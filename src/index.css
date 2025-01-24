@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+.container {
+  @apply max-w-[1400px] w-full mx-auto max-xl:max-w-[1280px] max-lg:max-w-[1280px];
+}
