@@ -2,9 +2,12 @@ import AboutAuthor from "./components/AboutAuthor";
 import AboutCourse from "./components/AboutCourse";
 import AboutPlatform from "./components/AboutPlatform";
 import Banner from "./components/Banner";
+import FAQs from "./components/FAQs";
 import Feedbacks from "./components/Feedbacks";
+import FormComponent from "./components/FormComponent";
 import Header from "./components/header/Header";
 import HowItWorks from "./components/HowItWorks";
+import PaymentTariff from "./components/PaymentTariff";
 import TrainingInfo from "./components/TrainingInfo";
 import WhyAtomika from "./components/WhyAtomika";
 import WhyChooseAtomika from "./components/WhyChooseAtomika";
@@ -23,6 +26,9 @@ function App() {
         <HowItWorks />
         <WhyChooseAtomika />
         <Feedbacks />
+        <PaymentTariff />
+        <FAQs />
+        <FormComponent />
       </main>
     </div>
   );
