@@ -5,7 +5,7 @@ const WhyChooseAtomika = () => {
 
   return (
     <section className="container mt-[208px]">
-      <h2 className="font-semibold text-[76px] text-center">
+      <h2 className="font-semibold text-[76px] text-center leading-20 max-w-[80%] mx-auto">
         {t("title.choose_atomika")}
       </h2>
       <div className="grid grid-cols-2 h-[603px] mt-20 gap-5">
@@ -27,7 +27,7 @@ const WhyChooseAtomika = () => {
                 {t("title.individual_temp")}
               </div>
               <div className="py-5 px-[30px] rounded-full bg-white text-2xl font-medium">
-                {t("title.gifts")}
+                {t("title.gifts2")}
               </div>
             </div>
             <div className="flex gap-1">

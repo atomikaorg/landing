@@ -9,10 +9,10 @@ const AboutAuthor = () => {
         <div className="inline-flex bg-white mx-auto py-5 px-7 shadow-md justify-center items-center rounded-[14px] font-normal text-2xl">
           {t("title.about_author")}
         </div>
-        <h2 className="mt-[34px] font-semibold text-[76px]">
+        <h2 className="mt-[34px] font-semibold text-[76px] max-w-[70%] mx-auto leading-20">
           {t("title.your_professor")}
         </h2>
-        <p className="mt-[34px] font-medium text-[34px] text-gray-text">
+        <p className="mt-[34px] font-medium text-[34px] text-gray-text max-w-[70%] mx-auto">
           {t("title.author_descr")}
         </p>
         <div className="flex flex-col items-center gap-y-8 mt-[78px]">
@@ -21,7 +21,6 @@ const AboutAuthor = () => {
             alt=""
             className="size-[200px] rounded-full"
           />
-          <p className="text-[34px] font-medium">{t("title.proydi_course")}</p>
         </div>
       </div>
     </section>

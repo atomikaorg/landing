@@ -9,11 +9,8 @@ const AboutCourse = () => {
           {t("title.about_course")}
         </div>
         <div className="w-[80%] mx-auto font-semibold text-[46px] mt-[34px]">
-          Курс atomika разработан М.С. Машариповым и включает видео-уроки,
-          задачи, тесты и тренажеры для подготовки по стандартам DTM и
-          национальным сертификатам. Обучение ориентировано на практику и
-          тестирование, что делает его идеальным для подготовки студентов к
-          поступлению в вузы.
+         <span>{t("title.about_course_descr1")}</span>{" "}
+         <span className="text-gray-text">{t("title.about_course_descr2")}</span>
         </div>
       </div>
     </section>

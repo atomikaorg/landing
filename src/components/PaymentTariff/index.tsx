@@ -5,13 +5,16 @@ const PaymentTariff = () => {
 
   return (
     <section className="container mt-[208px]">
-      <h2 className="font-semibold text-[76px] text-center">
+      <h2 className="font-semibold text-[76px] text-center leading-20 max-w-[70%] mx-auto">
         {t("title.choose_tariff")}
       </h2>
       <div className="grid grid-cols-2 gap-x-5 gap-y-[30px] mt-20">
         <div className="h-[369px] bg-white rounded-[40px] p-11 shadow-lg flex flex-col justify-between">
-          <h2 className="font-semibold text-[64px]">
-            <span></span> Free
+          <h2 className="font-semibold text-[64px] flex items-center gap-x-3">
+            <span>
+              <img src="/free_tariff.png" alt="" className="size-[120px]" />
+            </span>{" "}
+            Free
           </h2>
           <div>
             <span className="bg-[#f2f2f2] text-gray-text rounded-full text-2xl py-5 px-[30px]">
@@ -30,12 +33,15 @@ const PaymentTariff = () => {
             </p>
           </div>
           <div className="rounded-full bg-[#e9e9e9] text-2xl font-medium w-[110px] flex justify-center items-center">
-            <p className="rotate-270">{t("title.start_study")}</p>
+            <p className="rotate-270">{t("actions.start_education")}</p>
           </div>
         </div>
         <div className="h-[369px] bg-white rounded-[40px] p-11 shadow-lg flex flex-col justify-between">
-          <h2 className="font-semibold text-[64px] text-purple-main">
-            <span></span> Standard
+          <h2 className="font-semibold text-[64px] text-purple-main flex items-center gap-x-3">
+            <span>
+              <img src="/standart_tariff.png" alt="" className="size-[120px]" />
+            </span>{" "}
+            Standard
           </h2>
           <div>
             <span className="bg-[#f2f2f2] rounded-full text-2xl py-5 px-[30px]">
@@ -54,12 +60,17 @@ const PaymentTariff = () => {
             </p>
           </div>
           <div className="rounded-full bg-[#e9e9e9] text-2xl font-medium w-[110px] flex justify-center items-center border border-purple-main">
-            <p className="rotate-270 text-purple-main">{t("title.start_study")}</p>
+            <p className="rotate-270 text-purple-main">
+              {t("actions.start_education")}
+            </p>
           </div>
         </div>
         <div className="h-[369px] bg-gradient-to-b from-[#C38BFA] via-purple-main to-[#8216EB] rounded-[40px] p-11 shadow-lg flex flex-col justify-between">
-          <h2 className="font-semibold text-[64px] text-white">
-            <span></span> PRO
+          <h2 className="font-semibold text-[64px] text-white flex items-center gap-x-3">
+            <span>
+              <img src="/pro_tariff.png" alt="" className="size-[120px]" />
+            </span>{" "}
+            PRO
           </h2>
           <div>
             <span className="bg-white rounded-full text-2xl py-5 px-[30px]">
@@ -78,7 +89,7 @@ const PaymentTariff = () => {
             </p>
           </div>
           <div className="rounded-full bg-gradient-to-r from-[#C38BFA] via-purple-main to-[#8216EB] text-white text-2xl font-medium w-[110px] flex justify-center items-center">
-            <p className="rotate-270">{t("title.start_study")}</p>
+            <p className="rotate-270">{t("actions.start_education")}</p>
           </div>
         </div>
       </div>

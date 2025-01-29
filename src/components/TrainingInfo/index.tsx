@@ -5,10 +5,10 @@ const TrainingInfo = () => {
 
   return (
     <section className="container mt-[200px]">
-      <h2 className="font-semibold text-[76px] text-center">
+      <h2 className="font-semibold text-[76px] text-center leading-20 max-w-[90%] mx-auto">
         {t("title.training_heading")}
       </h2>
-      <p className="font-medium text-[28px] text-gray-text text-center mt-5">
+      <p className="font-medium text-[28px] text-gray-text text-center mt-5 max-w-[70%] mx-auto">
         {t("title.training_descr")}
       </p>
       <div className="grid grid-cols-[1fr_1fr] gap-5 mt-[68px] h-[612px]">
@@ -21,7 +21,7 @@ const TrainingInfo = () => {
           </p>
         </div>
         <div className="px-[30px] py-9 rounded-[50px] bg-white grid content-between bg-[url('/uzbekistan-flag.avif')] bg-contain bg-no-repeat bg-right">
-          <h3 className="font-semibold text-[42px]">
+          <h3 className="font-semibold text-[42px] max-w-[60%]">
             {t("title.national_sertificate")}
           </h3>
           <p className="text-gray-text font-normal text-xl">

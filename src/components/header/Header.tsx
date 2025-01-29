@@ -75,7 +75,7 @@ const Header = () => {
           {t("title.contacts")}
         </Button>
         <Button className="text-white bg-purple-main rounded-full h-16 px-[38px]">
-          {t("action.start_education")}
+          {t("actions.start_education")}
         </Button>
       </div>
     </header>

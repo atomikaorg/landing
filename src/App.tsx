@@ -2,6 +2,7 @@ import AboutAuthor from "./components/AboutAuthor";
 import AboutCourse from "./components/AboutCourse";
 import AboutPlatform from "./components/AboutPlatform";
 import Banner from "./components/Banner";
+import Contacts from "./components/Contacts";
 import FAQs from "./components/FAQs";
 import Feedbacks from "./components/Feedbacks";
 import FormComponent from "./components/FormComponent";
@@ -29,6 +30,7 @@ function App() {
         <PaymentTariff />
         <FAQs />
         <FormComponent />
+        <Contacts />
       </main>
     </div>
   );
