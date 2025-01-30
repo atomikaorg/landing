@@ -5,27 +5,29 @@ const Banner = () => {
   const { t } = useTranslation();
   return (
     <section className="container">
-      <div className="bg-white py-[54px] px-12 rounded-[50px] bg-[url('/banner-bg.avif')] bg-contain bg-no-repeat bg-right shadow-lg">
-        <h1 className="max-w-[90%] text-[76px] font-semibold leading-20">
+      <div className="bg-white py-[54px] max-lg:py-[38px] px-12 max-md:px-7 rounded-[50px] bg-[url('/banner-bg.avif')] max-md:bg-[url('/banner-bg-sm.avif')] bg-contain max-md:bg-contain bg-no-repeat bg-right max-md:bg-bottom max-lg:bg-cover shadow-lg">
+        <h1 className="max-w-[90%] max-md:max-w-full text-[76px] max-lg:text-[48px] max-md:text-3xl max-md:leading-8 font-semibold leading-20 max-lg:leading-16">
           {t("title.prepare_to_exam")}
         </h1>
-        <div className="flex items-center gap-x-5 mt-12 ">
+        <div className="flex items-center gap-x-5 max-md:gap-x-4 mt-12 ">
           <img
             src="/masharipov.jpg"
             alt=""
-            className="size-[82px] rounded-full"
+            className="size-[82px] max-md:size-[58px] rounded-full"
           />
-          <p className="text-2xl text-gray-text max-w-[546px]">{t("title.proydi_course")}</p>
+          <p className="text-2xl max-md:text-sm text-gray-text max-w-[546px]">
+            {t("title.proydi_course")}
+          </p>
         </div>
-        <Button className="rounded-full h-[92px] w-[396px] bg-linear-180 from-[#C38BFA] to-[#8216EB] !text-white text-xl font-semibold mt-[144px]">
+        <Button className="rounded-full h-[92px] w-[396px] max-md:w-full bg-linear-180 from-[#C38BFA] to-[#8216EB] !text-white text-xl font-semibold mt-[144px]">
           {t("actions.try_free")}
         </Button>
       </div>
-      <div className="mt-[60px] grid grid-cols-[2fr_1fr] gap-x-5">
-        <Button className="bg-white hover:bg-gray-50 rounded-full h-[114px] font-semibold text-[34px] text-purple-main cursor-pointer shadow-2xl">
+      <div className="mt-[60px] grid grid-cols-[2fr_1fr] gap-x-5 gap-y-3 max-lg:grid-cols-1">
+        <Button className="bg-white hover:bg-gray-50 rounded-full h-[114px] font-semibold text-[34px] max-md:text-2xl max-md:text-wrap max-md:rounded-[28px] text-purple-main cursor-pointer shadow-2xl">
           {t("actions.get_20_discrount")}
         </Button>
-        <Button className="rounded-full h-[114px] font-semibold !text-white text-[28px] !bg-black cursor-pointer shadow-2xl">
+        <Button className="rounded-full h-[114px] font-semibold !text-white text-[28px] max-md:text-2xl !bg-black cursor-pointer shadow-2xl">
           {t("actions.start_now")}
         </Button>
       </div>
