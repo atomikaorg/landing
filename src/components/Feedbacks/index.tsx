@@ -5,7 +5,7 @@ const Feedbacks = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="container mt-[208px] max-md:mt-[116px]">
+    <section className="container mt-[208px] max-md:mt-[116px]" id="feedbacks">
       <h2 className="text-center font-semibold text-[76px] max-md:text-[38px]">
         {t("title.students_feedbacks")}
       </h2>

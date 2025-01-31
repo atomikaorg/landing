@@ -36,8 +36,8 @@ const Header = () => {
 
   return (
     <header className="py-[30px] container flex items-center justify-between">
-      <div className="max-lg:bg-white max-lg:px-[66px] max-lg:rounded-full max-lg:order-2">
-        <img src="/Atomika_logo.png" alt="" className="max-w-[198.54px]" />
+      <div className="max-lg:bg-white max-lg:px-[66px] max-lg:rounded-full max-lg:order-2 max-md:px-[30px] max-md:py-1">
+        <img src="/Atomika_logo.png" alt="" className="max-w-[198.54px] max-md:max-w-[132px]" />
       </div>
       <DropdownMenu>
         <DropdownMenuTrigger className="max-lg:order-1">
@@ -68,10 +68,11 @@ const Header = () => {
         </DropdownMenuContent>
       </DropdownMenu>
       <div className="py-6 px-[38px] bg-white rounded-full text-gray-text font-semibold flex items-center gap-x-5 max-lg:hidden">
-        <a href="#">{t("title.about_course")}</a>
-        <a href="#">{t("title.privileges")}</a>
-        <a href="#">{t("title.feedbacks")}</a>
-        <a href="#">{t("title.pricing")}</a>
+        <a href="#about_course">{t("title.about_course")}</a>
+        <a href="#privileges">{t("title.privileges")}</a>
+        <a href="#about_platform">{t("title.about_platform")}</a>
+        <a href="#feedbacks">{t("title.feedbacks")}</a>
+        <a href="#pricing">{t("title.pricing")}</a>
       </div>
       <div className="flex gap-x-[10px] max-lg:hidden">
         <Button className="text-purple-main bg-purple-light hover:bg-purple-light cursor-pointer rounded-full h-16 px-[38px]">

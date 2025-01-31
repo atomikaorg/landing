@@ -15,7 +15,7 @@ import WhyChooseAtomika from "./components/WhyChooseAtomika";
 
 function App() {
   return (
-    <div className="bg-[#f3f3f3] min-h-screen pb-6">
+    <div className="bg-[#f3f3f3] min-h-screen pb-28 max-lg:pb-64">
       <Header />
       <main>
         <Banner />

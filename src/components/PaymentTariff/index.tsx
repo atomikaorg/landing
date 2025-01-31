@@ -4,15 +4,15 @@ const PaymentTariff = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="container mt-[208px]">
+    <section className="container mt-[208px]" id="pricing">
       <h2 className="font-semibold text-[76px] text-center leading-20 max-w-[70%] mx-auto max-md:leading-10 max-md:max-w-full max-md:text-[38px]">
         {t("title.choose_tariff")}
       </h2>
       <div className="grid grid-cols-2 gap-x-5 gap-y-[30px] mt-20 max-md:grid-cols-1">
         <div className="h-[369px] bg-white rounded-[40px] p-11 shadow-lg flex flex-col justify-between max-md:px-6 max-md:py-8">
-          <h2 className="font-semibold text-[64px] flex items-center gap-x-3">
+          <h2 className="font-semibold text-[64px] flex items-center gap-x-3 max-md:text-[54px]">
             <span>
-              <img src="/free_tariff.png" alt="" className="size-[120px]" />
+              <img src="/free_tariff.png" alt="" className="size-[120px] max-md:size-[96px]" />
             </span>{" "}
             Free
           </h2>
@@ -37,17 +37,17 @@ const PaymentTariff = () => {
           </div>
         </div>
         <div className="h-[369px] bg-white rounded-[40px] p-11 shadow-lg flex flex-col justify-between max-md:px-6 max-md:py-8">
-          <h2 className="font-semibold text-[64px] text-purple-main flex items-center gap-x-3">
+          <h2 className="font-semibold text-[64px] text-purple-main flex items-center gap-x-3 max-md:text-[54px]">
             <span>
-              <img src="/standart_tariff.png" alt="" className="size-[120px]" />
+              <img src="/standart_tariff.png" alt="" className="size-[120px] max-md:size-[96px] max-sm:size-[60px]" />
             </span>{" "}
             Standard
           </h2>
-          <div>
-            <span className="bg-[#f2f2f2] rounded-full text-2xl py-5 px-[30px] max-md:px-6 max-md:py-[14px] max-md:text-sm">
+          <div className="max-sm:flex max-sm:flex-col max-sm:gap-y-2">
+            <span className="bg-[#f2f2f2] rounded-full text-2xl py-5 px-[30px] max-md:px-6 max-md:py-[14px] max-md:text-sm max-sm:w-[170px]">
               {t("title.price_390")}
             </span>
-            <span className="bg-[#f2f2f2] rounded-full text-2xl py-5 px-[30px] ml-1 max-md:px-6 max-md:py-[14px] max-md:text-sm">
+            <span className="bg-[#f2f2f2] rounded-full text-2xl py-5 px-[30px] ml-1 max-md:px-6 max-md:py-[14px] max-md:text-sm max-sm:w-[170px]">
               {t("title.two_lesson_per_day")}
             </span>
           </div>
@@ -66,13 +66,13 @@ const PaymentTariff = () => {
           </div>
         </div>
         <div className="h-[369px] bg-gradient-to-b from-[#C38BFA] via-purple-main to-[#8216EB] rounded-[40px] p-11 shadow-lg flex flex-col justify-between max-md:px-6 max-md:py-8">
-          <h2 className="font-semibold text-[64px] text-white flex items-center gap-x-3">
+          <h2 className="font-semibold text-[64px] text-white flex items-center gap-x-3 max-md:text-[54px]">
             <span>
-              <img src="/pro_tariff.png" alt="" className="size-[120px]" />
+              <img src="/pro_tariff.png" alt="" className="size-[120px] max-md:size-[96px]" />
             </span>{" "}
             PRO
           </h2>
-          <div className="max-md:flex max-md:flex-col max-md:gap-y-2">
+          <div className="max-md:flex max-md:flex-col max-md:gap-y-2 flex flex-wrap gap-y-2">
             <span className="bg-white rounded-full text-2xl py-5 px-[30px] max-md:px-6 max-md:py-[14px] max-md:text-sm max-md:w-[182px]">
               {t("title.price_490")}
             </span>

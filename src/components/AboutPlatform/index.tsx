@@ -5,7 +5,7 @@ const AboutPlatform = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="container mt-[150px] max-md:mt-[116px] h-[793px] max-md:h-[950px] flex justify-start items-center max-md:items-start bg-[url('/tablets-bg.avif')] bg-contain bg-no-repeat bg-[position:490px_center] max-md:bg-[position:-50px_bottom]">
+    <section className="container mt-[150px] max-md:mt-[116px] h-[793px] max-md:h-[950px] flex justify-start items-center max-md:items-start bg-[url('/tablets-bg.avif')] bg-contain bg-no-repeat bg-[position:490px_center] max-md:bg-[position:-50px_bottom]" id="about_platform">
       <div className="flex flex-col gap-y-[34px] text-start">
         <div className="inline-flex bg-white mr-auto py-5 px-7 shadow-md justify-center items-center rounded-[14px] font-normal text-2xl max-md:mx-auto">
           {t("title.about_platform")}

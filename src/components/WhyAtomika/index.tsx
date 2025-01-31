@@ -4,7 +4,7 @@ const WhyAtomika = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="container mt-[296px] max-md:mt-[116px]">
+    <section className="container mt-[296px] max-md:mt-[116px]" id="privileges">
       <h2 className="text-center w-[70%] font-semibold text-[76px] mx-auto max-md:text-[38px] max-md:leading-10 max-md:w-full">
         {t("title.why_atomika")}
       </h2>
