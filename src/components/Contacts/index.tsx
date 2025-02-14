@@ -1,6 +1,6 @@
 const Contacts = () => {
   return (
-    <section className="container bg-white rounded-[50px] px-16 py-[74px] max-md:px-5 max-md:py-[54px] mt-[208px] max-md:mt-[116px] flex justify-between items-center mb-10 shadow-xl max-md:flex-col max-md:items-start">
+    <section className="container bg-white rounded-[50px] px-16 py-[74px] max-md:px-5 max-md:py-[54px] mt-[208px] max-md:mt-[116px] flex justify-between items-center mb-10 shadow-xl max-md:flex-col max-md:items-start" id="contacts">
       <div className="flex flex-col gap-y-7 max-md:gap-y-5">
         <a
           href="tel:998555111112"

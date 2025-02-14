@@ -12,7 +12,11 @@ const PaymentTariff = () => {
         <div className="h-[369px] bg-white rounded-[40px] p-11 shadow-lg flex flex-col justify-between max-md:px-6 max-md:py-8">
           <h2 className="font-semibold text-[64px] flex items-center gap-x-3 max-md:text-[54px]">
             <span>
-              <img src="/free_tariff.png" alt="" className="size-[120px] max-md:size-[96px]" />
+              <img
+                src="/free_tariff.png"
+                alt=""
+                className="size-[120px] max-md:size-[96px]"
+              />
             </span>{" "}
             Free
           </h2>
@@ -32,14 +36,23 @@ const PaymentTariff = () => {
               {t("title.abilities_descr")}
             </p>
           </div>
-          <div className="rounded-full bg-[#e9e9e9] text-2xl font-medium w-[110px] flex justify-center items-center max-md:w-full max-md:h-[76px]">
-            <p className="rotate-270 max-md:rotate-0">{t("actions.start_education")}</p>
-          </div>
+          <a
+            href="#form"
+            className="rounded-full bg-[#e9e9e9] text-2xl lg:px-9 font-medium w-[110px] flex justify-center items-center max-md:w-full max-md:h-[76px]"
+          >
+            <p className="lg:[writing-mode:sideways-lr] text-center">
+              {t("actions.start_education")}
+            </p>
+          </a>
         </div>
         <div className="h-[369px] bg-white rounded-[40px] p-11 shadow-lg flex flex-col justify-between max-md:px-6 max-md:py-8">
           <h2 className="font-semibold text-[64px] text-purple-main flex items-center gap-x-3 max-md:text-[54px]">
             <span>
-              <img src="/standart_tariff.png" alt="" className="size-[120px] max-md:size-[96px] max-sm:size-[60px]" />
+              <img
+                src="/standart_tariff.png"
+                alt=""
+                className="size-[120px] max-md:size-[96px] max-sm:size-[60px]"
+              />
             </span>{" "}
             Standard
           </h2>
@@ -59,16 +72,23 @@ const PaymentTariff = () => {
               {t("title.abilities2_descr")}
             </p>
           </div>
-          <div className="rounded-full max-md:w-full max-md:h-[76px] bg-[#e9e9e9] text-2xl font-medium w-[110px] flex justify-center items-center border border-purple-main">
-            <p className="rotate-270 text-purple-main max-md:rotate-0">
+          <a
+            href="#form"
+            className="rounded-full lg:px-9 max-md:w-full max-md:h-[76px] bg-[#e9e9e9] text-2xl font-medium w-[110px] flex justify-center items-center border border-purple-main"
+          >
+           <p className="lg:[writing-mode:sideways-lr] text-center">
               {t("actions.start_education")}
             </p>
-          </div>
+          </a>
         </div>
         <div className="h-[369px] bg-gradient-to-b from-[#C38BFA] via-purple-main to-[#8216EB] rounded-[40px] p-11 shadow-lg flex flex-col justify-between max-md:px-6 max-md:py-8">
           <h2 className="font-semibold text-[64px] text-white flex items-center gap-x-3 max-md:text-[54px]">
             <span>
-              <img src="/pro_tariff.png" alt="" className="size-[120px] max-md:size-[96px]" />
+              <img
+                src="/pro_tariff.png"
+                alt=""
+                className="size-[120px] max-md:size-[96px]"
+              />
             </span>{" "}
             PRO
           </h2>
@@ -88,9 +108,14 @@ const PaymentTariff = () => {
               {t("title.abilities3_descr")}
             </p>
           </div>
-          <div className="rounded-full max-md:w-full max-md:h-[76px] bg-gradient-to-r from-[#C38BFA] via-purple-main to-[#8216EB] text-white text-2xl font-medium w-[110px] flex justify-center items-center">
-            <p className="rotate-270 max-md:rotate-0">{t("actions.start_education")}</p>
-          </div>
+          <a
+            href="#form"
+            className="rounded-full max-md:w-full lg:px-9 max-md:h-[76px] bg-gradient-to-r from-[#C38BFA] via-purple-main to-[#8216EB] text-white text-2xl font-medium w-[110px] flex justify-center items-center"
+          >
+            <p className="lg:[writing-mode:sideways-lr] text-center">
+              {t("actions.start_education")}
+            </p>
+          </a>
         </div>
       </div>
     </section>

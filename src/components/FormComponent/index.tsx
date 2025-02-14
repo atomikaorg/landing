@@ -28,7 +28,7 @@ const FormComponent = () => {
   });
 
   return (
-    <section className="container mt-[208px] max-md:mt-[116px]">
+    <section className="container mt-[208px] max-md:mt-[116px]" id="form">
       <div className="rounded-[50px] w-full h-[748px] bg-gradient-to-b from-[#C38BFA] via-purple-main to-[#8216EB] relative shadow-2xl">
         <div className="bg-[url('/form_bg.avif')] bg-no-repeat bg-contain absolute inset-0 max-md:bg-none"></div>
         <div className="w-[676px] absolute right-[191px] top-[95px] max-md:static max-md:px-5 max-md:pb-[34px] max-md:pt-[86px] max-md:w-full">
@@ -48,7 +48,7 @@ const FormComponent = () => {
                     <FormControl>
                       <Input
                         placeholder={t("title.name")}
-                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] max-md:w-full"
+                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] max-md:w-full placeholder:text-white"
                         {...field}
                       />
                     </FormControl>
@@ -63,7 +63,7 @@ const FormComponent = () => {
                   <FormItem>
                     <FormControl>
                       <Input
-                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] my-3 max-md:w-full"
+                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] my-3 max-md:w-full placeholder:text-white"
                         placeholder={t("title.phone")}
                         {...field}
                       />

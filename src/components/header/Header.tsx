@@ -75,12 +75,12 @@ const Header = () => {
         <a href="#pricing">{t("title.pricing")}</a>
       </div>
       <div className="flex gap-x-[10px] max-lg:hidden">
-        <Button className="text-purple-main bg-purple-light hover:bg-purple-light cursor-pointer rounded-full h-16 px-[38px]">
+        <a href="#contacts" className="inline-flex items-center justify-center text-purple-main bg-purple-light hover:bg-purple-light cursor-pointer rounded-full h-16 px-[38px]">
           {t("title.contacts")}
-        </Button>
-        <Button className="text-white bg-purple-main hover:bg-purple-main cursor-pointer rounded-full h-16 px-[38px]">
+        </a>
+        <a href="#form" className="inline-flex items-center justify-center text-white bg-purple-main hover:bg-purple-main cursor-pointer rounded-full h-16 px-[38px]">
           {t("actions.start_education")}
-        </Button>
+        </a>
       </div>
       <BurgerMenu />
     </header>
