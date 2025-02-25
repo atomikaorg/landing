@@ -29,7 +29,7 @@ const PaymentTariff = () => {
             </span>
           </div>
         </div>
-        <div className="h-[369px] bg-white rounded-[40px] shadow-lg flex max-md:flex-col justify-between p-5 pl-[47px] max-md:px-6 max-md:py-8">
+        <div className="h-[369px] bg-white rounded-[40px] shadow-lg flex gap-x-[20px] max-md:flex-col justify-between p-5 pl-[47px] max-md:px-6 max-md:py-8">
           <div>
             <h4 className="text-3xl font-medium">{t("title.abilities")}</h4>
             <p className="mt-[49px] max-md:mt-4 max-md:text-lg text-2xl font-medium text-gray-text">
@@ -65,7 +65,7 @@ const PaymentTariff = () => {
             </span>
           </div>
         </div>
-        <div className="h-[369px] bg-white rounded-[40px] shadow-lg flex max-md:flex-col justify-between p-5 pl-[47px] max-md:px-6 max-md:py-8">
+        <div className="h-[369px] bg-white rounded-[40px] shadow-lg flex gap-x-[20px] max-md:flex-col justify-between p-5 pl-[47px] max-md:px-6 max-md:py-8">
           <div>
             <h4 className="text-3xl font-medium">{t("title.abilities")}</h4>
             <p className="mt-[49px] text-2xl font-medium text-gray-text max-md:mt-4 max-md:text-lg">
@@ -101,7 +101,7 @@ const PaymentTariff = () => {
             </span>
           </div>
         </div>
-        <div className="h-[369px] rounded-[40px] shadow-lg flex max-md:flex-col justify-between p-5 pl-[47px] bg-white max-md:px-6 max-md:py-8">
+        <div className="h-[369px] rounded-[40px] shadow-lg flex gap-x-[20px] max-md:flex-col justify-between p-5 pl-[47px] bg-white max-md:px-6 max-md:py-8">
           <div>
             <h4 className="text-3xl font-medium">{t("title.abilities")}</h4>
             <p className="mt-[49px] text-2xl font-medium text-gray-text max-md:mt-4 max-md:text-lg">

@@ -31,8 +31,8 @@ const FormComponent = () => {
     <section className="container mt-[208px] max-md:mt-[116px]" id="form">
       <div className="rounded-[50px] w-full h-[748px] bg-gradient-to-b from-[#C38BFA] via-purple-main to-[#8216EB] relative shadow-2xl">
         <div className="bg-[url('/form_bg.avif')] bg-no-repeat bg-contain absolute inset-0 max-md:bg-none"></div>
-        <div className="w-[676px] absolute right-[191px] top-[95px] max-md:static max-md:px-5 max-md:pb-[34px] max-md:pt-[86px] max-md:w-full">
-          <h2 className="font-semibold text-white text-[76px] max-md:text-[48px] max-md:max-w-[260px] max-md:break-words max-md:whitespace-break-spaces max-md:leading-10">
+        <div className="w-[600px] absolute right-[120px] top-[95px] max-md:static max-md:px-5 max-md:pb-[34px] max-md:pt-[86px] max-md:w-full">
+          <h2 className="font-semibold text-white text-[68px] max-md:text-[48px] max-md:max-w-[260px] max-md:break-words max-md:whitespace-break-spaces max-md:leading-10">
             {t("title.conact_with_us")}
           </h2>
           <p className="mt-5 text-[#f2f2f2] text-2xl font-medium max-md:text-base max-md:break-words max-md:whitespace-break-spaces">
