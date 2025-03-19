@@ -10,7 +10,7 @@ const AboutPlatform = () => {
         <div className="inline-flex bg-white mr-auto py-5 px-7 shadow-md justify-center items-center rounded-[14px] font-normal text-2xl max-md:mx-auto">
           {t("title.about_platform")}
         </div>
-        <h2 className="font-semibold text-[76px] max-w-[70%] leading-20 max-md:text-[38px] max-md:leading-10 max-md:max-w-full max-md:text-center">
+        <h2 className="font-semibold text-[70px] max-w-[70%] leading-20 max-md:text-[38px] max-md:leading-10 max-md:max-w-full max-md:text-center">
           {t("title.interactive_education")}
         </h2>
         <p className="text-gray-text text-2xl font-medium max-w-[60%] max-md:max-w-full max-md:text-center max-md:text-lg">

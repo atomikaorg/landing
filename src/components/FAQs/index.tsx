@@ -15,7 +15,7 @@ const FAQs = () => {
         {t("title.faqs")}
       </h2>
       <Accordion type="single" collapsible className="mt-20">
-        <AccordionItem value="item-1" className="bg-white rounded-[30px]">
+        <AccordionItem value="item-1" className="bg-white rounded-[30px] !border-none shadow-[0px_8px_28px_-6px_#18274B1F] hover:shadow-[0px_18px_88px_-4px_#18274B24] transition-shadow">
           <AccordionTrigger className="py-10 px-[30px] max-md:py-7 max-md:text-[28px] text-start cursor-pointer font-semibold text-[34px] hover:no-underline">
             {t("title.how_works_subscription")}
           </AccordionTrigger>
@@ -23,7 +23,7 @@ const FAQs = () => {
             {t("title.how_works_subscription_content")}
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-2" className="bg-white rounded-[30px] mt-5">
+        <AccordionItem value="item-2" className="bg-white rounded-[30px] mt-5 !border-none shadow-[0px_8px_28px_-6px_#18274B1F] hover:shadow-[0px_18px_88px_-4px_#18274B24] transition-shadow">
           <AccordionTrigger className="py-10 px-[30px] max-md:py-7 max-md:text-[28px] text-start cursor-pointer font-semibold text-[34px] hover:no-underline">
             {t("title.can_freeze_sub")}
           </AccordionTrigger>
@@ -31,7 +31,7 @@ const FAQs = () => {
             {t("title.can_freeze_sub_content")}
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-3" className="bg-white rounded-[30px] mt-5">
+        <AccordionItem value="item-3" className="bg-white rounded-[30px] mt-5 !border-none shadow-[0px_8px_28px_-6px_#18274B1F] hover:shadow-[0px_18px_88px_-4px_#18274B24] transition-shadow">
           <AccordionTrigger className="py-10 px-[30px] max-md:py-7 max-md:text-[28px] text-start cursor-pointer font-semibold text-[34px] hover:no-underline">
             {t("title.how_get_atoms")}
           </AccordionTrigger>
@@ -39,7 +39,7 @@ const FAQs = () => {
             {t("title.how_get_atoms_descr")}
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-4" className="bg-white rounded-[30px] mt-5">
+        <AccordionItem value="item-4" className="bg-white rounded-[30px] mt-5 !border-none shadow-[0px_8px_28px_-6px_#18274B1F] hover:shadow-[0px_18px_88px_-4px_#18274B24] transition-shadow">
           <AccordionTrigger className="py-10 px-[30px] max-md:py-7 max-md:text-[28px] text-start cursor-pointer font-semibold text-[34px] hover:no-underline">
             {t("title.third_person")}
           </AccordionTrigger>

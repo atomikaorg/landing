@@ -26,7 +26,7 @@ function App() {
         <TrainingInfo />
         <HowItWorks />
         <WhyChooseAtomika />
-        <Feedbacks />
+        {/* <Feedbacks /> */}
         <PaymentTariff />
         <FAQs />
         <FormComponent />

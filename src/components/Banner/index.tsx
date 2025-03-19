@@ -24,10 +24,10 @@ const Banner = () => {
         </Button>
       </div>
       <div className="mt-[60px] grid grid-cols-[2fr_1fr] gap-x-5 gap-y-3 max-lg:grid-cols-1 fixed bottom-4 z-30 left-[50%] translate-x-[-50%] container ">
-        <a href="#form" className="inline-flex justify-center items-center bg-white hover:bg-gray-50 rounded-full h-[114px] font-semibold text-[34px] max-md:text-2xl max-md:text-wrap max-md:rounded-[28px] text-purple-main cursor-pointer shadow-2xl">
+        <a href="#form" className="inline-flex justify-center items-center bg-white hover:bg-gray-50 rounded-full h-[114px] font-semibold text-[34px] max-md:text-2xl max-md:text-wrap max-md:rounded-full text-center text-purple-main cursor-pointer shadow-2xl">
           {t("actions.get_20_discrount")}
         </a>
-        <a href="#form" className="inline-flex justify-center items-center rounded-full h-[114px] font-semibold !text-white text-[28px] max-md:text-2xl !bg-black cursor-pointer shadow-2xl">
+        <a href="#form" className="inline-flex justify-center items-center rounded-full h-[114px] font-semibold !text-white text-[28px] max-md:text-2xl !bg-black cursor-pointer shadow-2xl text-center">
           {t("actions.start_now")}
         </a>
       </div>
