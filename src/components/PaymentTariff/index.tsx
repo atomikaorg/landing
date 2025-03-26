@@ -21,10 +21,10 @@ const PaymentTariff = () => {
             Free
           </h2>
           <div>
-            <span className="bg-[#f2f2f2] text-gray-text rounded-full text-2xl py-5 px-[30px] max-md:px-6 max-md:py-[14px] max-md:text-sm">
+            <span className="bg-[#f2f2f2] text-gray-text rounded-full text-xl py-5 px-[30px] max-md:px-6 max-md:py-[14px] max-md:text-sm">
               {t("title.price_0")}
             </span>
-            <span className="bg-[#f2f2f2] text-gray-text rounded-full text-2xl py-5 px-[30px] ml-1 max-md:px-6 max-md:py-[14px] max-md:text-sm">
+            <span className="bg-[#f2f2f2] text-gray-text rounded-full text-xl py-5 px-[30px] ml-1 max-md:px-6 max-md:py-[14px] max-md:text-sm">
               {t("title.lesson_per_day")}
             </span>
           </div>
@@ -57,10 +57,10 @@ const PaymentTariff = () => {
             Standard
           </h2>
           <div className="max-sm:flex max-sm:flex-col max-sm:gap-y-2">
-            <span className="bg-[#f2f2f2] rounded-full text-2xl py-5 px-[30px] max-md:px-6 max-md:py-[14px] max-md:text-sm max-sm:w-[170px]">
+            <span className="bg-[#f2f2f2] rounded-full text-xl py-5 px-[30px] max-md:px-6 max-md:py-[14px] max-md:text-sm max-sm:w-[170px]">
               {t("title.price_390")}
             </span>
-            <span className="bg-[#f2f2f2] rounded-full text-2xl py-5 px-[30px] ml-1 max-md:px-6 max-md:py-[14px] max-md:text-sm max-sm:w-[170px]">
+            <span className="bg-[#f2f2f2] rounded-full text-xl py-5 px-[30px] ml-1 max-md:px-6 max-md:py-[14px] max-md:text-sm max-sm:w-[170px]">
               {t("title.two_lesson_per_day")}
             </span>
           </div>
@@ -76,7 +76,7 @@ const PaymentTariff = () => {
             href="#form"
             className="rounded-full lg:px-9 max-md:w-full max-md:h-[76px] bg-[#e9e9e9] text-2xl font-medium w-[110px] flex justify-center items-center border border-purple-main"
           >
-           <p className="lg:[writing-mode:sideways-lr] text-center">
+           <p className="lg:[writing-mode:sideways-lr] text-center text-purple-main">
               {t("actions.start_education")}
             </p>
           </a>
@@ -93,10 +93,10 @@ const PaymentTariff = () => {
             PRO
           </h2>
           <div className="max-md:flex max-md:flex-col max-md:gap-y-2 flex flex-wrap gap-y-2">
-            <span className="bg-white rounded-full text-2xl py-5 px-[30px] max-md:px-6 max-md:py-[14px] max-md:text-sm max-md:w-[182px]">
+            <span className="bg-white rounded-full text-xl py-5 px-[30px] max-md:px-6 max-md:py-[14px] max-md:text-sm max-md:w-[182px]">
               {t("title.price_490")}
             </span>
-            <span className="bg-white rounded-full text-2xl py-5 px-[30px] ml-1 max-md:px-6 max-md:py-[14px] max-md:text-sm max-md:w-[222px]">
+            <span className="bg-white rounded-full text-xl py-5 px-[30px] ml-1 max-md:px-6 max-md:py-[14px] max-md:text-sm max-md:w-[222px]">
               {t("title.unlimited_access")}
             </span>
           </div>
