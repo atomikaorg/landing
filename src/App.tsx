@@ -20,7 +20,7 @@ function App() {
       <main>
         <Banner />
         <AboutCourse />
-        <AboutAuthor />
+        {/* <AboutAuthor /> */}
         <WhyAtomika />
         <AboutPlatform />
         <TrainingInfo />

@@ -10,11 +10,13 @@ const Banner = () => {
           {t("title.prepare_to_exam")}
         </h1>
         <div className="flex items-center gap-x-5 max-md:gap-x-4 mt-12 ">
-          <img
-            src="/masharipov.jpg"
+          <div className="bg-[#8216EB] rounded-full p-4">
+            <img
+              src="/logo_white.png"
             alt=""
-            className="size-[82px] max-md:size-[58px] rounded-full"
-          />
+            className="size-[32px] max-md:size-[18px]"
+            />
+          </div>
           <p className="text-2xl max-md:text-sm text-gray-text max-w-[546px]">
             {t("title.proydi_course")}
           </p>
