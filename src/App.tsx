@@ -12,6 +12,7 @@ import PaymentTariff from "./components/PaymentTariff";
 import TrainingInfo from "./components/TrainingInfo";
 import WhyAtomika from "./components/WhyAtomika";
 import WhyChooseAtomika from "./components/WhyChooseAtomika";
+import { Toaster } from "./components/ui/toaster"
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <FormComponent />
         <Contacts />
       </main>
+      <Toaster />
     </div>
   );
 }

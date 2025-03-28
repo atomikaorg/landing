@@ -90,6 +90,17 @@
     "try_free": "Попробовать бесплатно",
     "get_20_discrount": "Получите скидку 20% начав обучение сейчас",
     "start_now": "Начать обучение сейчас",
-    "send": "Отправить"
+    "send": "Отправить",
+    "sending": "Yuborilmoqda..."
+  },
+  "form": {
+    "success_title": "Muvaffaqiyatli!",
+    "success": "Xabaringiz muvaffaqiyatli yuborildi.",
+    "error_title": "Xatolik",
+    "error": "Xabar yuborishda xatolik yuz berdi. Iltimos, qayta urinib ko'ring.",
+    "errors": {
+      "name_min": "Ism kamida 2 ta belgidan iborat bo'lishi kerak",
+      "phone_min": "Telefon raqami kamida 2 ta belgidan iborat bo'lishi kerak"
+    }
   }
 }

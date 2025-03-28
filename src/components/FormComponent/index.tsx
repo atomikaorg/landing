@@ -11,21 +11,68 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useTranslation } from "react-i18next";
 import { Button } from "../ui/button";
+import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
+
+const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycby_D876icO60dANI3odSGaoNXQAaG_JofEgEoIvdNyfp0W84F287budP7XbgrU0z1g5/exec";
 
 const FormComponent = () => {
   const { t } = useTranslation();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const formSchema = z.object({
-    name: z.string().min(2).max(50),
-    phone: z.string().min(2).max(50),
+    name: z.string().min(2, t('form.errors.name_min') || 'Name must be at least 2 characters').max(50),
+    phone: z.string().min(2, t('form.errors.phone_min') || 'Phone must be at least 2 characters').max(50),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
+      phone: "",
     },
   });
+
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    try {
+      setIsSubmitting(true);
+      
+      // Create URL-encoded form data
+      const formData = new URLSearchParams();
+      formData.append('name', data.name);
+      formData.append('phone', data.phone);
+
+      const response = await fetch(GOOGLE_SHEETS_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formData.toString(),
+        mode: 'cors', // Change to cors mode
+        credentials: 'omit' // Don't send credentials
+      });
+
+      // Since we're using CORS, we can check the response
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
+      form.reset();
+      toast({
+        description: t('form.success'),
+        variant: 'default',
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        description: t('form.error'),
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section className="container mt-[208px] max-md:mt-[116px]" id="form">
@@ -39,7 +86,7 @@ const FormComponent = () => {
             {t("title.form_descr")}
           </p>
           <Form {...form}>
-            <form className="mt-[45px] max-md:max-w-full">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="mt-[45px] max-md:max-w-full">
               <FormField
                 control={form.control}
                 name="name"
@@ -48,7 +95,7 @@ const FormComponent = () => {
                     <FormControl>
                       <Input
                         placeholder={t("title.name")}
-                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] max-md:w-full placeholder:text-white"
+                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] max-md:w-full placeholder:text-white outline-none"
                         {...field}
                       />
                     </FormControl>
@@ -63,7 +110,7 @@ const FormComponent = () => {
                   <FormItem>
                     <FormControl>
                       <Input
-                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] my-3 max-md:w-full placeholder:text-white"
+                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] my-3 max-md:w-full placeholder:text-white outline-none"
                         placeholder={t("title.phone")}
                         {...field}
                       />
@@ -74,9 +121,10 @@ const FormComponent = () => {
               />
               <Button
                 type="submit"
-                className="w-full rounded-full h-[81px] cursor-pointer text-black bg-white text-2xl font-medium hover:bg-white max-w-full"
+                disabled={isSubmitting}
+                className="w-full rounded-full h-[81px] cursor-pointer text-black bg-white text-2xl font-medium hover:bg-white max-w-full disabled:opacity-50"
               >
-                {t("actions.send")}
+                {isSubmitting ? (t("actions.sending") || "Sending...") : (t("actions.send"))}
               </Button>
             </form>
           </Form>
