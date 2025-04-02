@@ -14,7 +14,7 @@ import { Button } from "../ui/button";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 
-const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycby_D876icO60dANI3odSGaoNXQAaG_JofEgEoIvdNyfp0W84F287budP7XbgrU0z1g5/exec";
+const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycbzf6uVGF7Ojq2MsLqE-obGoCqahmNR8E72YfLSOXGSTsi3OnhMoyFGy5gbPYppJBd8H/exec";
 
 const FormComponent = () => {
   const { t } = useTranslation();
@@ -95,7 +95,7 @@ const FormComponent = () => {
                     <FormControl>
                       <Input
                         placeholder={t("title.name")}
-                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] max-md:w-full placeholder:text-white outline-none"
+                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] max-md:w-full placeholder:text-white outline-none focus-visible:ring-transparent ring-offset-0"
                         {...field}
                       />
                     </FormControl>
@@ -110,7 +110,7 @@ const FormComponent = () => {
                   <FormItem>
                     <FormControl>
                       <Input
-                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] my-3 max-md:w-full placeholder:text-white outline-none"
+                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] my-3 max-md:w-full placeholder:text-white outline-none focus-visible:ring-transparent ring-offset-0"
                         placeholder={t("title.phone")}
                         {...field}
                       />
