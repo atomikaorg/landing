@@ -95,7 +95,7 @@ const FormComponent = () => {
                     <FormControl>
                       <Input
                         placeholder={t("title.name")}
-                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] max-md:w-full placeholder:text-white outline-none focus-visible:ring-transparent ring-offset-0"
+                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] max-md:w-full placeholder:text-white outline-none focus-visible:ring-transparent ring-offset-0 relative z-10"
                         {...field}
                       />
                     </FormControl>
@@ -110,7 +110,7 @@ const FormComponent = () => {
                   <FormItem>
                     <FormControl>
                       <Input
-                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] my-3 max-md:w-full placeholder:text-white outline-none focus-visible:ring-transparent ring-offset-0"
+                        className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] my-3 max-md:w-full placeholder:text-white outline-none focus-visible:ring-transparent ring-offset-0 relative z-10"
                         placeholder={t("title.phone")}
                         {...field}
                       />
@@ -122,7 +122,7 @@ const FormComponent = () => {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full rounded-full h-[81px] cursor-pointer text-black bg-white text-2xl font-medium hover:bg-white max-w-full disabled:opacity-50"
+                className="w-full rounded-full h-[81px] cursor-pointer text-black bg-white text-2xl font-medium hover:bg-white max-w-full disabled:opacity-50 relative z-10"
               >
                 {isSubmitting ? (t("actions.sending") || "Sending...") : (t("actions.send"))}
               </Button>
