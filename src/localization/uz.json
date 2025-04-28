@@ -100,7 +100,8 @@
     "error": "Xabar yuborishda xatolik yuz berdi. Iltimos, qayta urinib ko'ring.",
     "errors": {
       "name_min": "Ism kamida 2 ta belgidan iborat bo'lishi kerak",
-      "phone_min": "Telefon raqami kamida 2 ta belgidan iborat bo'lishi kerak"
+      "operator_required": "Operator kodini kiriting (masalan, 93)",
+      "phone_length": "Telefon raqami 9 ta raqamdan iborat bo'lishi kerak"
     }
   }
 }
