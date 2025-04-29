@@ -15,62 +15,63 @@ import { useState, useEffect } from "react";
 import { useToast } from "@/components/ui/use-toast";
 
 const formatPhoneNumber = (phone: string): string => {
-  // Remove all non-digit characters and any existing +998 prefix
-  const digits = phone.replace(/\D/g, '').replace(/^998/, '');
-  
-  // Take only the last 9 digits if there are more
-  const last9Digits = digits.slice(-9);
-  
-  // Pad with zeros if less than 9 digits
-  const paddedDigits = last9Digits.padStart(9, '0');
-  
-  // Return just the digits for Google Sheets
-  return `998${paddedDigits}`;
+  // Remove all non-digit characters
+  const digits = phone.replace(/\D/g, '');
+  // Return just the last 9 digits
+  return digits.slice(-9);
 };
 
-const formatDisplayPhoneNumber = (value: string, previousValue: string) => {
-  // Remove all non-digit characters first
-  let digits = value.replace(/\D/g, '');
-  const prevDigits = previousValue.replace(/\D/g, '').replace(/^998/, '');
+const formatDisplayPhoneNumber = (value: string, isDeleting = false) => {
+  // Clean up any duplicate +998 or +99
+  value = value.replace(/^\+998\+99/, '+998').replace(/^\+99\+99/, '+99');
   
-  // If backspacing, remove last digit
-  if (value.length < previousValue.length && prevDigits.length > 0) {
-    digits = prevDigits.slice(0, -1);
-  } else {
-    // Remove 998 from the beginning if it exists
-    digits = digits.replace(/^998/, '');
-    
-    // Take only the last 9 digits if there are more
-    digits = digits.slice(-9);
+  // Always ensure we start with +998
+  if (!value.startsWith('+998')) {
+    value = '+998' + value.replace(/^\+99/, '');
   }
 
-  // Format the number as user types
+  // If it's just the prefix, return it
+  if (value === '+998') {
+    return value;
+  }
+
+  // Get all digits after +998
+  let remainingValue = value.slice(4);
+  
+  // If deleting, just return the current value with cleanup
+  if (isDeleting) {
+    // If we're trying to delete part of +998, prevent it
+    if (value.length <= 4) {
+      return '+998';
+    }
+    // Clean up any formatting artifacts during deletion
+    return value.replace(/\(\)|-+/g, '');
+  }
+
+  // For new input, format the number
+  // Remove all non-digit characters
+  const digits = remainingValue.replace(/\D/g, '').slice(0, 9);
+
+  // Format the number for display
   if (digits.length > 0) {
-    // Always start with +998
     let formatted = '+998';
     
-    // Add opening parenthesis for operator code
     if (digits.length >= 1) {
-      formatted += '(';
-      formatted += digits.slice(0, 2);
+      formatted += '(' + digits.slice(0, 2);
     }
     
-    // Add closing parenthesis after operator code
     if (digits.length >= 2) {
       formatted += ')';
     }
     
-    // Add the next 3 digits
     if (digits.length > 2) {
       formatted += digits.slice(2, 5);
     }
     
-    // Add first hyphen and next 2 digits
     if (digits.length > 5) {
       formatted += '-' + digits.slice(5, 7);
     }
     
-    // Add second hyphen and last 2 digits
     if (digits.length > 7) {
       formatted += '-' + digits.slice(7, 9);
     }
@@ -81,7 +82,7 @@ const formatDisplayPhoneNumber = (value: string, previousValue: string) => {
   return '+998';
 };
 
-const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycbxx8lynrSRxiqPxmdl4gMwtQKXjNjNSa_-bpfc009mHwwuGJ2cRWMohmS1sAZOBdsTh/exec";
+const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycbx5uYVwea_K8zBMbGhva3sjanoyOegAI1fHxip4dViUBIkAgpk_RZrxWAkxJ8HKyeTk/exec";
 
 const FormComponent = () => {
   const { t } = useTranslation();
@@ -93,6 +94,8 @@ const FormComponent = () => {
     utm_source: "",
     utm_medium: "",
     utm_campaign: "",
+    utm_content: "",
+    utm_referrer: "",
   });
 
   useEffect(() => {
@@ -101,6 +104,8 @@ const FormComponent = () => {
       utm_source: params.get("utm_source") || "",
       utm_medium: params.get("utm_medium") || "",
       utm_campaign: params.get("utm_campaign") || "",
+      utm_content: params.get("utm_content") || "",
+      utm_referrer: document.referrer || "",
     });
   }, []);
 
@@ -108,12 +113,9 @@ const FormComponent = () => {
     name: z.string().min(2, t('form.errors.name_min') || 'Name must be at least 2 characters').max(50),
     phone: z.string()
       .refine((val) => {
-        const digits = val.replace(/\D/g, '').replace(/^998/, '');
-        return digits.length >= 2;
-      }, t('form.errors.operator_required') || 'Operator code (93) is required')
-      .refine((val) => {
-        const digits = val.replace(/\D/g, '').replace(/^998/, '');
-        return digits.length === 9;
+        // Remove the +998 prefix first, then count digits
+        const digitsAfterPrefix = val.replace(/^\+998/, '').replace(/\D/g, '');
+        return digitsAfterPrefix.length === 9;
       }, t('form.errors.phone_length') || 'Phone number must be 9 digits')
   });
 
@@ -139,7 +141,8 @@ const FormComponent = () => {
       formData.append("utm_source", utmParams.utm_source);
       formData.append("utm_medium", utmParams.utm_medium);
       formData.append("utm_campaign", utmParams.utm_campaign);
-
+      formData.append("utm_content", utmParams.utm_content);
+      formData.append("utm_referrer", utmParams.utm_referrer);
       const response = await fetch(GOOGLE_SHEETS_URL, {
         method: 'POST',
         headers: {
@@ -218,11 +221,10 @@ const FormComponent = () => {
                         className="text-white !text-2xl font-medium p-10 rounded-full bg-transparent border border-[#f3f3f3] my-3 max-md:w-full placeholder:text-white outline-none focus-visible:ring-transparent ring-offset-0 relative z-10"
                         placeholder={t("title.phone")}
                         {...field}
-                        value={formatDisplayPhoneNumber(field.value, previousPhone)}
+                        value={field.value}
                         onChange={(e) => {
-                          const value = e.target.value;
-                          setPreviousPhone(field.value);
-                          const formattedValue = formatDisplayPhoneNumber(value, field.value);
+                          const isDeleting = e.target.value.length < field.value.length;
+                          const formattedValue = formatDisplayPhoneNumber(e.target.value, isDeleting);
                           field.onChange(formattedValue);
                         }}
                       />
