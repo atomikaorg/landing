@@ -83,7 +83,8 @@
     "conact_with_us": "Свяжитесь с нами",
     "form_descr": "Если у вас остались вопросы или нужна помощь, заполните форму ниже, и мы ответим вам в кратчайшие сроки.",
     "name": "Имя",
-    "phone": "Номер телефона"
+    "phone": "Номер телефона",
+    "thank-you": " Ma'lumotlaringizni oldik.\nTez orada bog'lanamiz!"
   },
   "actions": {
     "start_education": "Начать обучение",

@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AboutAuthor from "./components/AboutAuthor";
 import AboutCourse from "./components/AboutCourse";
 import AboutPlatform from "./components/AboutPlatform";
@@ -13,28 +14,36 @@ import TrainingInfo from "./components/TrainingInfo";
 import WhyAtomika from "./components/WhyAtomika";
 import WhyChooseAtomika from "./components/WhyChooseAtomika";
 import { Toaster } from "./components/ui/toaster"
+import ThankYouPage from './pages/thank-you';
 
 function App() {
   return (
-    <div className="bg-[#f3f3f3] min-h-screen pb-28 max-lg:pb-64">
-      <Header />
-      <main>
-        <Banner />
-        <AboutCourse />
-        {/* <AboutAuthor /> */}
-        <WhyAtomika />
-        <AboutPlatform />
-        <TrainingInfo />
-        <HowItWorks />
-        <WhyChooseAtomika />
-        {/* <Feedbacks /> */}
-        <PaymentTariff />
-        <FAQs />
-        <FormComponent />
-        <Contacts />
-      </main>
-      <Toaster />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          <div className="bg-[#FAFAFA]">
+            <Header />
+            <main>
+              <Banner />
+              <AboutCourse />
+              {/* <AboutAuthor /> */}
+              <WhyAtomika />
+              <AboutPlatform />
+              <TrainingInfo />
+              <HowItWorks />
+              <WhyChooseAtomika />
+              {/* <Feedbacks /> */}
+              <PaymentTariff />
+              <FAQs />
+              <FormComponent />
+              <Contacts />
+            </main>
+            <Toaster />
+          </div>
+        } />
+        <Route path="/thank-you" element={<ThankYouPage />} />
+      </Routes>
+    </Router>
   );
 }
 

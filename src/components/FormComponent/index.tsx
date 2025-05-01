@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import {
   Form,
   FormControl,
@@ -86,6 +87,7 @@ const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycbx5uYVwea_K8z
 
 const FormComponent = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   const [previousPhone, setPreviousPhone] = useState('+998');
@@ -149,11 +151,10 @@ const FormComponent = () => {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: formData.toString(),
-        mode: 'cors', // Change to cors mode
-        credentials: 'omit' // Don't send credentials
+        mode: 'cors',
+        credentials: 'omit'
       });
 
-      // Since we're using CORS, we can check the response
       if (!response.ok) {
         throw new Error('Failed to submit form');
       }
@@ -167,10 +168,8 @@ const FormComponent = () => {
       // Reset previous phone state
       setPreviousPhone("+998");
 
-      toast({
-        description: t('form.success'),
-        variant: 'default',
-      });
+      // Redirect to thank you page using React Router
+      navigate('/thank-you');
     } catch (error) {
       console.error('Error submitting form:', error);
       toast({
