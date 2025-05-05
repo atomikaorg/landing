@@ -4,6 +4,10 @@ import { Button } from "../ui/button";
 const AboutPlatform = () => {
   const { t } = useTranslation();
 
+  const handleRedirect = () => {
+    window.open('https://atomika.org/', '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section className="container mt-[150px] max-md:mt-[116px] h-[793px] max-md:h-[950px] flex justify-start items-center max-md:items-start bg-[url('/tablets-bg.avif')] bg-contain bg-no-repeat bg-[position:370px_center] max-md:bg-[position:-50px_bottom]" id="about_platform">
       <div className="flex flex-col gap-y-[34px] text-start">
@@ -16,7 +20,10 @@ const AboutPlatform = () => {
         <p className="text-gray-text text-2xl font-medium max-w-[60%] max-md:max-w-full max-md:text-center max-md:text-lg">
           {t("title.about_platform_descr")}
         </p>
-        <Button className="bg-gradient-to-b from-[#C38BFA] via-purple-main to-[#8216EB] w-[400px] max-md:w-full max-md:mx-auto h-[92px] rounded-full text-white font-semibold text-[20px]">
+        <Button 
+          onClick={handleRedirect}
+          className="bg-gradient-to-b from-[#C38BFA] via-purple-main to-[#8216EB] w-[400px] max-md:w-full max-md:mx-auto h-[92px] rounded-full text-white font-semibold text-[20px]"
+        >
           {t("actions.start_now")}
         </Button>
       </div>
