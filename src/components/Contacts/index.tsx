@@ -6,7 +6,7 @@ const Contacts = () => {
           href="tel:998555111112"
           className="text-[54px] font-semibold max-md:text-[35px] max-[432px]:!text-[32px]"
         >
-          +998 (55) 511-11-12
+          +998 (55) 511-11-33
         </a>
         <a
           href="mailto:info@atomika.org"
