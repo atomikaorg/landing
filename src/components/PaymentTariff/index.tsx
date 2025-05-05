@@ -20,11 +20,11 @@ const PaymentTariff = () => {
             </span>{" "}
             Free
           </h2>
-          <div>
-            <span className="bg-[#f2f2f2] text-gray-text rounded-full text-xl py-5 px-[30px] max-md:px-6 max-md:py-[14px] max-md:text-sm">
+          <div className="max-sm:flex max-sm:flex-col max-sm:gap-y-2">
+            <span className="bg-[#f2f2f2] text-gray-text rounded-full text-xl py-5 px-[30px] max-md:px-6 max-md:py-[14px] max-md:text-sm max-sm:w-[170px]">
               {t("title.price_0")}
             </span>
-            <span className="bg-[#f2f2f2] text-gray-text rounded-full text-xl py-5 px-[30px] ml-1 max-md:px-6 max-md:py-[14px] max-md:text-sm">
+            <span className="bg-[#f2f2f2] text-gray-text rounded-full text-xl py-5 px-[30px] ml-1 max-md:px-6 max-md:py-[14px] max-md:text-sm max-sm:w-[240px]">
               {t("title.lesson_per_day")}
             </span>
           </div>
