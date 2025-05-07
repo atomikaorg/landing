@@ -15,6 +15,7 @@ import WhyAtomika from "./components/WhyAtomika";
 import WhyChooseAtomika from "./components/WhyChooseAtomika";
 import { Toaster } from "./components/ui/toaster"
 import ThankYouPage from './pages/thank-you';
+import LogoCarousel from './components/LogoCarousel';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Header />
             <main>
               <Banner />
+              <LogoCarousel />
               <AboutCourse />
               {/* <AboutAuthor /> */}
               <WhyAtomika />

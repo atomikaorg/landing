@@ -20,6 +20,7 @@
     "@types/react-router-dom": "^5.3.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.10.0",
     "i18next": "^24.2.1",
     "lucide-react": "^0.473.0",
     "next": "^15.3.1",
