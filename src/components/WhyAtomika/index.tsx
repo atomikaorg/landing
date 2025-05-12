@@ -14,7 +14,7 @@ const WhyAtomika = () => {
           <h5 className="text-white font-semibold text-3xl max-md:text-[32px] max-md:max-w-[70%] z-10">
             {t("title.original_course")}
           </h5>
-          <p className="text-white font-medium text-[22px]">
+          <p className="text-white font-medium text-[22px] z-10">
             {t("title.original_course_descr")}
           </p>
         </div>
@@ -23,7 +23,7 @@ const WhyAtomika = () => {
           <h5 className="text-white font-semibold text-3xl max-md:text-[32px] max-md:max-w-[70%] z-10">
             {t("title.interactive")}
           </h5>
-          <p className="text-white font-medium text-[22px]">
+          <p className="text-white font-medium text-[22px] z-10">
             {t("title.interactive_descr")}
           </p>
         </div>
@@ -35,7 +35,7 @@ const WhyAtomika = () => {
           <h5 className="text-black font-semibold text-3xl z-10 max-md:text-[32px] max-md:max-w-[70%]">
             {t("title.gamification")}
           </h5>
-          <p className="text-gray-text font-medium text-[22px]">
+          <p className="text-gray-text font-medium text-[22px] z-10">
             {t("title.gamification_descr")}
           </p>
         </div>
@@ -44,7 +44,7 @@ const WhyAtomika = () => {
           <h5 className="text-white font-semibold text-3xl z-10 max-md:text-[32px] max-md:max-w-[70%]">
             {t("title.lesson_with_help")}
           </h5>
-          <p className="text-white font-medium text-[22px]">
+          <p className="text-white font-medium text-[22px] z-10">
             {t("title.lesson_with_help_descr")}
           </p>
         </div>
@@ -53,7 +53,7 @@ const WhyAtomika = () => {
           <h5 className="text-black font-semibold text-3xl z-10 max-md:text-[32px] max-md:max-w-[70%]">
             {t("title.flexible_study")}
           </h5>
-          <p className="text-gray-text font-medium text-[22px]">
+          <p className="text-gray-text font-medium text-[22px] z-10">
             {t("title.flexible_study_descr")}
           </p>
         </div>

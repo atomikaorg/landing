@@ -71,7 +71,7 @@ const Header = () => {
         <a href="#about_course">{t("title.about_course")}</a>
         <a href="#privileges">{t("title.privileges")}</a>
         <a href="#about_platform">{t("title.about_platform")}</a>
-        <a href="#feedbacks">{t("title.feedbacks")}</a>
+        {/* <a href="#feedbacks">{t("title.feedbacks")}</a> */}
         <a href="#pricing">{t("title.pricing")}</a>
       </div>
       <div className="flex gap-x-[10px] max-lg:hidden">
