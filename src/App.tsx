@@ -16,6 +16,8 @@ import WhyChooseAtomika from "./components/WhyChooseAtomika";
 import { Toaster } from "./components/ui/toaster"
 import ThankYouPage from './pages/thank-you';
 import LogoCarousel from './components/LogoCarousel';
+import AboutTeachers from './components/AboutTeachers';
+import Team from './components/Team';
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
               <Banner />
               <LogoCarousel />
               <AboutCourse />
+              <AboutTeachers />
               {/* <AboutAuthor /> */}
               <WhyAtomika />
               <AboutPlatform />
@@ -38,6 +41,7 @@ function App() {
               <PaymentTariff />
               <FAQs />
               <FormComponent />
+              <Team />
               <Contacts />
             </main>
             <Toaster />

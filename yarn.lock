@@ -956,6 +956,13 @@
     "@types/prop-types" "*"
     csstype "^3.0.2"
 
+"@types/swiper@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.npmjs.org/@types/swiper/-/swiper-6.0.0.tgz"
+  integrity sha512-QPZRgxZ+ivXXtzV43B3LxpXUIC7FE/EoKM+rtxngmgt2M7eeUYypZhyqZD8UxJtlBcUDw/ATGoVeSNpvBBrz2w==
+  dependencies:
+    swiper "*"
+
 "@typescript-eslint/eslint-plugin@8.21.0":
   version "8.21.0"
   resolved "https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-8.21.0.tgz"
@@ -1530,12 +1537,12 @@ fraction.js@^4.3.7:
   resolved "https://registry.npmjs.org/fraction.js/-/fraction.js-4.3.7.tgz"
   integrity sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==
 
-framer-motion@^12.10.0:
-  version "12.10.0"
-  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-12.10.0.tgz"
-  integrity sha512-fce/SPS/lrIHYLGfRNytdvzwotc43hBGnEGjXAS304xB+uX9iAm0BpPDx9SuO3TatJkQMm9mglVu94wIPdOTjw==
+framer-motion@^12.11.0:
+  version "12.11.0"
+  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-12.11.0.tgz"
+  integrity sha512-BaBPmkhaC2l0n619Kt1nQaxSdUdyyz5V1Z7EKJ1CcraOTZitgVx0RTbL8lmg2XesaFi6o8MPBIhkWDIvzDpGaQ==
   dependencies:
-    motion-dom "^12.10.0"
+    motion-dom "^12.11.0"
     motion-utils "^12.9.4"
     tslib "^2.4.0"
 
@@ -1817,10 +1824,10 @@ minimatch@^9.0.4:
   dependencies:
     brace-expansion "^2.0.1"
 
-motion-dom@^12.10.0:
-  version "12.10.0"
-  resolved "https://registry.npmjs.org/motion-dom/-/motion-dom-12.10.0.tgz"
-  integrity sha512-TbRFEjQmRIDEFXJFIHfvM3VW8PuQ8bSWwwYxWA5Elq+GCghzqYUQ1FDQK/K6PmtmOoLiQY3ttJE6CrOedRrGgw==
+motion-dom@^12.11.0:
+  version "12.11.0"
+  resolved "https://registry.npmjs.org/motion-dom/-/motion-dom-12.11.0.tgz"
+  integrity sha512-CItkGYJenn5ZsbzTX0D9mE0UWdjdd9r535FrxEXhzR8Kwa9I2dLr1uhEJgQPWbgaIJ6i0sNFnf2T9NvVDWQVBw==
   dependencies:
     motion-utils "^12.9.4"
 
@@ -2239,6 +2246,11 @@ svg-parser@^2.0.4:
   version "2.0.4"
   resolved "https://registry.npmjs.org/svg-parser/-/svg-parser-2.0.4.tgz"
   integrity sha512-e4hG1hRwoOdRb37cIMSgzNsxyzKfayW6VOflrwvR+/bzrkyxY/31WkbgnQpgtrNp1SdpJvpUAGTa/ZoiPNDuRQ==
+
+swiper@*, swiper@^11.2.6:
+  version "11.2.6"
+  resolved "https://registry.npmjs.org/swiper/-/swiper-11.2.6.tgz"
+  integrity sha512-8aXpYKtjy3DjcbzZfz+/OX/GhcU5h+looA6PbAzHMZT6ESSycSp9nAjPCenczgJyslV+rUGse64LMGpWE3PX9Q==
 
 tailwind-merge@^2.6.0:
   version "2.6.0"

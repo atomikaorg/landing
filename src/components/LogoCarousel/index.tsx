@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import IT_PARK from "../../../public/itpark-logo.png";
-import MINISTRY from "../../../public/ministry-logo.png";
 import { motion } from "framer-motion";
+import IT_PARK from "/itpark-logo.png?url";
+import MINISTRY from "/ministry-logo.png?url";
 
 export const Logo1 = () => (
   <Link to="https://cyberpark.uz/" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center justify-center min-w-[200px] h-[100px] bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-md p-4 hover:bg-white/20 transition-all">
@@ -48,7 +48,7 @@ export const logos = [
 ]; 
 
 const LogoCarousel = () => (
-  <div className="relative py-5 mb-10 mt-[110px] overflow-hidden">
+  <div className="relative py-5 overflow-hidden mt-[154px]">
     <motion.div
           className="flex gap-4"
           animate={{

@@ -21,10 +21,7 @@ const Banner = () => {
             {t("title.proydi_course")}
           </p>
         </div>
-        <Button 
-          onClick={() => window.open('https://atomika.org/', '_blank', 'noopener,noreferrer')}
-          className="rounded-full h-[92px] w-[396px] max-md:w-full bg-linear-180 from-[#C38BFA] to-[#8216EB] !text-white text-xl font-semibold mt-[144px]"
-        >
+        <Button className="rounded-full h-[92px] w-[396px] max-md:w-full bg-linear-180 from-[#C38BFA] to-[#8216EB] !text-white text-xl font-semibold mt-[144px]">
           {t("actions.try_free")}
         </Button>
       </div>
