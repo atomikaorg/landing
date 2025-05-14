@@ -31,16 +31,16 @@ const AboutTeachers = () => {
 
     const teachers = [
         {
-            name: t("title.teacher_name2"),
-            image: teacher2,
-            description: t("title.teacher_desc2"),
-            experience: t("title.teacher_exp2")
-        },
-        {
             name: t("title.teacher_name1"),
-            image: teacher1,
+            image: teacher2,
             description: t("title.teacher_desc1"),
             experience: t("title.teacher_exp1")
+        },
+        {
+            name: t("title.teacher_name2"),
+            image: teacher1,
+            description: t("title.teacher_desc2"),
+            experience: t("title.teacher_exp2")
         },
         {
             name: t("title.teacher_name3"),
