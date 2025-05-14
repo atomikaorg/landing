@@ -51,7 +51,7 @@ const AboutTeachers = () => {
     ]
 
     const TeacherCard = ({ teacher }: { teacher: typeof teachers[0] }) => (
-        <div className="w-full bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+        <div className="w-full h-full bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col">
             <div className="relative">
                 <img 
                     src={teacher.image} 
@@ -60,9 +60,9 @@ const AboutTeachers = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"/>
             </div>
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-2xl font-semibold text-gray-800 mb-3">{teacher.name}</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">{teacher.description}</p>
+                <p className="text-gray-600 mb-4 leading-relaxed flex-grow">{teacher.description}</p>
                 <div className="pt-4 border-t border-gray-100">
                     <p className="text-gray-600 italic">{teacher.experience}</p>
                 </div>

@@ -95,10 +95,10 @@
     "phone": "Telefon raqam",
     "thank-you": " Ma'lumotlaringizni oldik.\nTez orada bog'lanamiz!",
     "team": "Asoschilar haqida",
-    "team_name1": "Бехзодбек Сатвалдиев",
-    "team_description1": "Основатель и генеральный директор платформы atomika",
-    "team_name2": "Нозир Тухтамуродов",
-    "team_description2": "Один из основателей платформы atomika и руководитель IT-отдела"
+    "team_name1": "Bexzodbek Satvaldiev",
+    "team_desc1": "atomika platformasi asoschisi va bosh rahbari",
+    "team_name2": "Nozir To‘xtamurodov",
+    "team_desc2": "atomika platformasi asoschilaridan biri va IT bo‘limi rahbari"
   },
   "actions": {
     "start_education": "O'qishni boshlash",

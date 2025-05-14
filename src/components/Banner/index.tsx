@@ -14,7 +14,7 @@ const Banner = () => {
             <img
               src="/logo_white.png"
             alt=""
-            className="size-[32px] max-md:size-[18px]"
+            className="size-[32px] max-md:w-[28px] max-md:h-auto"
             />
           </div>
           <p className="text-2xl max-md:text-sm text-gray-text max-w-[546px]">
