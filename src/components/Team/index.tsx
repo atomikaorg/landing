@@ -32,17 +32,19 @@ const Team = () => {
         {
             name: t("title.team_name1"),
             image: team1,
-            description: t("title.team_desc1")
+            description: t("title.team_desc1"),
+            experience: t("title.team_exp1")
         },
         {
             name: t("title.team_name2"),
             image: team2,
-            description: t("title.team_desc2")
+            description: t("title.team_desc2"),
+            experience: t("title.team_exp2")
         }
     ];
 
     const TeamCard = ({ member }: { member: typeof team[0] }) => (
-        <div className="w-full bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+        <div className="w-full bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 h-full flex flex-col">
             <div className="relative">
                 <img 
                     src={member.image} 
@@ -51,9 +53,10 @@ const Team = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"/>
             </div>
-            <div className="p-6">
+            <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-2xl font-semibold text-gray-800 mb-3">{member.name}</h3>
-                <p className="text-gray-600 leading-relaxed">{member.description}</p>
+                <p className="text-gray-600 leading-relaxed mb-5 flex-1">{member.description}</p>
+                <p className="text-gray-600 leading-relaxed"><strong>{t("title.experience")}</strong> {member.experience}</p>
             </div>
         </div>
     );

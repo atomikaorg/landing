@@ -34,19 +34,22 @@ const AboutTeachers = () => {
             name: t("title.teacher_name1"),
             image: teacher2,
             description: t("title.teacher_desc1"),
-            experience: t("title.teacher_exp1")
+            experience: t("title.teacher_exp1"),
+            field: t("title.teacher_field1")
         },
         {
             name: t("title.teacher_name2"),
             image: teacher1,
             description: t("title.teacher_desc2"),
-            experience: t("title.teacher_exp2")
+            experience: t("title.teacher_exp2"),
+            field: t("title.teacher_field2")
         },
         {
             name: t("title.teacher_name3"),
             image: teacher3,
             description: t("title.teacher_desc3"),
-            experience: t("title.teacher_exp3")
+            experience: t("title.teacher_exp3"),
+            field: t("title.teacher_field3")
         }
     ]
 
@@ -64,7 +67,8 @@ const AboutTeachers = () => {
                 <h3 className="text-2xl font-semibold text-gray-800 mb-3">{teacher.name}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed flex-grow">{teacher.description}</p>
                 <div className="pt-4 border-t border-gray-100">
-                    <p className="text-gray-600 italic">{teacher.experience}</p>
+                    <p className="text-gray-600 italic"><strong>{t("title.experience")}</strong> {teacher.experience}</p>
+                    <p className="text-gray-600 italic"><strong>{t("title.field")}</strong> {teacher.field}</p>
                 </div>
             </div>
         </div>
