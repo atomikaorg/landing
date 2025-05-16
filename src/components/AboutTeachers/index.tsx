@@ -75,36 +75,38 @@ const AboutTeachers = () => {
     );
 
     return (
-        <div className="about-teachers px-4 md:px-8 py-12 bg-gray-50">
-            <h2 className="text-center font-semibold text-[76px] max-md:text-[38px] mb-16">
-                {t("title.about_teachers")}
-            </h2>
-            
-            {isMobile ? (
-                <Swiper
-                    modules={[Navigation, Pagination]}
-                    spaceBetween={20}
-                    slidesPerView={1}
-                    navigation
-                    pagination={{ clickable: true }}
-                    className="w-full"
-                >
-                    {teachers.map((teacher, index) => (
-                        <SwiperSlide key={index}>
-                            <TeacherCard teacher={teacher} />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            ) : (
-                <div className="grid grid-cols-3 gap-10 max-w-5xl mx-auto">
-                    {teachers.map((teacher, index) => (
-                        <div className="col-span-1" key={index}>
-                            <TeacherCard teacher={teacher} />
-                        </div>
-                    ))}
-                </div>
-            )}
-        </div>
+        <section className="about-teachers py-12 bg-gray-50">
+            <div className="container mx-auto px-4 md:px-8">
+                <h2 className="text-center font-semibold text-[76px] max-md:text-[38px] mb-16">
+                    {t("title.about_teachers")}
+                </h2>
+                
+                {isMobile ? (
+                    <Swiper
+                        modules={[Navigation, Pagination]}
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        navigation
+                        pagination={{ clickable: true }}
+                        className="w-full"
+                    >
+                        {teachers.map((teacher, index) => (
+                            <SwiperSlide key={index}>
+                                <TeacherCard teacher={teacher} />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                ) : (
+                    <div className="grid grid-cols-3 gap-8 max-w-7xl mx-auto">
+                        {teachers.map((teacher, index) => (
+                            <div className="col-span-1" key={index}>
+                                <TeacherCard teacher={teacher} />
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </div>
+        </section>
     )
 }
 
