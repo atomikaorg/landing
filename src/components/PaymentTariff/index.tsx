@@ -9,7 +9,7 @@ const PaymentTariff = () => {
         {t("title.choose_tariff")}
       </h2>
       <div className="grid grid-cols-2 gap-x-5 gap-y-[30px] mt-20 max-md:grid-cols-1">
-        <div className="h-[369px] bg-white rounded-[40px] p-11 shadow-lg flex flex-col justify-between max-md:px-6 max-md:py-8">
+        {/* <div className="h-[369px] bg-white rounded-[40px] p-11 shadow-lg flex flex-col justify-between max-md:px-6 max-md:py-8">
           <h2 className="font-semibold text-[64px] flex items-center gap-x-3 max-md:text-[54px]">
             <span>
               <img
@@ -44,7 +44,7 @@ const PaymentTariff = () => {
               {t("actions.start_education")}
             </p>
           </a>
-        </div>
+        </div> */}
         <div className="h-[369px] bg-white rounded-[40px] p-11 shadow-lg flex flex-col justify-between max-md:px-6 max-md:py-8">
           <h2 className="font-semibold text-[64px] text-purple-main flex items-center gap-x-3 max-md:text-[54px]">
             <span>
