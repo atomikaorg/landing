@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import team1 from "../../../public/team1.jpg"
 import team2 from "../../../public/team2.jpg"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 // @ts-ignore
 import 'swiper/css';
 // @ts-ignore
@@ -68,11 +68,13 @@ const Team = () => {
             </h2>
             {isMobile ? (
                 <Swiper
-                    modules={[Navigation, Pagination]}
+                    modules={[Navigation, Pagination, Autoplay]}
                     spaceBetween={20}
                     slidesPerView={1}
                     navigation
                     pagination={{ clickable: true }}
+                    loop={true}
+                    autoplay={{ delay: 2000, disableOnInteraction: false }}
                     className="w-full"
                 >
                     {team.map((member, index) => (
