@@ -68,7 +68,7 @@ const PaymentTariff = () => {
         <div className="h-[369px] bg-white rounded-[40px] shadow-lg flex gap-x-[20px] max-md:flex-col justify-between p-5 pl-[47px] max-md:px-6 max-md:py-8">
           <div>
             <h4 className="text-3xl font-medium">{t("title.abilities")}</h4>
-            <p className="mt-[49px] text-2xl font-medium text-gray-text max-md:mt-4 max-md:text-lg">
+            <p className="mt-[25px] text-2xl font-medium text-gray-text max-md:mt-4 max-md:text-lg">
               {t("title.abilities2_descr")}
             </p>
           </div>
@@ -97,14 +97,14 @@ const PaymentTariff = () => {
               {t("title.price_490")}
             </span>
             <span className="bg-white rounded-full text-xl py-5 px-[30px] ml-1 max-md:px-6 max-md:py-[14px] max-md:text-sm max-md:w-[222px]">
-              {t("title.unlimited_access")}
+              {t("title.two_lesson_per_day")}
             </span>
           </div>
         </div>
         <div className="h-[369px] rounded-[40px] shadow-lg flex gap-x-[20px] max-md:flex-col justify-between p-5 pl-[47px] bg-white max-md:px-6 max-md:py-8">
           <div>
             <h4 className="text-3xl font-medium">{t("title.abilities")}</h4>
-            <p className="mt-[49px] text-2xl font-medium text-gray-text max-md:mt-4 max-md:text-lg">
+            <p className="mt-[25px] text-2xl font-medium text-gray-text max-md:mt-4 max-md:text-lg">
               {t("title.abilities3_descr")}
             </p>
           </div>
