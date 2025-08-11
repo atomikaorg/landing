@@ -54,7 +54,7 @@ const PaymentTariff = () => {
                 className="size-[120px] max-md:size-[96px] max-sm:size-[60px]"
               />
             </span>{" "}
-            Standard
+            Standart
           </h2>
           <div className="max-sm:flex max-sm:flex-col max-sm:gap-y-2">
             <span className="bg-[#f2f2f2] rounded-full text-xl py-5 px-[30px] max-md:px-6 max-md:py-[14px] max-md:text-sm max-sm:w-[170px]">
