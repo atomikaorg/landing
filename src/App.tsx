@@ -38,7 +38,7 @@ function App() {
               <HowItWorks />
               <WhyChooseAtomika />
               {/* <Feedbacks /> */}
-              <PaymentTariff />
+              {/* <PaymentTariff /> */}
               <FAQs />
               <FormComponent />
               <Team />
