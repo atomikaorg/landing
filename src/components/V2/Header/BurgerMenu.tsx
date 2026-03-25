@@ -1,14 +1,21 @@
-import { LayoutGridIcon, XIcon } from "lucide-react";
-import Bar from "@/assets/svg/bar.svg"
+import Bar from "@/assets/svg/bar.svg";
 import clsx from "clsx";
+import { XIcon } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "../../ui/button";
 
 export default function BurgerMenu(): JSX.Element {
   const { t } = useTranslation();
-
   const [isMenuShown, setIsMenuShown] = useState<boolean>(false);
+
+  const navItems = [
+    { href: "#about_course", label: t("version2.header.nav.teachers") },
+    { href: "#privileges", label: t("version2.header.nav.reviews") },
+    { href: "#about_platform", label: t("version2.header.nav.tariffs") },
+    { href: "#pricing", label: t("version2.header.nav.certificate") },
+    { href: "#contacts", label: t("version2.header.nav.contacts") },
+  ];
 
   const closeMenuAfterNavigate = () => {
     setIsMenuShown(false);
@@ -18,7 +25,7 @@ export default function BurgerMenu(): JSX.Element {
     <div className="lg:hidden max-lg:order-3 cursor-pointer">
       <Button
         className={clsx(
-          `inline-flex p-0 w-[52px] h-[52px] bg-trasparent  rounded-full`,
+          "inline-flex p-0 w-[52px] h-[52px] bg-trasparent rounded-full",
           {
             "bg-purple-main hover:bg-purple-main": isMenuShown,
           }
@@ -28,7 +35,7 @@ export default function BurgerMenu(): JSX.Element {
         {isMenuShown ? (
           <XIcon color="white" />
         ) : (
-        <img src={Bar} alt="" className="text-[#000000]" />
+          <img src={Bar} alt="" className="text-[#000000]" />
         )}
       </Button>
       <div
@@ -46,54 +53,22 @@ export default function BurgerMenu(): JSX.Element {
             e.stopPropagation();
           }}
         >
-          <div className="">
-            <ul className="flex flex-col gap-y-3 text-white text-base font-extrabold">
+          <ul className="flex flex-col gap-y-3 text-white text-base font-extrabold">
+            {navItems.map((item) => (
               <li
+                key={item.href}
                 className="hover:bg-[#B677F3] rounded-full border border-[#B677F3]"
                 onClick={closeMenuAfterNavigate}
               >
                 <a
-                  href="#about_course"
+                  href={item.href}
                   className="flex py-4 px-4 w-full h-full bg-transparent hover:bg-transparent justify-center gap-x-3 rounded-none text-white font-semibold text-sm"
                 >
-                  {t("title.about_course")}
+                  {item.label}
                 </a>
               </li>
-              <li
-                className="hover:bg-[#B677F3] rounded-full border border-[#B677F3]"
-                onClick={closeMenuAfterNavigate}
-              >
-                <a
-                  href="#privileges"
-                  className="flex py-4 px-4 w-full h-full bg-transparent hover:bg-transparent justify-center gap-x-3 rounded-none text-white font-semibold text-sm"
-                >
-                  {t("title.privileges")}
-                </a>
-              </li>
-              <li
-                className="hover:bg-[#B677F3] rounded-full border border-[#B677F3]"
-                onClick={closeMenuAfterNavigate}
-              >
-                <a
-                  href="#feedbacks"
-                  className="flex py-4 px-4 w-full h-full bg-transparent hover:bg-transparent justify-center gap-x-3 rounded-none text-white font-semibold text-sm"
-                >
-                  {t("title.feedbacks")}
-                </a>
-              </li>
-              <li
-                className="hover:bg-[#B677F3] rounded-full border border-[#B677F3]"
-                onClick={closeMenuAfterNavigate}
-              >
-                <a
-                  href="#pricing"
-                  className="flex py-4 px-4 w-full h-full bg-transparent hover:bg-transparent justify-center gap-x-3 rounded-none text-white font-semibold text-sm"
-                >
-                  {t("title.pricing")}
-                </a>
-              </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

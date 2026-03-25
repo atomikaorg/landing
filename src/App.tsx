@@ -21,6 +21,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './components/V2/Header';
 import Info from './components/V2/Info/Index';
+import Partners from './components/V2/Partners';
+import Features from './components/V2/Features';
+import WhyAtomika from './components/V2/WhyAtomika';
+
 function App() {
   return (
     <Router>
@@ -53,7 +57,12 @@ function App() {
         <Route path='/' element={
           <div>
             <Header/>
+            <main className='bg-[#F9FAFB]'>
             <Info/>
+            <Partners/>
+            <Features/>  
+            <WhyAtomika/>
+            </main>
           </div>
         }
        />

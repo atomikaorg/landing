@@ -133,5 +133,93 @@
       "operator_required": "Operator kodini kiriting (masalan, 93)",
       "phone_length": "Telefon raqami 9 ta raqamdan iborat bo'lishi kerak"
     }
+  },
+  "version2": {
+    "header": {
+      "changeLanguage": "Tilni o'zgartirish",
+      "languages": {
+        "ru": "Rus tili",
+        "uz": "O'zbek tili"
+      },
+      "nav": {
+        "teachers": "O'qituvchilar haqida",
+        "reviews": "Mijoz fikrlari",
+        "tariffs": "Narxlar",
+        "certificate": "🏆 Milliy Sertifikat",
+        "contacts": "Bog’lanish"
+      },
+      "login": "Kirish",
+      "startEducation": "O'qishni boshlash"
+    },
+    "info": {
+      "titlePrefix": "Kimyo va biologiya imtihonlariga",
+      "titleHighlight": "onlayn tayyorlaning",
+      "titleSuffix": "va repetitorsiz o'qing",
+      "description": "O'z tezligingizda, jadvalsiz, mentor va kurator yordamida samarali va oson o'rganing. Darslarni keraklicha qayta ko'rib chiqing.",
+      "startEducation": "O'qishni boshlash",
+      "tryFree": "Bepul sinab ko'rish",
+      "students": "o'quvchilar",
+      "lessons": "darslar",
+      "languages": "xil tilda",
+      "partners":"Rasmiy hamkorlarimiz"
+    },
+    "features": {
+      "badge": "Ustunliklarimiz",
+      "title": "Nega",
+      "atomika":"atomika",
+      "title2":" boshqa kurslardan ustun?",
+      "description":"“Repetitor” va ustoz o'rnini bosmаymiz — undan ko'proq narsani beramiz!",
+      "cards": {
+        "expertTeachers": {
+          "title": "Kuchli o’qituvchilar",
+          "description": "Ko'p yillik tajribaga ega o'qituvchilar — imtihonga qanday tayyorlashni yaxshi bilishadi."
+        },
+        "smartPractice": {
+          "title": "Haqiqiy sinov imtihonlari",
+          "description": "DTM va Milliy sertifikat standartlariga mos sinov imtihonlari bilan amaliyot."
+        },
+        "progressSystem": {
+          "title": "Geymifikatsiya  va “CashBack”",
+          "description": "Yutuqlaringiz uchun ball to'plang va ularni “CashBack” hamda bonuslarga ega bo’ling."
+        },
+        "clearExplanations": {
+          "title": "Har bir savol uchun video-tahlillar",
+          "description": "Hamma oldida qayta so'rashga hojat yo'q!"
+        },
+        "flexibleLearning": {
+          "title": "Xohlagan vaqtda",
+          "description": "To'liq onlayn, istalgan  vaqtda va istalgan qurilmada foydalanish mumkin."
+        }
+      }
+    },
+    "whyAtomika": {
+      "title": "Nega boshqa kurslar o'rniga ",
+      "title2":"ni  tanlash kerak?",
+      "description": "Qisqa taqqoslash orqali onlayn ta'lim nega qulayroq va samaraliroq ekanini ko'ring.",
+      "atomika": {
+        "title": "atomika bilan o'qish",
+        "items": [
+          "Jadvalsiz, 24/7 ta’lim olish",
+          "Cheklovlarsiz darslarni ko’rish",
+          "Har bir savol uchun video-tahlillar",
+          "DTM va Milliy sertifikat sinov imtihonlari",
+          "Kuratorlar nazorati va mentorlar yordami",
+          "Geymifikatsiya va bonus ballar",
+          "To’xtagan joydan boshlab ketish"
+        ]
+      },
+      "otherCourses": {
+        "title": "Boshqa kurslar",
+        "items": [
+          "2-3 marta dars, jadval bo’yicha",
+          "Darslar o'tiladi, yozib olingan darslar esa yo'q!",
+          "Qayta so’rash imkoniyati cheklangan",
+          "Qog’ozdagi testlar va savollar",
+          "O’qituvchilar bilan jonli muloqot",
+          "800,000 - 1,500,000 narxlar",
+          "O’tkazib yuborilsa - qaytarib o’tilmaydi"
+        ]
+      }
+    }
   }
 }
