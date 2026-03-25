@@ -24,6 +24,8 @@ import Info from './components/V2/Info/Index';
 import Partners from './components/V2/Partners';
 import Features from './components/V2/Features';
 import WhyAtomika from './components/V2/WhyAtomika';
+import Teachers from './components/V2/Teachers';
+import Footer from './components/V2/Footer';
 
 function App() {
   return (
@@ -62,7 +64,9 @@ function App() {
             <Partners/>
             <Features/>  
             <WhyAtomika/>
+            <Teachers/>
             </main>
+            <Footer/>
           </div>
         }
        />

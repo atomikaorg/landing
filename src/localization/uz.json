@@ -13,19 +13,19 @@
     "about_teachers": "O'qituvchilar haqida",
     "teacher_name1": "Aytimbetova Gulayim Duysenbayevna",
     "teacher_desc1": "atomika platformasida oʻqituvchi",
-    "teacher_field1": "Biolog-genetik, magistrant",
+    "teacher_field1": "Biologiya",
     "teacher_exp1": "5+ yil",
     "teacher_name2": "Xomidova Sayyora Abduganiyevna",
     "teacher_desc2": "atomika platformasida oʻqituvchi",
-    "teacher_field2": "Biolog-tadqiqotchi, magistr",
+    "teacher_field2": "Biologiya",
     "teacher_exp2": "5+ yil",
-    "teacher_name3": "Diyora Ortiqova \n Orifjon qizi",
+    "teacher_name3": "Ortiqova Diyora Orifjon qizi",
     "teacher_desc3": "atomika platformasida oʻqituvchi",
-    "teacher_field3": "Biologiya pedagogi",
+    "teacher_field3": "Biologiya",
     "teacher_exp3": "5+ yil",
     "teacher_name4": "Xudoyqulova Nigina Nizomiddinovna",
     "teacher_desc4": "atomika platformasida oʻqituvchi",
-    "teacher_field4": "Kimyo pedagogi",
+    "teacher_field4": "Kimyo",
     "teacher_exp4": "5+ yil",
     "author_descr": "Автор более 20 книг по Химии, автор школьних книг по Химии, Профессор наук по Химии, автор тестов DTM",
     "why_atomika": "Nega atomika boshqa kurslardan yaxshiroq?",
@@ -219,6 +219,34 @@
           "800,000 - 1,500,000 narxlar",
           "O’tkazib yuborilsa - qaytarib o’tilmaydi"
         ]
+      }
+    },
+    "teacher_name1": "Aytimbetova Gulayim",
+    "teacher_field1": "Biologiya",
+    "teacher_name2": "Xomidova Sayyora",
+    "teacher_field2": "Biologiya",
+    "teacher_name3": "Ortiqova Diyora",
+    "teacher_field3": "Kurs metodisti (Uslubchisi)",
+    "teacher_name4": "Xudoyqulova Nigina",
+    "teacher_field4": "Kimyo",
+    "teacher_name5":"Shaxriyev Husniddin",
+    "teacher_field5":"Kimyo",
+    "teacher_button":"Bizning o’qituvchilar",
+    "teacher_title":"Eng zo’rlardan o’rganing!",
+    "teacher_description":"Ko'p yillik tajribaga ega o'qituvchilar — imtihonga qanday tayyorlashni yaxshi bilishadi."
+
+    ,
+    "footer": {
+      "description": "O'zbekistondagi birinchi kimyo va biologiya fanlariga yo'naltirilgan onlayn platformasi",
+      "platform": "Platforma",
+      "contacts": "Bog'lanish",
+      "socials": "Ijtimoiy tarmoqlar",
+      "copyright": "Barcha huquqlar himoyalangan.",
+      "links": {
+        "courses": "Kurslar",
+        "pricing": "Tariflar va narxlar",
+        "certificate": "Milliy Sertifikat",
+        "questions": "Savollar"
       }
     }
   }

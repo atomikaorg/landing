@@ -26,7 +26,7 @@ const WhyAtomika = () => {
   ];
 
   return (
-    <div className="bg-[#0F0A1F] mt-[30px] md:mt-[100px] pb-[141px]">
+    <div className="bg-[#0F0A1F] mt-[30px] md:mt-[100px] pb-[30px] md:pb-[141px]">
       <motion.div
        ref={ref}
        initial="hidden"
