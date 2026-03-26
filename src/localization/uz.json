@@ -292,7 +292,47 @@
       "plan":"Tariflar va narxlar",
       "title":"O’zingiz uchun muvaffaqiyat yo’lini tanlang!",
       "description":"Ikkita moslashuvchan tariflar. 1, 3 va 6 oylik obunalar!"
+    }, 
+  "pricing": {
+    "currency": "so'm / oyiga",
+    "start_plan": {
+      "title": "Start",
+      "description": "Mustaqil ta’lim uchun",
+      "price": "300 000",
+      "button_text": "O'qishni boshlash",
+      "features": [
+        "Kimyo va biologiyadan video-darslar",
+        "Cheklovsiz darslarni ko'rish",
+        "Har bir dars/mavzu/moduldan keyin testlar",
+        "Har bir savol uchun video-tahlillar",
+        "Haftalik ochiq darslar va yozib olingan ochiq darslar kirish",
+        "24/7 ta'lim olish"
+      ],
+      "unavailable_features": [
+        "Kuratorlar nazorati",
+        "Mentorlar yordami",
+        "Sinov imtihonlari"
+      ]
     },
+    "standard_plan": {
+      "title": "Standart",
+      "badge": "⭐ Tavsiya etamiz!",
+      "description": "Mentorlar bilan to'liq tayyorgarlik",
+      "price": "600 000",
+      "button_text": "O'qishni boshlash",
+      "installment_info": "🏦 Uzum Nasiya / Alif Nasiya orqali bo’lib to’lash",
+      "features": [
+        "“Start” tarifidagi barcha imkoniyatlar",
+        "Individual mentorlar",
+        "Kuratorlar nazorati va yordami",
+        "DTM va Milliy sertifikat bo'yicha sinov imtihonlari",
+        "Interaktiv bilim mashqlari (trenajorlar)",
+        "ATOMS ballar va “Cashback”",
+        "Master-klasslar va podkastlar"
+      ]
+    }
+  },
+
         "footer": {
       "description": "O'zbekistondagi birinchi kimyo va biologiya fanlariga yo'naltirilgan onlayn platformasi",
       "platform": "Platforma",
