@@ -221,6 +221,32 @@
         ]
       }
     },
+    "process": {
+      "badge": "Ta'lim jarayoni",
+      "titlePrefix": "",
+      "titleHighlight": "atomika",
+      "titleSuffix": "da ta'lim qanday olib boriladi ?",
+      "description": "Kurs → Modul → Mavza → Dars.",
+      "description2":" Aniq tuzilma, tushunarli yo'l",
+      "cards": {
+        "watchLesson": {
+          "title": "1. Darslarni ko'rasiz",
+          "description": "Tajribali o'qituvchilardan video darslar — o'zingizga qulay vaqtda!"
+        },
+        "takeTests": {
+          "title": "2. Testlarni ishlaysiz",
+          "description": "Dars, mavzu va moduldan so'ng — mustahkamlash uchun testlar!"
+        },
+        "reviewMistakes": {
+          "title": "3. Xatolar ustida ishlaysiz",
+          "description": "Har bir savol uchun video-tahlillar va mentorlar bilan savol-javob!"
+        },
+        "mockExams": {
+          "title": "4. Sinov imtihonlari",
+          "description": "Sinov imtihonlari sizning haqiqiy tayyorgarlik darajangizni ko'rsatadi!"
+        }
+      }
+    },
     "teacher_name1": "Aytimbetova Gulayim",
     "teacher_field1": "Biologiya",
     "teacher_name2": "Xomidova Sayyora",
@@ -233,10 +259,41 @@
     "teacher_field5":"Kimyo",
     "teacher_button":"Bizning o’qituvchilar",
     "teacher_title":"Eng zo’rlardan o’rganing!",
-    "teacher_description":"Ko'p yillik tajribaga ega o'qituvchilar — imtihonga qanday tayyorlashni yaxshi bilishadi."
+    "teacher_description":"Ko'p yillik tajribaga ega o'qituvchilar — imtihonga qanday tayyorlashni yaxshi bilishadi.",
 
-    ,
-    "footer": {
+    "feedbacks":{
+      "button":"Mijozlarimiz fikrlari",
+      "title":"O'quvchilarimiz va ota-onalar biz haqimizda nima deyishadi?",
+      "description":"O'quvchilarimiz va ota-onalardan haqiqiy fikrlar!",
+      "videofeedback":" Video-fikrlar"
+    },
+     "ourcourses":{
+     "button":"Bizning kursimiz",
+      "title":"Bizning kursimizda nimalarni o’rganasiz?",
+      "description":"Ikki fan bo'yicha to'liq dastur.  Har bir modul — video darslar, testlar va video yechimlar.",    
+      "biology":"Biologiya",
+      "chemistry":"Kimyo",
+      "itemsbiology": {
+       "anatomy": "1. Anatomiya",
+        "botany": "2. Botanika",
+        "zoology": "3. Zoologiya",
+        "cytology": "4. Sitologiya",
+        "genetics": "5. Genetika",
+        "generalBiology": "6. Umumiy biologiya"
+         },
+      "itemschemistry": {
+        "general": "1. Umumiy kimyo",
+        "inorganic": "2. Anorganik kimyo",
+        "organic": "3. Organik kimyo"
+     }
+
+    },
+    "plans":{
+      "plan":"Tariflar va narxlar",
+      "title":"O’zingiz uchun muvaffaqiyat yo’lini tanlang!",
+      "description":"Ikkita moslashuvchan tariflar. 1, 3 va 6 oylik obunalar!"
+    },
+        "footer": {
       "description": "O'zbekistondagi birinchi kimyo va biologiya fanlariga yo'naltirilgan onlayn platformasi",
       "platform": "Platforma",
       "contacts": "Bog'lanish",

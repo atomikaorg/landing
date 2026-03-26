@@ -1,8 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Button from "../Button";
 
-function MobileCard({ children, className }) {
+function MobileCard({ children, className }:any) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
@@ -27,7 +28,7 @@ export default function Features() {
 
   const cardVariants = {
     hidden: { y: 80, opacity: 0 },
-    visible: (i) => ({
+    visible: (i:any) => ({
       y: 0,
       opacity: 1,
       transition: { duration: 0.7, delay: i * 0.12, ease: "easeOut" },
@@ -87,7 +88,7 @@ export default function Features() {
     },
   ];
 
-  const renderCardInner = (card) => (
+  const renderCardInner = (card:any) => (
     <>
       <div className={card.bgClass} />
       <h5 className={card.titleClass}>
@@ -100,13 +101,8 @@ export default function Features() {
   );
 
   return (
-    <div className="container mt-[61px] md:mt-[116px]" id="privileges">
-      {/* Header */}
-      <div className="flex items-center justify-center">
-        <button className="px-7 cursor-pointer text-[#787878] rounded-[14px] bg-white py-5 shadow-[0px_12px_42px_-4px_#18274B1F,0px_8px_18px_-6px_#18274B1F]">
-          {t("version2.features.badge")}
-        </button>
-      </div>
+    <div className="container mt-[61px] md:mt-[116px]">
+      <Button text={"version2.features.badge"}/>
 
       <h2 className="mt-[13px] md:mt-6 text-left mb-[10px] md:mb-5 font-semibold text-[48px] mx-auto max-md:text-[32px] max-md:leading-10 max-md:w-full">
         {t("version2.features.title")}{" "}

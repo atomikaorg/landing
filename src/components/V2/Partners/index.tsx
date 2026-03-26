@@ -4,6 +4,7 @@ import MINISTRY from "/ministry-logo.png?url";
 import { motion, useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
+import Button from "../Button";
 
 export default function Partners() {
   const {t}=useTranslation()
@@ -23,12 +24,7 @@ export default function Partners() {
       className="pt-[39px]"
     >
       <div className="container  mx-auto">
-
-      <div className="flex items-center justify-center">
-        <button className="cursor-pointer text-[#787878] rounded-[14px] bg-white py-5 px-[28px] shadow-[0px_12px_42px_-4px_#18274B1F,0px_8px_18px_-6px_#18274B1F]">
-        {t("version2.info.partners")}
-        </button>
-      </div>
+      <Button text={"version2.info.partners"}/>
 
       <div className="overflow-hidden mt-[30px] md:mt-[68px]">
         <div

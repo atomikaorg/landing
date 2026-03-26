@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import Button from "../Button";
 
 type Teacher = {
   name: string;
@@ -10,9 +11,8 @@ type Teacher = {
 
 export default function Teachers() {
   const { t } = useTranslation();
-  const titleRef = useRef(null);
-  const titleInView = useInView(titleRef, { once: true, margin: "-80px" });
-
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const teachers: Teacher[] = [
     {
       name: t("version2.teacher_name3"),
@@ -43,21 +43,20 @@ export default function Teachers() {
 
   return (
     <motion.section
-    ref={titleRef}
-        initial={{ y: 70, opacity: 0 }}
-        animate={titleInView ? { y: 0, opacity: 1 } : { y: 70, opacity: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+       ref={ref}
+       initial="hidden"
+       animate={isInView ? "visible" : "hidden"}
+       variants={{
+       hidden: { y: 100, opacity: 0 },
+       visible: { y: 0, opacity: 1 }
+       }}
+       transition={{ duration: 0.8, delay: 0.1 }}
       id="about_course"
-      className="pt-[60px] overflow-hidden pb-[40px] md:pt-[120px] md:pb-[90px] "
+      className="pt-[60px] overflow-hidden  md:pt-[120px] "
     >
       <div className="container relative" >
-                <div className="absolute top-[-100px] left-[-280px] hidden lg:block "><img src="/the.png" alt="" /></div>
-
-        <div className="flex items-center justify-center">
-          <button className="rounded-[14px] cursor-pointer bg-white px-7 py-5 text-[#787878] shadow-[0px_12px_42px_-4px_#18274B1F,0px_8px_18px_-6px_#18274B1F]">
-            {t("version2.teacher_button")}
-          </button>
-        </div>
+        <div className="absolute top-[-100px] left-[-280px] hidden lg:block "><img src="/the.png" alt="" /></div>
+        <Button text={"version2.teacher_button"}/>
 
         <div className="mx-auto mt-5">
           <h2 className="text-[32px] font-semibold leading-[1.1] text-[#111827] md:text-[48px] text-left">
@@ -69,7 +68,7 @@ export default function Teachers() {
         </div>
       </div>
 
-      <div className="mt-8 overflow-x-visible overflow-y-scroll pb-4 md:mt-12 no-scrollbar ">
+      <div className="mt-8 overflow-x-visible overflow-y-auto pb-20 md:pb-[50px] md:mt-12 no-scrollbar ">
         <div
           className="mx-auto flex w-max min-w-full snap-x snap-mandatory justify-start gap-[30px] md:gap-[50px] px-4 md:px-8 lg:justify-center xl:px-0   "
           style={{ msOverflowStyle: "none", scrollbarWidth: "none" }}
@@ -77,7 +76,7 @@ export default function Teachers() {
           {teachers.map((teacher, index) => (
             <article
               key={index}
-              className="group min-w-[270px] max-w-[270px] snap-start overflow-hidden rounded-[32px]  md:min-w-[280px] md:max-w-[280px]"
+              className="group min-w-[270px] max-w-[270px] snap-start overflow-hidden rounded-[32px] shadow-[0px_18px_50px_-16px_rgba(24,39,75,0.28)]  md:min-w-[280px] md:max-w-[280px]"
             >
               <div className="relative h-[360px] overflow-hidden bg-[#F3F4F6]  ">
                 <div className="absolute right-4 top-4 z-10 rounded-full bg-[linear-gradient(182.09deg,_#C38BFA_1.21%,_#A755F7_53.87%,_#8216EB_123.92%)] p-[16px] ">

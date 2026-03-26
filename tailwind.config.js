@@ -48,6 +48,9 @@ export default {
         "gray-text": "#787878",
         "gray-light": "#f3f3f3",
       },
+      backgroundImage: {
+        'brand-purple-gradient': 'linear-gradient(182.09deg, #C38BFA 1.21%, #A755F7 53.87%, #8216EB 123.92%)',
+      },
     },
   },
   plugins: [tailwindcssAnimate, require("tailwindcss-animate")],

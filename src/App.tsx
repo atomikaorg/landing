@@ -26,6 +26,10 @@ import Features from './components/V2/Features';
 import WhyAtomika from './components/V2/WhyAtomika';
 import Teachers from './components/V2/Teachers';
 import Footer from './components/V2/Footer';
+import Process from './components/V2/Process';
+import Feedbacks from './components/V2/Feedbacks';
+import OurCourses from './components/V2/OurCourses';
+import Plans from './components/V2/Plans';
 
 function App() {
   return (
@@ -65,6 +69,10 @@ function App() {
             <Features/>  
             <WhyAtomika/>
             <Teachers/>
+            <Feedbacks/>
+            <Process/>
+            <OurCourses/>
+            <Plans/>
             </main>
             <Footer/>
           </div>
