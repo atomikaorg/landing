@@ -140,7 +140,7 @@ export default function Plans() {
             <h2 className="text-[32px] font-semibold leading-[1.1] text-[#1F2138] md:text-[48px]">
               {t(`${plansRoot}.title`)}
             </h2>
-            <p className="mt-4 text-[15px] leading-6 text-[#7B8092] md:text-[22px] md:leading-8">
+            <p className="mt-4 hidden md:block text-[15px] leading-6 text-[#7B8092] md:text-[22px] md:leading-8">
               {t(`${plansRoot}.description`)}
             </p>
           </div>
@@ -169,6 +169,9 @@ export default function Plans() {
               highlighted
             />
           </div>
+          <p className="mt-4 block md:hidden text-[15px] leading-6 text-[#7B8092] md:text-[22px] md:leading-8">
+              {t(`${plansRoot}.description`)}
+            </p>
         </motion.div>
       </div>
     </section>

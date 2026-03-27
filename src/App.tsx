@@ -30,6 +30,9 @@ import Process from './components/V2/Process';
 import Feedbacks from './components/V2/Feedbacks';
 import OurCourses from './components/V2/OurCourses';
 import Plans from './components/V2/Plans';
+import NationalCert from './components/V2/NationalCert';
+import Ready from './components/V2/Ready';
+import FAQ from './components/V2/FAQ';
 
 function App() {
   return (
@@ -73,6 +76,9 @@ function App() {
             <Process/>
             <OurCourses/>
             <Plans/>
+            <NationalCert/>
+            <Ready/>
+            <FAQ/>
             </main>
             <Footer/>
           </div>

@@ -32,6 +32,9 @@ export default function Footer() {
               <a href="#" className="block transition-colors hover:text-white/80">
                 {t("version2.footer.links.questions")}
               </a>
+              <a href="https://admin.atomika.org/media/terms_and_conditions/atomika_Ommaviy_oferta_16_03_2026.pdf" className="block transition-colors hover:text-white/80">
+              {t("version2.footer.links.oferta")}
+              </a>
             </div>
           </div>
 

@@ -12,21 +12,23 @@
     "about_course_descr2": "Bularning barchasi bir joyda bo‘lishi siz uchun ideal kurs shu ekanligini bildiradi",
     "about_teachers": "O'qituvchilar haqida",
     "teacher_name1": "Aytimbetova Gulayim Duysenbayevna",
-    "teacher_desc1": "atomika platformasida oʻqituvchi",
+    "teacher_desc1": "Biolog Genetik Magistrant",
     "teacher_field1": "Biologiya",
     "teacher_exp1": "5+ yil",
     "teacher_name2": "Xomidova Sayyora Abduganiyevna",
-    "teacher_desc2": "atomika platformasida oʻqituvchi",
+    "teacher_desc2": "Biolog magistr Tadqiqotchi",
     "teacher_field2": "Biologiya",
-    "teacher_exp2": "5+ yil",
+    "teacher_exp2": "6+ yil",
     "teacher_name3": "Ortiqova Diyora Orifjon qizi",
-    "teacher_desc3": "atomika platformasida oʻqituvchi",
+    "teacher_desc3": "Kimyo va Biologiya Pedagogi",
     "teacher_field3": "Biologiya",
     "teacher_exp3": "5+ yil",
     "teacher_name4": "Xudoyqulova Nigina Nizomiddinovna",
-    "teacher_desc4": "atomika platformasida oʻqituvchi",
+    "teacher_desc4": "Biologiya pedagogi Xalqaro olimpiadalar g'olibi",
     "teacher_field4": "Kimyo",
     "teacher_exp4": "5+ yil",
+    "teacher_desc5":"Bilogiya va Kimyo pedagog o'qituvchisi",
+    "teacher_exp5":"11+ yil",
     "author_descr": "Автор более 20 книг по Химии, автор школьних книг по Химии, Профессор наук по Химии, автор тестов DTM",
     "why_atomika": "Nega atomika boshqa kurslardan yaxshiroq?",
     "original_course": "Tajribali o'qituvchilar",
@@ -152,9 +154,9 @@
       "startEducation": "O'qishni boshlash"
     },
     "info": {
-      "titlePrefix": "Kimyo va biologiya imtihonlariga",
-      "titleHighlight": "onlayn tayyorlaning",
-      "titleSuffix": "va repetitorsiz o'qing",
+      "titlePrefix": "", 
+      "titleHighlight": "Kimyo va biologiya",
+      "titleSuffix": "imtihonlariga onlayn tayyorlaning va repetitorsiz o'qing",
       "description": "O'z tezligingizda, jadvalsiz, mentor va kurator yordamida samarali va oson o'rganing. Darslarni keraklicha qayta ko'rib chiqing.",
       "startEducation": "O'qishni boshlash",
       "tryFree": "Bepul sinab ko'rish",
@@ -265,7 +267,34 @@
       "button":"Mijozlarimiz fikrlari",
       "title":"O'quvchilarimiz va ota-onalar biz haqimizda nima deyishadi?",
       "description":"O'quvchilarimiz va ota-onalardan haqiqiy fikrlar!",
-      "videofeedback":" Video-fikrlar"
+      "videofeedback":" Video-fikrlar",
+      "userfeedbacks": [
+  {
+    "id": 1,
+    "userName": "Madina Ibragimova (ota-ona)",
+    "feedback": "Атомика зур дарсларни тушунарли килиб утадилар мени кизим химия фани тушунмасди атомикага катта рахмат илохим грант асосида укишга кириш насиб килсин хар бир ота она фарзандини укимишли энг касб эгаси булишини истайди ишларингизни ривожини барсин оллохим"
+  },
+  {
+    "id": 2,
+    "userName": "Ahmed Muhammedov (o'quvchi)",
+    "feedback": "Platforma haqida fikrm Juda zor ichidagi mavzulari tushunarli boshqa joylarda shuncha oqb tushunmagan mazularmni bu platforma bilan Tez tushunaman. Otilgan darsdan keyingi testlari Juda yoqadi. Man ozim xorazmdan turb onlayn. Tayorlanyabman Atomika 🔥🔥"
+  },
+  {
+    "id": 3,
+    "userName": "Shahruza Rustamova (o'quvchi)",
+    "feedback": "Дахщат Кийини темаларни осон усулда чунтирвотти 🥰"
+  },
+  {
+  "id": 5,
+  "userName": "Behruz Alimbayev (o'quvchi)",
+  "feedback": "Atomika — ajoyib platforma, barcha kerakli ma'lumotlarni topsa bo'ladi. Hozirda platformada Milliy sertifikat va DTM savollari chiqishini intiqlik bilan kutyapman. Nasib bo'lsa, Atomika bilan hali katta yutuqlarga erishaman. Katta rahmat!"
+ },
+  {
+  "id": 6,
+  "userName": "Zilola Mamasolieva (o'quvchi)",
+  "feedback": "Assalomu alaykum! Menga platforma juda yoqdi. Uydan chiqmagan holda kimyo va biologiya fanlarini chuqur o'rganib bormoqdaman. Beminnat yordamingiz uchun katta tashakkur!"
+}
+]
     },
      "ourcourses":{
      "button":"Bizning kursimiz",
@@ -331,9 +360,85 @@
         "Master-klasslar va podkastlar"
       ]
     }
-  },
+   },
+  "NationalCert":{
+    "nattitle":"🏆 Milliy sertifikat bo’yicha maxsus kurs",
+   "title_gold": "Milliy Sertifikat",
+    "title": "imtihonidan А+ oling!",
+    "description":"Kimyo yoki biologiya bo'yicha Milliy sertifikatni topshirish uchun 3 oylik intensiv kurs. Haqiqiy savollar, o'qituvchi bilan guruhli tahlillar, individual qo'llab-quvvatlash.",
+     "features":[
+      "3 oy intensiv tayyorlanish",
+      "Haftada bir marta 3 soatlik guruhda jonli darslar",
+      "12 ta HAQIQIY sinov imtihoni",
+      "100+ o’quvchlarimiz Milliy Sertifikat imtihonlarini topshirishdi",
+      "Abituriyentlar, o’quvchilar va o’qituvchilar uchun",
+      "Uzum Nasiya / Alif Nasiya orqali bo’lib to’lash imkoniyati"
+     ],
+      "button1":"Kurs haqida batafsil →",
+      "button2":"Sinov darslarni ko’rish",
+      "cards": [
+    {
+      "id": 1,
+      "icon": "/book-open.png",
+      "title": "Haqiqiy savollar",
+      "description": "O’tgan imtihonlardan haqiqiy savollar tahlili"
+    },
+    {
+      "id": 2,
+      "icon": "/user-check.png",
+      "title": "O’qituchilar bilan jonli darslar",
+      "description": "3 soatli jonli darslar va testlar tahlili"
+    },
+    {
+      "id": 3,
+      "icon": "/bolt.png",
+      "title": "Sinov imtihonlari",
+      "description": "Bilim darajasini sinash uchun haqiqiy sinov imtihonlari"
+    }
+    ],
+    "price":"400 000 so’m/oyiga",
+    "pricetitle":"Uzum Nasiya и Alif Nasiya orqali bo’lib to’lash imkoniyati"
+   },
+    "Ready":{
+    "title":"Tayyormisiz?",
+    "description":"Bepul sinab ko’ring! Birinchi darslar — mutlaqo bepul!",
+    "button":"Bepul sinab ko’rish!"    
+   },
+   "Faq":{
+    "title":"Ko‘p beriladigan savollar",
+    "items":{
+      "howSubscriptionWorks":{
+        "question":"Obuna qanday ishlaydi?",
+        "answer":"Obuna aktiv vaqtida cheklovsiz darslarni ko‘rish imkoniyatiga egasiz. Obuna tugaganidan so‘ng, darslarga kirish cheklanadi, lekin progress saqlanadi. Yana obuna aktivlashganida, to‘xtagan joydan boshlab ketishingiz mumkin."
+      },
+      "isInstallmentAvailable":{
+        "question":"Bo‘lib to‘lash imkoniyati bormi?",
+        "answer":" Ha! Biz Uzum Nasiya va Alif Nasiya bilan ishlaymiz. Qulay va hamyonbop."
+      },
+      "differenceBetweenPlans":{
+        "question":"Start va Standart tariflarining asosiy farqi nimada?",
+        "answer":" Start — mustaqil o'rganish uchun tarif: darslar, testlar, video yechimlar. Standart — to'liq qo'llab-quvvatlash: ustoz, kurator, sinov imtihonlari va bilim mashqlari."
+      },
+      "dailyLessonCount":{
+        "question":"Bir kunda nechta darsni o‘zlashtirish mumkin?",
+        "answer":". Darslar soni cheklanmagan! Xohlang 1 ta, xohlang 100 ta."
+      },
+      "lessonLanguage":{
+        "question":"Darslar qaysi tilda olib boriladi?",
+        "answer":"O'zbek va rus tillarida mavjud. Siz o'qitish tilini istalgan vaqtda platforma sozlamalari orqali o'zgartirishingiz mumkin."
+      },
+      "differenceFromMainCourse":{
+        "question":"Milliy Sertifikat kursi asosiy kursdan qanday farq qiladi?",
+        "answer":" Milliy sertifikat kursi — aynan shu imtihonga qaratilgan 3 oylik intensiv kurs. O'qituvchi bilan guruh mashg'ulotlari, haqiqiy testlar bilan olib boriladi. Asosiy kurs — noldan o'rganish uchun mo’ljallangan!"
+      },
+      "dontlearnmychild":{
+        "question":"Farzandim o’qishni tashlab qo’ysachi?",
+        "ansver":" Standart tarifida farzandingiz kuratori barcha jarayonni kuzatib boradi. Ular farzandingiz eslatadi, rag'batlantiradi va tashlab qo’yishiga yo’l qo’ymaydi. Bu shaxsiy murabbiyga ega bo'lishga o'xshaydi, lekin o'rganish uchun."
+      }
+    }
+   },
 
-        "footer": {
+    "footer": {
       "description": "O'zbekistondagi birinchi kimyo va biologiya fanlariga yo'naltirilgan onlayn platformasi",
       "platform": "Platforma",
       "contacts": "Bog'lanish",
@@ -343,7 +448,8 @@
         "courses": "Kurslar",
         "pricing": "Tariflar va narxlar",
         "certificate": "Milliy Sertifikat",
-        "questions": "Savollar"
+        "questions": "Savollar",
+        "oferta":"Shartlar va siyosat"
       }
     }
   }

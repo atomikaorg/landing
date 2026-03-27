@@ -50,6 +50,7 @@ export default {
       },
       backgroundImage: {
         'brand-purple-gradient': 'linear-gradient(182.09deg, #C38BFA 1.21%, #A755F7 53.87%, #8216EB 123.92%)',
+        'gold-gradient': 'linear-gradient(98.37deg, #D4A017 0%, #F5D060 100%)',
       },
     },
   },

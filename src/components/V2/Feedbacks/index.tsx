@@ -1,82 +1,115 @@
-import { useTranslation } from "react-i18next"
-import Button from "../Button"
-import {motion, useInView} from "framer-motion"
 import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import Button from "../Button";
+
+type FeedbackItem = {
+  id?: number | string;
+  userName?: string;
+  username?: string;
+  feedback?: string;
+};
+
 export default function Feedbacks() {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
-    const {t}=useTranslation()
-    const links=[
-        {
-          src:"https://www.youtube.com/embed/Mqzw_NY6G7A"
-        },
-          {
-          src:"https://www.youtube.com/embed/IcCoCf42s98"
-        },
-          {
-          src:"https://www.youtube.com/embed/GCXMOW2ECxk"
-        },
-          {
-          src:"https://www.youtube.com/embed/kZv0O3OJytg"
-        },
-          {
-          src:"https://www.youtube.com/embed/il7AWXvf-4w"
-        },
-          {
-          src:"https://www.youtube.com/embed/PyY7QTY2SL8"
-        },
-    ]
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const cardref = useRef(null);
+  const cardisInView = useInView(ref, { once: true });
+  const { t } = useTranslation();
+
+  const videoLinks = [
+    { src: "https://www.youtube.com/embed/Mqzw_NY6G7A" },
+    { src: "https://www.youtube.com/embed/IcCoCf42s98" },
+    { src: "https://www.youtube.com/embed/GCXMOW2ECxk" },
+    { src: "https://www.youtube.com/embed/kZv0O3OJytg" },
+    { src: "https://www.youtube.com/embed/il7AWXvf-4w" },
+    { src: "https://www.youtube.com/embed/PyY7QTY2SL8" },
+  ];
+
+  const feedbacks =
+    (t("version2.feedbacks.userfeedbacks", {
+      returnObjects: true,
+    }) as FeedbackItem[]) || [];
 
   return (
-    <div id="privileges" className="md:pt-[150px]">
-        <div className="container relative">
-            <div className="hidden lg:block absolute right-[-200px] top-[-80px]"><img src="/message.png" alt="" /></div>
-            <Button text={"version2.feedbacks.button"}/>
-            <h2 className="text-[#1A1A2E] text-[32px] md:text-[48px] font-medium mt-10 mb-5 text-center">{t("version2.feedbacks.title")}</h2>
-            <p className="text-[#6B7280] text-[15px] md:text-[24px] text-center ">{t("version2.feedbacks.description")}</p>
-
+    <section id="privileges" className="md:pt-[150px] pt-[80px]">
+      <div className="container relative">
+        <div className="absolute right-[-200px] top-[-80px] hidden lg:block">
+          <img src="/message.png" alt="" />
         </div>
-      <div className="flex items-center gap-5">
 
-        {/* <div className="p-7 bg-[#FFFFFF] rounded-[40px]">
-            <img src="/stars.png" alt="" />
-            <p>«Дочка готовится к поступлению в медвуз. Раньше ходила к репетитору за 1.5 млн, теперь учится на Atomika. Результаты даже лучше стали!»</p>
+        <Button text={"version2.feedbacks.button"} />
+        <h2 className="mt-10 mb-5 text-center text-[32px] font-medium text-[#1A1A2E] md:text-[48px]">
+          {t("version2.feedbacks.title")}
+        </h2>
+        <p className="text-center text-[15px] text-[#6B7280] md:text-[24px]">
+          {t("version2.feedbacks.description")}
+        </p>
 
-            <p>Нилуфар Р.</p>
-            <p>Мама ученицы</p>
-        </div> */}
+      </div>
+       <motion.div
+             ref={cardref}
+        initial="hidden"
+        animate={cardisInView ? "visible" : "hidden"}
+        variants={{
+          hidden: { y: 100, opacity: 0 },
+          visible: { y: 0, opacity: 1 },
+        }}
+        transition={{ duration: 0.8, delay: 0.1 }}
       
-       </div>
-        
-        <motion.div 
-        
-             ref={ref}
-       initial="hidden"
-       animate={isInView ? "visible" : "hidden"}
-       variants={{
-       hidden: { y: 100, opacity: 0 },
-       visible: { y: 0, opacity: 1 }
-       }}
-       transition={{ duration: 0.8, delay: 0.1 }}>
-
-        <div className="container mt-[40px]">
-            <h2 className="text-[#1A1A2E] text-[32px] mb-[10px] md:mb-5 text-center">🎥{t("version2.feedbacks.videofeedback")}</h2>
-            <p className="text-[#6B7280] text-[24px] text-center">{t("version2.feedbacks.description")}</p>
-        </div>
-            <div className="flex items-center gap-[30px] md:gap-[50px] justify-between px-4 md:px-20 overflow-scroll no-scrollbar mt-[30px] md:mt-[40px] ">
-                {links.map(({src})=>{
-                  return ( 
-                    <iframe
-                    key={src}
-                      src={src}
-                      title="YouTube video"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="rounded-[30px] w-[300px] md:w-[400px] h-[500px] md:h-[650px]">
-                    </iframe>
-                )})}
-            </div>
-        </motion.div>
+       className="mt-[30px] flex items-stretch px-5 md:px-10  overflow-x-scroll no-scrollbar gap-5 md:mt-[50px] pb-[40px] md:pb-[80px]">
+     {feedbacks.map((item, index) => (
+    <div
+      key={item.id ?? index}
+      className="flex flex-col rounded-[32px] min-w-[300px] bg-white p-7 shadow-[0px_4px_24px_0px_#7C3AED14]"
+    >
+      <img src="/stars.png" alt="stars" className="mb-5 h-4 w-[100px]" />
+      
+      <p className="flex-1 text-[15px] leading-7 text-[#4B5563] md:text-[17px]">
+        {item.feedback}
+      </p>
+      
+      <div className="mt-6 border-t border-[#EEEAF8] pt-5">
+        <p className="text-[17px] font-semibold text-[#1A1A2E]">
+          {item.userName || item.username}
+        </p>
+      </div>
     </div>
-  )
+  ))}
+</motion.div>
+
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={{
+          hidden: { y: 100, opacity: 0 },
+          visible: { y: 0, opacity: 1 },
+        }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+      >
+        <div className="container">
+          <h2 className="mb-[10px] text-center text-[32px] text-[#1A1A2E] md:mb-5">
+            {`🎥 ${t("version2.feedbacks.videofeedback")}`}
+          </h2>
+          <p className="text-center text-[15px] text-[#6B7280] md:text-[24px]">
+            {t("version2.feedbacks.description")}
+          </p>
+        </div>
+
+        <div className="mt-[30px] flex items-center justify-between gap-[30px] overflow-scroll px-4 no-scrollbar md:mt-[40px] md:gap-[50px] md:px-20">
+          {videoLinks.map(({ src }) => (
+            <iframe
+              key={src}
+              src={src}
+              title="YouTube video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="h-[500px] w-[300px] rounded-[30px] md:h-[650px] md:w-[400px]"
+            />
+          ))}
+        </div>
+      </motion.div>
+    </section>
+  );
 }

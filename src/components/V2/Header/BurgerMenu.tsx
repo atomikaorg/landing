@@ -13,7 +13,7 @@ export default function BurgerMenu(): JSX.Element {
     { href: "#about_course", label: t("version2.header.nav.teachers") },
     { href: "#privileges", label: t("version2.header.nav.reviews") },
     { href: "#about_platform", label: t("version2.header.nav.tariffs") },
-    { href: "#pricing", label: t("version2.header.nav.certificate") },
+    { href: "#nat_cert", label: t("version2.header.nav.certificate") },
     { href: "#contacts", label: t("version2.header.nav.contacts") },
   ];
 

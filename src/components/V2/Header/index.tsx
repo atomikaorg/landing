@@ -9,6 +9,7 @@ import clsx from "clsx";
 import { ReactNode, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import BurgerMenu from "./BurgerMenu";
+import { Link } from "react-router-dom";
 
 const langsFlags: Record<string, ReactNode> = {
   ru: <RuIcon className="w-full" />,
@@ -29,7 +30,7 @@ export default function Header() {
     { href: "#privileges", label: t("version2.header.nav.reviews") },
     { href: "#about_platform", label: t("version2.header.nav.tariffs") },
     {
-      href: "#pricing",
+      href: "#nat_cert",
       label: t("version2.header.nav.certificate"),
       className:
         "bg-[#FFF7CA] px-[18px] py-[5.5px] rounded-full font-medium text-[#1A1A2E] hidden lg:block",
@@ -50,7 +51,7 @@ export default function Header() {
   );
 
   return (
-    <header className="bg-[#FFFEF7] py-4 lg:py-6 fixed w-full z-999" >
+    <header className="bg-[#FFFEF7] py-4 lg:py-6 fixed left-0 right-0 w-full z-999" >
       <div className="container">
         <div className="flex items-center justify-between gap-0 ">
           <a href="/" aria-label="Atomika home">
@@ -75,7 +76,7 @@ export default function Header() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
                   align="start"
-                  className="w-[220px] rounded-3xl border-none bg-white p-2 shadow-xl"
+                  className="w-[220px] rounded-3xl border-none bg-white p-2 shadow-xl mt-5"
                 >
                   <div className="grid gap-1">
                     {Object.entries(langs).map(([lang, label]) => (
@@ -117,18 +118,18 @@ export default function Header() {
               </div>
             </div>
 
-            <Button className="px-7 py-3 font-bold text-[15px] rounded-full text-white bg-gradient-to-b from-[#C38BFA] via-[#A755F7] to-[#8216EB] lg:bg-none lg:bg-[#FFFEF7] lg:text-[#1A1A2E] hover:bg-transparent">
+            <Link to={"https://atomika.org/session/signin"} className="px-7 py-3 font-bold text-[15px] rounded-full text-white bg-gradient-to-b from-[#C38BFA] via-[#A755F7] to-[#8216EB] lg:bg-none lg:bg-[#FFFEF7] lg:text-[#1A1A2E] hover:bg-transparent">
               {t("version2.header.login")}
-            </Button>
-            <Button
-              className="rounded-full px-7 py-2 font-bold text-[15px] cursor-pointer hidden lg:block"
+            </Link>
+            <Link to={"https://atomika.org/session/signup"}
+              className="rounded-full px-7 py-2 font-bold text-[15px] cursor-pointer hidden lg:block text-white"
               style={{
                 background:
                   "linear-gradient(182.09deg, #C38BFA 1.21%, #A755F7 53.87%, #8216EB 123.92%)",
               }}
             >
               {t("version2.header.startEducation")}
-            </Button>
+            </Link>
             <BurgerMenu />
           </div>
         </div>

@@ -30,9 +30,7 @@ const courseCards = [
 const CourseCard = ({ card, index }:any) => {
   const { t } = useTranslation();
   const cardRef = useRef(null);
-  // amount: 0.2 - cardning 20% qismi ko'ringanda animatsiya boshlanadi
   const isCardInView = useInView(cardRef, { once: true, amount: 0.2 });
-
   const items = Object.values(
     t(card.itemsKey, { returnObjects: true }) as Record<string, string>
   );
