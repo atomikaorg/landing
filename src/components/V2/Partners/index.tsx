@@ -21,9 +21,9 @@ export default function Partners() {
     visible: { y: 0, opacity: 1 }
   }}
   transition={{ duration: 0.8, delay: 0.1 }}
-      className="pt-[39px]"
+      className="pt-[39px] pb-20"
     >
-      <div className="container  mx-auto">
+      <div className="w-full md:mx-auto md:max-w-[90%] lg:max-w-[840px] xl:max-w-[1000px] 2xl:max-w-[1280px]">
       <Button text={"version2.info.partners"}/>
 
       <div className="overflow-hidden mt-[30px] md:mt-[68px]">

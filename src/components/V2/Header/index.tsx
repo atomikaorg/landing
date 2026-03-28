@@ -51,7 +51,7 @@ export default function Header() {
   );
 
   return (
-    <header className="bg-[#FFFEF7] py-4 lg:py-6 fixed left-0 right-0 w-full z-999" >
+    <header className="fixed left-0 right-0 z-999 w-full border-b border-[#F2F2F2] bg-[#FFFEF7] py-4 backdrop-blur-lg supports-[backdrop-filter]:bg-[#FFFEF7]/70 lg:py-6" >
       <div className="container">
         <div className="flex items-center justify-between gap-0 ">
           <a href="/" aria-label="Atomika home">

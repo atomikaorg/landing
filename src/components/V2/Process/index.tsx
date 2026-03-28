@@ -27,7 +27,7 @@ const ProcessCard = ({ card, index, t }:any) => {
           transition: { duration: 0.6, delay: index * 0.1 }
         }
       }}
-      className="relative overflow-hidden rounded-[28px] bg-white p-[30px] md:p-10 shadow-[0px_18px_50px_-16px_rgba(24,39,75,0.28)]"
+      className="relative h-[250px] overflow-hidden  rounded-[28px] bg-white p-[30px] shadow-[0px_18px_50px_-16px_rgba(24,39,75,0.28)] md:h-[320px] md:p-10"
     >
       <img
         src={card.image}
@@ -42,11 +42,11 @@ const ProcessCard = ({ card, index, t }:any) => {
         className={`block md:hidden pointer-events-none absolute ${card.imageClass}`}
       />
 
-      <div className="relative z-10 flex h-full flex-col">
-        <h3 className="md:max-w-[190px] max-w-full text-[24px] md:text-[28px] font-semibold leading-[1.15] text-[#1F2138] mb-[19px] md:mb-[70px]">
+      <div className="relative z-10 flex h-full flex-col justify-between gap-4 md:gap-6">
+        <h3 className="max-w-full font-gilroy text-[24px] font-semibold leading-[1.15] text-[#1F2138] md:max-w-[190px] md:text-[28px]">
           {t(`version2.process.cards.${card.id}.title`)}
         </h3>
-        <p className="text-[15px] md:text-[22px] font-medium leading-6 text-[#7B8092]">
+        <p className="text-[15px] font-sfpro md:text-[22px] font-medium leading-6 text-[#7B8092]">
           {t(`version2.process.cards.${card.id}.description`)}
         </p>
       </div>
@@ -60,7 +60,7 @@ export default function Process() {
   const isSectionInView = useInView(sectionRef, { once: true, margin: "-50px" });
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden pb-[56px] pt-[30px] md:pt-[146px] md:py-[92px]">
+    <section ref={sectionRef} className="relative overflow-hidden pt-[30px]  md:pt-[146px]">
       <div className="container relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -77,7 +77,7 @@ export default function Process() {
           <div className="mx-auto">
             <Button text={"version2.process.badge"}/>
 
-            <h2 className="mx-auto mt-5 text-left text-[32px] font-semibold leading-[1.15] text-[#1F2138] md:text-[48px]">
+            <h2 className="font-gilroy mx-auto mt-5 text-left text-[32px] font-semibold leading-[1.15] text-[#1F2138] md:text-[48px]">
               {t("version2.process.titlePrefix")}{" "}
               <span className="bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] bg-clip-text text-transparent">
                 {t("version2.process.titleHighlight")}
@@ -92,9 +92,19 @@ export default function Process() {
         </motion.div>
       </div>
 
-      <div className="mt-8 px-4 md:px-10 grid gap-5 md:mt-10 md:grid-cols-2 xl:grid-cols-4">
+      <div className="container mt-8 flex flex-col gap-5 pb-12 md:hidden">
         {cards.map((card, index) => (
-          <ProcessCard key={card.id} card={card} index={index} t={t} />
+          <div key={card.id} className="w-full">
+            <ProcessCard card={card} index={index} t={t} />
+          </div>
+        ))}
+      </div>
+
+      <div className="content-rail hidden gap-5 overflow-x-auto pb-20 no-scrollbar md:mt-10 md:flex md:gap-6">
+        {cards.map((card, index) => (
+          <div key={card.id} className="shrink-0 md:min-w-[380px] md:max-w-[380px] xl:min-w-[420px] xl:max-w-[420px]">
+            <ProcessCard card={card} index={index} t={t} />
+          </div>
         ))}
       </div>
     </section>

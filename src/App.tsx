@@ -20,7 +20,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import Team from './components/Team';
 
 import Header from './components/V2/Header';
-import Info from './components/V2/Info/Index';
+import Info from './components/V2/Info/';
 import Partners from './components/V2/Partners';
 import Features from './components/V2/Features';
 import WhyAtomika from './components/V2/WhyAtomika';
@@ -33,6 +33,7 @@ import Plans from './components/V2/Plans';
 import NationalCert from './components/V2/NationalCert';
 import Ready from './components/V2/Ready';
 import FAQ from './components/V2/FAQ';
+import StudentsResult from './components/V2/StudentsResult';
 
 function App() {
   return (
@@ -68,17 +69,18 @@ function App() {
             <Header/>
             <main className='bg-[#F9FAFB]'>
             <Info/>
-            <Partners/>
             <Features/>  
             <WhyAtomika/>
             <Teachers/>
             <Feedbacks/>
+            <StudentsResult/>
             <Process/>
             <OurCourses/>
             <Plans/>
             <NationalCert/>
             <Ready/>
             <FAQ/>
+            <Partners/>
             </main>
             <Footer/>
           </div>
