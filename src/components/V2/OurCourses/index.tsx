@@ -58,7 +58,7 @@ const CourseCard = ({ card, index }:any) => {
       />
 
       <div className="relative z-10">
-        <h3 className={`mb-6 text-[34px] font-semibold md:mb-8 md:text-[54px] ${card.textClass}`}>
+        <h3 className={`mb-6 text-[34px] font-semibold md:mb-8 md:text-[54px] font-sfpro ${card.textClass}`}>
           {t(card.titleKey)}
         </h3>
       </div>
@@ -70,7 +70,7 @@ const CourseCard = ({ card, index }:any) => {
             initial={{ opacity: 0, x: -20 }}
             animate={isCardInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: (index * 0.2) + (idx * 0.1) }}
-            className={`max-w-[303px] w-full rounded-full px-5 py-3 text-[16px] font-medium md:px-[30px] md:py-[15px] md:text-[24px] shadow-sm ${card.itemClass}`}
+            className={`max-w-[354px] w-full rounded-full px-5 py-3 text-[16px] font-medium md:px-[30px] md:py-[15px] md:text-[24px] font-sfpro shadow-sm ${card.itemClass}`}
           >
             {item}
           </motion.p>
@@ -88,7 +88,6 @@ export default function OurCourses() {
   return (
     <section className="py-[56px] md:py-[90px] overflow-hidden">
       <div className="container relative">
-        {/* Sarlavha qismi */}
         <motion.div
           ref={headerRef}
           initial="hidden"
@@ -105,7 +104,7 @@ export default function OurCourses() {
 
           <Button text="version2.ourcourses.button" />
 
-          <h2 className="mt-[30px] text-left text-[32px] font-semibold text-[#1A1A2E] md:mt-10 md:text-[44px]">
+          <h2 className="mt-[30px] text-left text-[32px] font-bold font-gilroy text-[#1A1A2E] md:mt-10 md:text-[44px]">
             {t("version2.ourcourses.title")}
           </h2>
 
@@ -114,7 +113,6 @@ export default function OurCourses() {
           </p>
         </motion.div>
 
-        {/* Cardlar qismi */}
         <div className="grid gap-5 lg:grid-cols-2">
           {courseCards.map((card, index) => (
             <CourseCard key={card.id} card={card} index={index} />

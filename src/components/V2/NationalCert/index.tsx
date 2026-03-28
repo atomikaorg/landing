@@ -28,7 +28,7 @@ export default function NationalCert() {
         className="container flex items-center justify-between py-[100px]">
             <div className="max-w-[655px]">
                 <p className="text-[#F5D060] text-[14px] bg-[#3F2E09] border border-[#D4A0174D] py-2 px-[18px] rounded-[50px] w-fit mb-6">{t("version2.NationalCert.nattitle")}</p>
-               <h2 className="text-[#FFFFFF] text-[32px] md:text-[48px] font-bold leading-[1.2] mb-6">
+               <h2 className="font-gilroy text-[#FFFFFF] text-[32px] md:text-[48px] font-bold leading-[1.2] mb-6">
                  {i18n.language === 'uz' ? (
                    <>
                      <span className="bg-[linear-gradient(104.61deg,_#D4A017_0%,_#F5D060_100%)] bg-clip-text text-transparent">
@@ -49,7 +49,7 @@ export default function NationalCert() {
             {Array.isArray(features) && features.map((item, index) => (
               <div key={index} className="flex items-center gap-4 text-[#FFFFFFCC] text-[16px]">
                 <img src="/check.svg" className="w-5 h-5" alt="check" />
-                <p>{item}</p>
+                <p className="font-outfit text-[#FFFFFFCC] text-[15px]">{item}</p>
               </div>
             ))}
           </div>
@@ -75,10 +75,10 @@ export default function NationalCert() {
                     </div>
           
                     <div>
-                      <p className="text-[#FFFFFF] font-bold text-[18px]">
+                      <p className="text-[#FFFFFF]  text-[18px] font-outfit font-bold">
                         {card.title}
                       </p>
-                      <p className="text-[#FFFFFF80] text-[13px] mt-1">
+                      <p className="text-[#FFFFFF80] text-[13px] mt-1 font-outfit">
                         {card.description}
                       </p>
                     </div>
@@ -86,7 +86,7 @@ export default function NationalCert() {
                 ))}
               </div>
                 <div className="mt-4 border border-[#D4A01740] bg-[#D4A01714] py-5 px-10 rounded-[30px]">
-                    <h3 className="bg-[linear-gradient(96.5deg,_#D4A017_0%,_#F5D060_100%)] bg-clip-text text-transparent text-[28px]">{t("version2.NationalCert.price")}</h3>
+                    <h3 className="bg-[linear-gradient(96.5deg,_#D4A017_0%,_#F5D060_100%)] bg-clip-text text-transparent text-[28px] font-delagothic">{t("version2.NationalCert.price")}</h3>
                    <p className="text-[#FFFFFF80] text-[15px]">{t("version2.NationalCert.pricetitle")}</p>
                 </div>
             </div>

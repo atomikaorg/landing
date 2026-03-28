@@ -20,3 +20,137 @@
   -ms-overflow-style: none; 
   scrollbar-width: none;     
 }
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/outfit-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* outfit-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/outfit-v15-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* Gilroy 400 */
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Gilroy-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Gilroy-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Gilroy-Bold.woff') format('woff');
+}
+
+/* @font-face {
+  font-family:Gilroy;
+  font-weight:700;
+  src: url('/src/assets/fonts/Gilroy-ExtraBold.woff') format('woff');  
+  font-style:normal;
+} */
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Gilroy-Heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('./assets/fonts/SFPRODISPLAYREGULAR.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('./assets/fonts/SFPRODISPLAYMEDIUM.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('./assets/fonts/SFPRODISPLAYBOLD.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dela Gothic One';
+  src: url('./assets/fonts/DelaGothicOne-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-delagothic {
+  font-family: 'Dela Gothic One', sans-serif;
+}
+
+.feedbacks-rail {
+  padding-left: 5%;
+  padding-right: 20px;
+}
+
+.content-rail {
+  padding-left: 5%;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .feedbacks-rail {
+    padding-left: calc((100vw - 840px) / 2);
+    padding-right: 40px;
+  }
+
+  .content-rail {
+    padding-left: calc((100vw - 840px) / 2);
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .feedbacks-rail {
+    padding-left: calc((100vw - 1000px) / 2);
+  }
+
+  .content-rail {
+    padding-left: calc((100vw - 1000px) / 2);
+  }
+}
+
+@media (min-width: 1280px) {
+  .feedbacks-rail {
+    padding-left: calc((100vw - 1280px) / 2);
+  }
+
+  .content-rail {
+    padding-left: calc((100vw - 1280px) / 2);
+  }
+}

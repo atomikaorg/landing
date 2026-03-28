@@ -12,22 +12,22 @@
     "about_course_descr2": "Bularning barchasi bir joyda bo‘lishi siz uchun ideal kurs shu ekanligini bildiradi",
     "about_teachers": "O'qituvchilar haqida",
     "teacher_name1": "Aytimbetova Gulayim Duysenbayevna",
-    "teacher_desc1": "Biolog Genetik Magistrant",
+    "teacher_desc1": "Biolog-genetik, magistrant. Genetik tahlil va molekulyar biologiya mutaxassisi.",
     "teacher_field1": "Biologiya",
     "teacher_exp1": "5+ yil",
     "teacher_name2": "Xomidova Sayyora Abduganiyevna",
-    "teacher_desc2": "Biolog magistr Tadqiqotchi",
+    "teacher_desc2": "Biologiya fanlari magistri, tadqiqotchi. Akademik tadqiqotlar va fundamental biologiya eksperti.",
     "teacher_field2": "Biologiya",
     "teacher_exp2": "6+ yil",
     "teacher_name3": "Ortiqova Diyora Orifjon qizi",
-    "teacher_desc3": "Kimyo va Biologiya Pedagogi",
+    "teacher_desc3": "Kimyo va biologiya o'qituvchisi. Tabiiy fanlar bo'yicha pedagogik texnologiyalar mutaxassisi.",
     "teacher_field3": "Biologiya",
     "teacher_exp3": "5+ yil",
     "teacher_name4": "Xudoyqulova Nigina Nizomiddinovna",
-    "teacher_desc4": "Biologiya pedagogi Xalqaro olimpiadalar g'olibi",
+    "teacher_desc4": "Biologiya pedagogi, xalqaro olimpiadalar g'olibi. Yuqori darajadagi olimpiadalar metodikasi ustasi.",
     "teacher_field4": "Kimyo",
     "teacher_exp4": "5+ yil",
-    "teacher_desc5":"Bilogiya va Kimyo pedagog o'qituvchisi",
+    "teacher_desc5": "Kimyo va biologiya fanlari bo'yicha 11 yillik tajribaga ega oliy toifali pedagog-ekspert",
     "teacher_exp5":"11+ yil",
     "author_descr": "Автор более 20 книг по Химии, автор школьних книг по Химии, Профессор наук по Химии, автор тестов DTM",
     "why_atomika": "Nega atomika boshqa kurslardan yaxshiroq?",
@@ -155,11 +155,11 @@
     },
     "info": {
       "titlePrefix": "", 
-      "titleHighlight": "Kimyo va biologiya",
-      "titleSuffix": "imtihonlariga onlayn tayyorlaning va repetitorsiz o'qing",
+      "titleHighlight": "Kimyo va Biologiya",
+      "titleSuffix": "  imtihonlariga “repititorlar”siz ONLAYN tayyorlaning va GRANTga kiring!",
       "description": "O'z tezligingizda, jadvalsiz, mentor va kurator yordamida samarali va oson o'rganing. Darslarni keraklicha qayta ko'rib chiqing.",
       "startEducation": "O'qishni boshlash",
-      "tryFree": "Bepul sinab ko'rish",
+      "tryFree": "Mutaxasis bilan bog’lanish",
       "students": "o'quvchilar",
       "lessons": "darslar",
       "languages": "xil tilda",
@@ -182,7 +182,7 @@
         },
         "progressSystem": {
           "title": "Geymifikatsiya  va “CashBack”",
-          "description": "Yutuqlaringiz uchun ball to'plang va ularni “CashBack” hamda bonuslarga ega bo’ling."
+          "description": "Yutuqlaringiz uchun ball to'plang “CashBack” hamda bonuslarga ega bo’ling."
         },
         "clearExplanations": {
           "title": "Har bir savol uchun video-tahlillar",
@@ -413,15 +413,15 @@
       },
       "isInstallmentAvailable":{
         "question":"Bo‘lib to‘lash imkoniyati bormi?",
-        "answer":" Ha! Biz Uzum Nasiya va Alif Nasiya bilan ishlaymiz. Qulay va hamyonbop."
+        "answer":"Ha! Biz Uzum Nasiya va Alif Nasiya bilan ishlaymiz. Qulay va hamyonbop."
       },
       "differenceBetweenPlans":{
         "question":"Start va Standart tariflarining asosiy farqi nimada?",
-        "answer":" Start — mustaqil o'rganish uchun tarif: darslar, testlar, video yechimlar. Standart — to'liq qo'llab-quvvatlash: ustoz, kurator, sinov imtihonlari va bilim mashqlari."
+        "answer":"Start — mustaqil o'rganish uchun tarif: darslar, testlar, video yechimlar. Standart — to'liq qo'llab-quvvatlash: ustoz, kurator, sinov imtihonlari va bilim mashqlari."
       },
       "dailyLessonCount":{
         "question":"Bir kunda nechta darsni o‘zlashtirish mumkin?",
-        "answer":". Darslar soni cheklanmagan! Xohlang 1 ta, xohlang 100 ta."
+        "answer":"Darslar soni cheklanmagan! Xohlang 1 ta, xohlang 100 ta."
       },
       "lessonLanguage":{
         "question":"Darslar qaysi tilda olib boriladi?",
@@ -436,6 +436,12 @@
         "ansver":" Standart tarifida farzandingiz kuratori barcha jarayonni kuzatib boradi. Ular farzandingiz eslatadi, rag'batlantiradi va tashlab qo’yishiga yo’l qo’ymaydi. Bu shaxsiy murabbiyga ega bo'lishga o'xshaydi, lekin o'rganish uchun."
       }
     }
+   },
+
+   "results":{
+    "title":"O’quvchilarimizning “Milliy Sertifikat” natijalari",
+    "atomika":"atomika",
+    "description":" o’quvchilarining “Milliy Sertifikat” imtihonidan erishgan natijalari"
    },
 
     "footer": {

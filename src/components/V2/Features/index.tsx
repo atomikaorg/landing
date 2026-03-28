@@ -44,7 +44,7 @@ export default function Features() {
         "absolute inset-0 bg-[url('/original-course-bg.png')] bg-contain bg-right bg-no-repeat max-md:bg-[size:300px] max-md:bg-right-top",
       titleClass:
         "text-white font-semibold text-3xl max-md:text-[32px] max-md:max-w-[70%] z-10",
-      descClass: "text-white font-medium text-[22px] z-10",
+      descClass: "text-[#F2F2F2] font-sfpro font-medium text-[22px] z-10",
     },
     {
       id: "smartPractice",
@@ -54,7 +54,7 @@ export default function Features() {
         "absolute inset-0 bg-[url('/training-card-bg.png')] bg-[length:447px] bg-right-top bg-no-repeat max-md:bg-[size:250px]",
       titleClass:
         "text-white font-semibold text-3xl max-md:text-[32px] max-md:max-w-[70%] z-10",
-      descClass: "text-white font-medium text-[22px] z-10",
+      descClass: "text-white font-medium text-[22px] z-10 font-sfpro",
     },
     {
       id: "progressSystem",
@@ -64,7 +64,7 @@ export default function Features() {
         "absolute inset-0 bg-[url('/gamification-card-bg.png')] bg-[length:203px] bg-right-top bg-no-repeat max-md:bg-[size:150px]",
       titleClass:
         "text-black font-semibold text-3xl z-10 max-md:text-[32px] max-md:max-w-[70%]",
-      descClass: "text-gray-text font-medium text-[22px] z-10",
+      descClass: "text-gray-text font-medium text-[22px] z-10 font-sfpro",
     },
     {
       id: "clearExplanations",
@@ -74,7 +74,7 @@ export default function Features() {
         "absolute inset-0 bg-[url('/lesson-card-bg.png')] bg-[length:362px] bg-right-top bg-no-repeat max-md:bg-[size:250px]",
       titleClass:
         "text-white font-semibold text-3xl z-10 max-md:text-[32px] max-md:max-w-[70%]",
-      descClass: "text-white font-medium text-[22px] z-10",
+      descClass: "text-white font-medium text-[22px] z-10 font-sfpro",
     },
     {
       id: "flexibleLearning",
@@ -84,7 +84,7 @@ export default function Features() {
         "absolute inset-0 bg-[url('/flexible-card-bg.png')] bg-[length:164px] bg-right-top bg-no-repeat max-md:bg-[size:150px]",
       titleClass:
         "text-black font-semibold text-3xl z-10 max-md:text-[32px] max-md:max-w-[70%]",
-      descClass: "text-gray-text font-medium text-[22px] z-10",
+      descClass: "text-gray-text font-medium text-[22px] z-10 font-sfpro",
     },
   ];
 
@@ -101,10 +101,10 @@ export default function Features() {
   );
 
   return (
-    <div className="container mt-[61px] md:mt-[116px]">
+    <div className="container ">
       <Button text={"version2.features.badge"}/>
 
-      <h2 className="mt-[13px] md:mt-6 text-left mb-[10px] md:mb-5 font-semibold text-[48px] mx-auto max-md:text-[32px] max-md:leading-10 max-md:w-full">
+      <h2 className="font-gilroy mt-[13px] md:mt-6 text-left mb-[10px] md:mb-5 font-semibold text-[48px] mx-auto max-md:text-[32px] max-md:leading-10 max-md:w-full">
         {t("version2.features.title")}{" "}
         <span className="text-[40px] md:text-[64px] bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] bg-clip-text text-transparent">
           {t("version2.features.atomika")}
@@ -112,11 +112,10 @@ export default function Features() {
         {t("version2.features.title2")}
       </h2>
 
-      <p className="text-[#6B7280] text-[15px] md:text-[24px]">
+      <p className="text-[#6B7280] text-[15px] font-outfit md:text-[24px]">
         {t("version2.features.description")}
       </p>
 
-      {/* ─── KATTA EKRAN (md+): barcha cardlar bitta wrapper animatsiyasida ─── */}
       <motion.div
         ref={wrapperRef}
         initial="hidden"

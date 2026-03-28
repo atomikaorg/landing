@@ -6,6 +6,12 @@ export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        gilroy: ["Gilroy", "sans-serif"],
+        outfit: ["Outfit", "sans-serif"],
+        sfpro: ["SF Pro", "sans-serif"],
+        delagothic:["Dela Gothic One", "sans-serif"],
+      },
       keyframes: {
         "accordion-down": {
           from: {

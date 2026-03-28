@@ -31,10 +31,10 @@ export default function FAQ() {
           transition: { duration: 0.8, delay:0.1 }}}}
         className="mx-auto max-w-[700px]">
           <div className="mb-8 flex flex-col items-center justify-center gap-4 md:mb-12">
-            <button className="rounded-[14px] bg-[#FFFFFF] p-5 text-[#787878] shadow-[0px_12px_42px_-4px_#18274B1F,_0px_8px_18px_-6px_#18274B1F]">
+            <button className="font-gilroy rounded-[14px] bg-[#FFFFFF] p-5 text-[#787878] shadow-[0px_12px_42px_-4px_#18274B1F,_0px_8px_18px_-6px_#18274B1F]">
               FAQ
             </button>
-            <h2 className="text-center text-[32px] font-semibold text-[#1A1A2E] md:text-[48px]">
+            <h2 className="font-gilroy text-center text-[32px] font-semibold text-[#1A1A2E] md:text-[48px]">
               {t("version2.Faq.title")}
             </h2>
           </div>
@@ -42,7 +42,6 @@ export default function FAQ() {
           <Accordion.Root
             type="single"
             collapsible
-            defaultValue={faqKeys[0]}
             className="rounded-[28px] bg-[#F9FAFB]"
           >
             {faqKeys.map((key) => (
@@ -53,7 +52,7 @@ export default function FAQ() {
               >
                 <Accordion.Header>
                   <Accordion.Trigger className="group flex w-full items-center justify-between gap-4 py-6 text-left md:py-8">
-                    <span className="text-[17px] font-semibold text-[#1A1A2E]">
+                    <span className="text-[17px] font-semibold text-[#1A1A2E] font-outfit">
                       {t(`version2.Faq.items.${key}.question`)}
                     </span>
 
@@ -65,7 +64,7 @@ export default function FAQ() {
                 </Accordion.Header>
 
                 <Accordion.Content className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-                  <p className="max-w-[98%] pb-6 pr-0 text-[16px] leading-[180%] text-[#6B7280] md:pb-8 md:pr-20 md:text-[20px]">
+                  <p className="max-w-[98%] pb-6 pr-0 text-[16px] leading-[180%] text-[#6B7280] md:pb-8 md:pr-20 md:text-[20px] font-outfit ">
                     {t(`version2.Faq.items.${key}.answer`)}
                   </p>
                 </Accordion.Content>

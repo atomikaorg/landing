@@ -14,7 +14,7 @@ export default function Feedbacks() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const cardref = useRef(null);
-  const cardisInView = useInView(ref, { once: true });
+  const cardisInView = useInView(cardref, { once: true });
   const { t } = useTranslation();
 
   const videoLinks = [
@@ -32,7 +32,7 @@ export default function Feedbacks() {
     }) as FeedbackItem[]) || [];
 
   return (
-    <section id="privileges" className="md:pt-[150px] pt-[80px]">
+    <section id="privileges" className="md:pt-[150px] pt-0">
       <div className="container relative">
         <div className="absolute right-[-200px] top-[-80px] hidden lg:block">
           <img src="/message.png" alt="" />
@@ -57,11 +57,11 @@ export default function Feedbacks() {
         }}
         transition={{ duration: 0.8, delay: 0.1 }}
       
-       className="mt-[30px] flex items-stretch px-5 md:px-10  overflow-x-scroll no-scrollbar gap-5 md:mt-[50px] pb-[40px] md:pb-[80px]">
+       className="feedbacks-rail mt-[30px] flex items-stretch overflow-x-scroll no-scrollbar gap-5 md:mt-[50px] pb-[40px] md:pb-[80px]">
      {feedbacks.map((item, index) => (
     <div
       key={item.id ?? index}
-      className="flex flex-col rounded-[32px] min-w-[300px] bg-white p-7 shadow-[0px_4px_24px_0px_#7C3AED14]"
+      className="flex min-w-[300px] max-w-[300px] flex-col rounded-[32px] bg-white p-7 shadow-[0px_4px_24px_0px_#7C3AED14] md:min-w-[360px] md:max-w-[360px]"
     >
       <img src="/stars.png" alt="stars" className="mb-5 h-4 w-[100px]" />
       
@@ -89,7 +89,7 @@ export default function Feedbacks() {
         transition={{ duration: 0.8, delay: 0.1 }}
       >
         <div className="container">
-          <h2 className="mb-[10px] text-center text-[32px] text-[#1A1A2E] md:mb-5">
+          <h2 className="mb-[10px] text-center text-[36px] font-bold text-[#1A1A2E] md:mb-5 font-gilroy">
             {`🎥 ${t("version2.feedbacks.videofeedback")}`}
           </h2>
           <p className="text-center text-[15px] text-[#6B7280] md:text-[24px]">
@@ -97,7 +97,7 @@ export default function Feedbacks() {
           </p>
         </div>
 
-        <div className="mt-[30px] flex items-center justify-between gap-[30px] overflow-scroll px-4 no-scrollbar md:mt-[40px] md:gap-[50px] md:px-20">
+        <div className="content-rail mt-[30px] flex items-center gap-[30px] overflow-x-scroll no-scrollbar md:mt-[40px] md:gap-[50px]">
           {videoLinks.map(({ src }) => (
             <iframe
               key={src}
@@ -105,7 +105,7 @@ export default function Feedbacks() {
               title="YouTube video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="h-[500px] w-[300px] rounded-[30px] md:h-[650px] md:w-[400px]"
+              className="h-[500px] w-[300px] shrink-0 rounded-[30px] md:h-[650px] md:w-[400px]"
             />
           ))}
         </div>

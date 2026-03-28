@@ -8,6 +8,8 @@ type Teacher = {
   id: number;
   name: string;
   image: string;
+  imagePosition?: string;
+  imageScale?: number;
   field: string;
   description: string;
   experience: string;
@@ -21,17 +23,10 @@ export default function Teachers() {
 
   const teachers: Teacher[] = [
     {
-      id: 3,
-      name: t("version2.teacher_name3"),
-      image: "/teacher3.jpg",
-      field: t("version2.teacher_field3"),
-      description: t("title.teacher_desc3"),
-      experience: t("title.teacher_exp3"),
-    },
-    {
       id: 1,
       name: t("version2.teacher_name1"),
       image: "/teacher2.jpg",
+      imagePosition: "center top",
       field: t("version2.teacher_field1"),
       description: t("title.teacher_desc1"),
       experience: t("title.teacher_exp1"),
@@ -40,14 +35,25 @@ export default function Teachers() {
       id: 2,
       name: t("version2.teacher_name2"),
       image: "/teacher1.jpg",
+      imagePosition: "center top",
       field: t("version2.teacher_field2"),
       description: t("title.teacher_desc2"),
       experience: t("title.teacher_exp2"),
     },
     {
+      id: 3,
+      name: t("version2.teacher_name3"),
+      image: "/teacher3.jpg",
+      imagePosition: "center 48%",
+      field: t("version2.teacher_field3"),
+      description: t("title.teacher_desc3"),
+      experience: t("title.teacher_exp3"),
+    },
+    {
       id: 4,
       name: t("version2.teacher_name4"),
       image: "/teacher4.jpg",
+      imagePosition: "center top",
       field: t("version2.teacher_field4"),
       description: t("title.teacher_desc4"),
       experience: t("title.teacher_exp4"),
@@ -56,6 +62,8 @@ export default function Teachers() {
       id: 5,
       name: t("version2.teacher_name5"),
       image: "/teacher5.jpg",
+      imagePosition: "center 50%",
+      imageScale: 1.40,
       field: t("version2.teacher_field5"),
       description: t("title.teacher_desc5"),
       experience: t("title.teacher_exp5"),
@@ -95,9 +103,9 @@ export default function Teachers() {
         </div>
       </div>
 
-      <div className="no-scrollbar mt-8 overflow-x-visible overflow-y-auto pb-20 md:mt-12 md:pb-[50px]">
+      <div className="content-rail no-scrollbar mt-8 overflow-x-auto overflow-y-hidden pb-20 md:mt-12 md:pb-[50px]">
         <div
-          className="mx-auto flex w-max min-w-full snap-x snap-mandatory justify-start gap-[30px] px-4 md:gap-[50px] md:px-8 lg:justify-center xl:px-0 pt-5"
+          className="flex w-max min-w-full snap-x snap-mandatory justify-start gap-[30px] pt-5 md:gap-[50px]"
           style={{ msOverflowStyle: "none", scrollbarWidth: "none" }}
         >
           {teachers.map((teacher) => {
@@ -124,6 +132,10 @@ export default function Teachers() {
                       src={teacher.image}
                       alt={teacher.name}
                       className="h-full w-full object-cover object-top transition-transform duration-500"
+                      style={{
+                        objectPosition: teacher.imagePosition ?? "center top",
+                        transform: `scale(${teacher.imageScale ?? 1})`,
+                      }}
                     />
 
                     <div className="absolute inset-x-0 bottom-0 h-36 bg-[linear-gradient(180deg,_rgba(0,0,0,0)_47.12%,_rgba(0,0,0,0.71)_72.23%,_#000000_93.17%)] to-transparent" />
@@ -138,14 +150,14 @@ export default function Teachers() {
                     </div>
                   </div>
 
-                  <div className="absolute inset-0 flex rounded-[32px] bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] p-6 text-white [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                  <div className="absolute inset-0 flex rounded-[32px] bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] p-4 text-white [backface-visibility:hidden] [transform:rotateY(180deg)]">
                     <div className="flex h-full flex-col">
                       <div className="mb-5 flex items-start justify-between gap-3">
                         <div>
                           <h3 className="text-[20px] font-bold leading-tight">
                             {teacher.name}
                           </h3>
-                          <p className="mt-2 text-sm font-semibold text-white/80">
+                          <p className="mt-1 text-sm font-semibold text-white/80">
                             {teacher.field}
                           </p>
                         </div>
@@ -154,16 +166,16 @@ export default function Teachers() {
                         </span>
                       </div>
 
-                      <div className="rounded-[24px] bg-white/10 p-4 backdrop-blur-sm">
+                      <div className="flex items-center gap-2 rounded-[24px] bg-white/10 p-4 backdrop-blur-sm">
                         <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-white/70">
                           {t("title.experience")}
                         </p>
-                        <p className="mt-2 text-[16px] font-semibold">
+                        <p className="text-[16px] font-semibold">
                           {teacher.experience}
                         </p>
                       </div>
 
-                      <div className="mt-4 flex-1 rounded-[24px] bg-white/10 p-4 backdrop-blur-sm">
+                      <div className="mt-2 flex-1 rounded-[24px] bg-white/10 p-4 backdrop-blur-sm">
                         <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-white/70">
                           {t("title.field")}
                         </p>

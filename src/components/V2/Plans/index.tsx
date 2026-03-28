@@ -52,7 +52,7 @@ function PlanCard({
       </div>
 
       <div className="mb-7 flex items-end gap-2 pb-5">
-        <span className="bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] bg-clip-text text-[44px] font-bold leading-none text-transparent md:text-[52px]">
+        <span className="bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] bg-clip-text font-delagothic font-normal leading-none text-transparent text-[36px] sm:text-[42px] ">
           {price}
         </span>
         <span className="pb-1 text-[14px] font-medium text-[#6B7280] md:text-[16px]">
@@ -122,7 +122,7 @@ export default function Plans() {
     <section
       id="about_platform"
       ref={ref}
-      className="overflow-hidden pb-[40px] pt-[40px] md:pb-[120px] md:pt-[140px]"
+      className="overflow-hidden pb-[40px] pt-[40px] md:pb-[120px] md:pt-[40px]"
     >
       <div className="container relative">
         <motion.div
@@ -137,7 +137,7 @@ export default function Plans() {
           <Button text={`${plansRoot}.plan`} />
 
           <div className="mx-auto mt-5 max-w-[780px] text-center">
-            <h2 className="text-[32px] font-semibold leading-[1.1] text-[#1F2138] md:text-[48px]">
+            <h2 className="text-[32px] font-semibold leading-[1.1] text-[#1F2138] md:text-[48px] font-gilroy">
               {t(`${plansRoot}.title`)}
             </h2>
             <p className="mt-4 hidden md:block text-[15px] leading-6 text-[#7B8092] md:text-[22px] md:leading-8">

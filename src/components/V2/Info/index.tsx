@@ -17,7 +17,7 @@ export default function Info() {
           className="flex items-center gap-0 md:gap-10 bg-[#FFFFFF] rounded-[40px] p-10 px-[30px] md:px-10 shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
         >
           <div className="flex flex-col gap-[37px] max-w-[611px] ">
-         <h1 className="text-[36px] md:text-[40px] text-[#1A1A2E] font-bold leading-[110%]">
+         <h1 className="font-gilroy text-[36px] md:text-[40px] text-[#1A1A2E] font-bold leading-[110%]">
              {t("version2.info.titlePrefix") && `${t("version2.info.titlePrefix")} `}
              <span className="text-[#A24DF5]">
                {t("version2.info.titleHighlight")}
@@ -40,13 +40,13 @@ export default function Info() {
                 {t("version2.info.startEducation")}
               </Link>
 
-              <Link to={"https://atomika.org/session/signup"} className="rounded-full border-[2px] border-[#A755F7] text-center py-[18px] px-10 bg-[#FFFFFF] text-[#A755F7] cursor-pointer hover:bg-transparent w-full md:w-auto">
+              <a href="tel:+998555111133" className="rounded-full border-[2px] border-[#A755F7] text-center py-[18px] px-10 bg-[#FFFFFF] text-[#A755F7] cursor-pointer hover:bg-transparent w-full md:w-auto">
                 {t("version2.info.tryFree")}
-              </Link>
+              </a>
             </div>
 
             <div className="flex items-center gap-[5px] md:gap-10 ">
-              <p className="text-[#6B7280] text-[14px] md:text-[20px] flex items-center gap-[2px] md:gap-[5px]">
+              <p className="text-[#6B7280] text-[14px] md:text-[20px] flex items-center gap-[2px] md:gap-[5px] font-gilroy">
                 <CountUp
                   className="text-[#A755F7] text-[22px] md:text-[40px] font-extrabold"
                   end={800}
@@ -56,9 +56,9 @@ export default function Info() {
                 {t("version2.info.students")}
               </p>
 
-              <p className="text-[#6B7280] text-[14px] md:text-[20px] flex items-center gap-[2px] md:gap-[5px]">
+              <p className="text-[#6B7280] text-[14px] md:text-[20px] flex items-center gap-[2px] md:gap-[5px] font-gilroy">
                 <CountUp
-                  className="text-[#A755F7]  text-[22px] md:text-[40px] font-extrabold"
+                  className="text-[#A755F7]  text-[22px] md:text-[40px] font-extrabold "
                   end={600}
                   duration={3}
                   suffix="+"
@@ -66,9 +66,9 @@ export default function Info() {
                 {t("version2.info.lessons")}
               </p>
 
-              <p className="text-[#6B7280] text-[14px] md:text-[20px] flex items-center gap-[2px] md:gap-[5px]">
+              <p className="text-[#6B7280] text-[14px] md:text-[20px] flex items-center gap-[2px] md:gap-[5px] font-gilroy">
                 <CountUp
-                  className="text-[#A755F7]  text-[22px] md:text-[40px] font-extrabold"
+                  className="text-[#A755F7]  text-[22px] md:text-[40px] font-extrabold "
                   end={2}
                   duration={3}
                 />

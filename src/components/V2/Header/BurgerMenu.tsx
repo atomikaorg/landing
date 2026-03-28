@@ -62,7 +62,7 @@ export default function BurgerMenu(): JSX.Element {
               >
                 <a
                   href={item.href}
-                  className="flex py-4 px-4 w-full h-full bg-transparent hover:bg-transparent justify-center gap-x-3 rounded-none text-white font-semibold text-sm"
+                  className="font-sfpro flex py-4 px-4 w-full h-full bg-transparent hover:bg-transparent justify-center gap-x-3 rounded-none text-white font-semibold text-sm"
                 >
                   {item.label}
                 </a>
