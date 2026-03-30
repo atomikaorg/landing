@@ -15,8 +15,11 @@ const langsFlags: Record<string, ReactNode> = {
   ru: <RuIcon className="w-full" />,
   uz: <UzIcon className="w-full" />,
 };
+interface HeaderProps {
+  onOpenModal?: () => void;
+} 
 
-export default function Header() {
+export default function Header({onOpenModal}: HeaderProps) {
   const { i18n, t } = useTranslation();
   const activeLang = i18n.language in langsFlags ? i18n.language : "uz";
 
@@ -121,7 +124,7 @@ export default function Header() {
             <Link to={"https://atomika.org/session/signin"} className="px-7 py-3 font-bold text-[15px] rounded-full text-white bg-gradient-to-b from-[#C38BFA] via-[#A755F7] to-[#8216EB] lg:bg-none lg:bg-[#FFFEF7] lg:text-[#1A1A2E] hover:bg-transparent">
               {t("version2.header.login")}
             </Link>
-            <Link to={"https://atomika.org/session/signup"}
+            <Button onClick={onOpenModal}
               className="rounded-full px-7 py-2 font-bold text-[15px] cursor-pointer hidden lg:block text-white"
               style={{
                 background:
@@ -129,7 +132,7 @@ export default function Header() {
               }}
             >
               {t("version2.header.startEducation")}
-            </Link>
+            </Button>
             <BurgerMenu />
           </div>
         </div>

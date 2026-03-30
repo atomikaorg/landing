@@ -9,6 +9,7 @@ type PlanCardProps = {
   price: string;
   currency: string;
   buttonText: string;
+  onOpenModal?: () => void;
   features: string[];
   unavailableFeatures?: string[];
   badge?: string;
@@ -22,6 +23,7 @@ function PlanCard({
   price,
   currency,
   buttonText,
+  onOpenModal,
   features,
   unavailableFeatures = [],
   badge,
@@ -43,7 +45,7 @@ function PlanCard({
       ) : null}
 
       <div className="mb-7">
-        <h3 className="text-[28px] font-semibold leading-none text-[#1F2138] md:text-[32px]">
+        <h3 className="text-[28px] font-bold font-gilroy leading-none text-[#1F2138] md:text-[32px]">
           {title}
         </h3>
         <p className="mt-3 text-[14px] leading-5 text-[#8A8FA3] md:text-[16px]">
@@ -81,7 +83,11 @@ function PlanCard({
         ))}
       </div>
 
-      <button className="mt-8 rounded-full border border-[#A855F7] px-6 py-4 text-[15px] font-semibold text-[#A855F7] transition hover:bg-[#A855F7] hover:text-white">
+      <button
+        type="button"
+        onClick={onOpenModal}
+        className="mt-8 cursor-pointer rounded-full border border-[#A855F7] px-6 py-4 text-[15px] font-semibold text-[#A855F7] transition hover:bg-[#A855F7] hover:text-white"
+      >
         {buttonText}
       </button>
 
@@ -94,7 +100,11 @@ function PlanCard({
   );
 }
 
-export default function Plans() {
+type PlansProps = {
+  onOpenModal?: () => void;
+};
+
+export default function Plans({ onOpenModal }: PlansProps) {
   const { t, i18n } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
@@ -152,6 +162,7 @@ export default function Plans() {
               price={t(`${pricingRoot}.start_plan.price`)}
               currency={t(`${pricingRoot}.currency`)}
               buttonText={t(`${pricingRoot}.start_plan.button_text`)}
+              onOpenModal={onOpenModal}
               features={startFeatures}
               unavailableFeatures={startUnavailableFeatures}
               installmentInfo={t(`${pricingRoot}.standard_plan.installment_info`)}
@@ -163,6 +174,7 @@ export default function Plans() {
               price={t(`${pricingRoot}.standard_plan.price`)}
               currency={t(`${pricingRoot}.currency`)}
               buttonText={t(`${pricingRoot}.standard_plan.button_text`)}
+              onOpenModal={onOpenModal}
               badge={t(`${pricingRoot}.standard_plan.badge`)}
               features={standardFeatures}
               installmentInfo={t(`${pricingRoot}.standard_plan.installment_info`)}

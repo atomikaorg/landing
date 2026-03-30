@@ -39,7 +39,7 @@ export default function Feedbacks() {
         </div>
 
         <Button text={"version2.feedbacks.button"} />
-        <h2 className="mt-10 mb-5 text-center text-[32px] font-medium text-[#1A1A2E] md:text-[48px]">
+        <h2 className="mt-10 mb-5 text-center text-[32px] font-bold font-gilroy text-[#1A1A2E] md:text-[48px]">
           {t("version2.feedbacks.title")}
         </h2>
         <p className="text-center text-[15px] text-[#6B7280] md:text-[24px]">
@@ -48,7 +48,7 @@ export default function Feedbacks() {
 
       </div>
        <motion.div
-             ref={cardref}
+        ref={cardref}
         initial="hidden"
         animate={cardisInView ? "visible" : "hidden"}
         variants={{
@@ -57,11 +57,11 @@ export default function Feedbacks() {
         }}
         transition={{ duration: 0.8, delay: 0.1 }}
       
-       className="feedbacks-rail mt-[30px] flex items-stretch overflow-x-scroll no-scrollbar gap-5 md:mt-[50px] pb-[40px] md:pb-[80px]">
+       className="feedbacks-rail mt-[30px] flex items-stretch overflow-x-scroll no-scrollbar gap-[30px] md:gap-[50px]  md:mt-[50px] pb-[40px] md:pb-[80px]">
      {feedbacks.map((item, index) => (
     <div
       key={item.id ?? index}
-      className="flex min-w-[300px] max-w-[300px] flex-col rounded-[32px] bg-white p-7 shadow-[0px_4px_24px_0px_#7C3AED14] md:min-w-[360px] md:max-w-[360px]"
+      className="flex  flex-col rounded-[32px] bg-white p-7 shadow-[0px_4px_24px_0px_#7C3AED14] max-v-[300px] min-w-[300px] md:min-w-[400px] md:max-w-[400px]"
     >
       <img src="/stars.png" alt="stars" className="mb-5 h-4 w-[100px]" />
       
@@ -89,7 +89,7 @@ export default function Feedbacks() {
         transition={{ duration: 0.8, delay: 0.1 }}
       >
         <div className="container">
-          <h2 className="mb-[10px] text-center text-[36px] font-bold text-[#1A1A2E] md:mb-5 font-gilroy">
+          <h2 className="mb-[10px] text-center text-[36px] md:text-[48px] font-bold text-[#1A1A2E] md:mb-5 font-gilroy">
             {`🎥 ${t("version2.feedbacks.videofeedback")}`}
           </h2>
           <p className="text-center text-[15px] text-[#6B7280] md:text-[24px]">

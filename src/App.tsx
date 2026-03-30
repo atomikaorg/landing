@@ -1,3 +1,4 @@
+import { useCallback, useRef, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import AboutAuthor from "./components/AboutAuthor";
 // import AboutCourse from "./components/AboutCourse";
@@ -34,8 +35,61 @@ import NationalCert from './components/V2/NationalCert';
 import Ready from './components/V2/Ready';
 import FAQ from './components/V2/FAQ';
 import StudentsResult from './components/V2/StudentsResult';
+import Modal from './components/V2/Modal';
+import { Toaster } from './components/ui/toaster';
 
 function App() {
+  const [modalSource, setModalSource] = useState<string | undefined>();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalOpenMode, setModalOpenMode] = useState<'button' | 'scroll'>('button');
+  const [autoOpenedSections, setAutoOpenedSections] = useState<Record<string, boolean>>({});
+  const modalOpenFrameRef = useRef<number | null>(null);
+
+  const scheduleModalOpen = useCallback((source: string, mode: 'button' | 'scroll') => {
+    if (modalOpenFrameRef.current) {
+      window.cancelAnimationFrame(modalOpenFrameRef.current);
+      modalOpenFrameRef.current = null;
+    }
+
+    setModalSource(source);
+    setModalOpenMode(mode);
+
+    window.requestAnimationFrame(() => {
+      modalOpenFrameRef.current = window.requestAnimationFrame(() => {
+        setIsModalOpen(true);
+        modalOpenFrameRef.current = null;
+      });
+    });
+  }, []);
+
+  const openModal = useCallback((source: string) => {
+    scheduleModalOpen(source, 'button');
+  }, [scheduleModalOpen]);
+
+  const closeModal = useCallback(() => {
+    if (modalOpenFrameRef.current) {
+      window.cancelAnimationFrame(modalOpenFrameRef.current);
+      modalOpenFrameRef.current = null;
+    }
+
+    setIsModalOpen(false);
+  }, []);
+
+  const openModalOnce = useCallback((source: string) => {
+    setAutoOpenedSections((previous) => {
+      if (previous[source]) {
+        return previous;
+      }
+
+      scheduleModalOpen(source, 'scroll');
+
+      return {
+        ...previous,
+        [source]: true,
+      };
+    });
+  }, [scheduleModalOpen]);
+
   return (
     <Router>
       <Routes>
@@ -66,23 +120,30 @@ function App() {
         {/* <Route path="/thank-you" element={<ThankYouPage />} /> */}
         <Route path='/' element={
           <div>
-            <Header/>
+            <Header onOpenModal={() => openModal('header-cta')} />
             <main className='bg-[#F9FAFB]'>
-            <Info/>
+            <Info onOpenModal={() => openModal('info-cta')}/>
             <Features/>  
-            <WhyAtomika/>
+            {/* <WhyAtomika/> */}
             <Teachers/>
             <Feedbacks/>
             <StudentsResult/>
-            <Process/>
+            <Process  onAutoOpen={() => openModalOnce('students-result-scroll')}/>
             <OurCourses/>
-            <Plans/>
-            <NationalCert/>
-            <Ready/>
+            <Plans onOpenModal={() => openModal('plans-cta')}/>
+            <NationalCert onOpenModal={() => openModal('national-cert-cta')}/>
+            <Ready onOpenModal={() => openModal('ready-button')}/>
             <FAQ/>
             <Partners/>
             </main>
             <Footer/>
+            <Modal
+              isOpen={isModalOpen}
+              onClose={closeModal}
+              source={modalSource}
+              openMode={modalOpenMode}
+            />
+            <Toaster />
           </div>
         }
        />
