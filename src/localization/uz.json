@@ -12,23 +12,29 @@
     "about_course_descr2": "Bularning barchasi bir joyda bo‘lishi siz uchun ideal kurs shu ekanligini bildiradi",
     "about_teachers": "O'qituvchilar haqida",
     "teacher_name1": "Aytimbetova Gulayim Duysenbayevna",
-    "teacher_desc1": "Biolog-genetik, magistrant. Genetik tahlil va molekulyar biologiya mutaxassisi.",
+    "teacher_desc1": "Biolog-genetik, magistrant.",
+    "teacher_desc11":"Genetik tahlil va molekulyar biologiya mutaxassisi.",
     "teacher_field1": "Biologiya",
     "teacher_exp1": "5+ yil",
     "teacher_name2": "Xomidova Sayyora Abduganiyevna",
-    "teacher_desc2": "Biologiya fanlari magistri, tadqiqotchi. Akademik tadqiqotlar va fundamental biologiya eksperti.",
+    "teacher_desc2": "Biologiya fanlari magistri, tadqiqotchi.",
+    "teacher_desc22":" Akademik tadqiqotlar va fundamental biologiya eksperti.",
     "teacher_field2": "Biologiya",
     "teacher_exp2": "6+ yil",
     "teacher_name3": "Ortiqova Diyora Orifjon qizi",
-    "teacher_desc3": "Kimyo va biologiya o'qituvchisi. Tabiiy fanlar bo'yicha pedagogik texnologiyalar mutaxassisi.",
+    "teacher_desc3": "Kimyo va biologiya o'qituvchisi",
+    "teacher_desc33":"Tabiiy fanlar bo'yicha pedagogik texnologiyalar mutaxassisi.",
     "teacher_field3": "Biologiya",
     "teacher_exp3": "5+ yil",
     "teacher_name4": "Xudoyqulova Nigina Nizomiddinovna",
-    "teacher_desc4": "Biologiya pedagogi, xalqaro olimpiadalar g'olibi. Yuqori darajadagi olimpiadalar metodikasi ustasi.",
+    "teacher_desc4": "Biologiya pedagogi, xalqaro olimpiadalar g'olibi.",
+    "teacher_desc44": "Yuqori darajadagi olimpiadalar metodikasi ustasi.",
     "teacher_field4": "Kimyo",
     "teacher_exp4": "5+ yil",
-    "teacher_desc5": "Kimyo va biologiya fanlari bo'yicha 11 yillik tajribaga ega oliy toifali pedagog-ekspert",
+    "teacher_desc5": "Kimyo va biologiya fanlari o'ituvchisi",
+    "teacher_desc55": "11 yillik tajribaga ega oliy toifali pedagog-ekspert",
     "teacher_exp5":"11+ yil",
+    "teacherbutton":"O'qituvchi haqida",
     "author_descr": "Автор более 20 книг по Химии, автор школьних книг по Химии, Профессор наук по Химии, автор тестов DTM",
     "why_atomika": "Nega atomika boshqa kurslardan yaxshiroq?",
     "original_course": "Tajribali o'qituvchilar",
@@ -110,7 +116,7 @@
     "team_name2": "Nozir To‘xtamurodov",  
     "team_desc2": "“atomika” platformasi asoschilaridan biri va IT bo’limi rahbari",
     "team_exp2": "10 yildan ortiq IT yo’nalishi bo’yicha tajribasi \n - “MARS” o’quv markazida IT bo’limi rahbari, LMS platformasi bosh dasturchisi \n - “EPAM” xalqaro kompaniyasida bosh dasturchisi va “TeamLead” \n - Bir nechta sun’iy intelekt va IT loyihalari bosh mutaxassisi",
-    "experience": "Tajriba: ",
+    "experience": "Dars berish tajribasi: ",
     "field": "Mutaxassiligi: ",
     "major": "Yo'nalish: ",
     "biology": "Biologiya",
@@ -158,7 +164,7 @@
       "titleHighlight": "Kimyo va Biologiya",
       "titleSuffix": "  imtihonlariga “repititorlar”siz ONLAYN tayyorlaning va GRANTga kiring!",
       "description": "O'z tezligingizda, jadvalsiz, mentor va kurator yordamida samarali va oson o'rganing. Darslarni keraklicha qayta ko'rib chiqing.",
-      "startEducation": "O'qishni boshlash",
+      "startEducation": "BEPUL sinab ko’rish!",
       "tryFree": "Mutaxasis bilan bog’lanish",
       "students": "o'quvchilar",
       "lessons": "darslar",
@@ -173,7 +179,7 @@
       "description":"“Repetitor” va ustoz o'rnini bosmаymiz — undan ko'proq narsani beramiz!",
       "cards": {
         "expertTeachers": {
-          "title": "Kuchli o’qituvchilar",
+          "title": "Eng zo’rlaridan o’rganing!",
           "description": "Ko'p yillik tajribaga ega o'qituvchilar — imtihonga qanday tayyorlashni yaxshi bilishadi."
         },
         "smartPractice": {
@@ -191,6 +197,10 @@
         "flexibleLearning": {
           "title": "Xohlagan vaqtda",
           "description": "To'liq onlayn, istalgan  vaqtda va istalgan qurilmada foydalanish mumkin."
+        },
+        "fasterLearning":{
+          "title": "O'z tezligingizda, cheklovlarsiz!",
+          "description": "Kuniga 5 ta dars o'tmoqchimisiz — marhamat! Haftada bitta dars kerakmi — muammosiz! Shaxsiy tezligingiz, shaxsiy tanlovingiz!"
         }
       }
     },
@@ -443,7 +453,24 @@
     "atomika":"atomika",
     "description":" o’quvchilarining “Milliy Sertifikat” imtihonidan erishgan natijalari"
    },
-
+   "modal":{
+      "title": "Hoziroq ",
+      "titlefree":"bepul",
+      "title2":" o'qishni boshlang!",
+      "description":"Kimyo va biologiya darslari — 3 kun to'liq kirish.  Hech qanday to'lovlarsiz va majburiyatlarsiz.",
+      "features":[
+          "24/7 kirish",
+          "600+ darslar",
+          "O’zbek va rus tillarida"
+        ],
+      "phonePlaceholder": "+998 (XX) XXX XX XX",
+      "submit": "BEPUL sinov muddatini olish!",
+      "or": "yoki",
+      "secondary": "Hoziroq mutaxasis bilan bog’lanish!",
+      "success": "So'rov yuborildi. Tez orada bog'lanamiz.",
+      "error": "So'rov yuborilmadi. Qayta urinib ko'ring.",
+      "validation": "Telefon raqamini to'liq kiriting."
+    },
     "footer": {
       "description": "O'zbekistondagi birinchi kimyo va biologiya fanlariga yo'naltirilgan onlayn platformasi",
       "platform": "Platforma",

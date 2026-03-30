@@ -2,7 +2,12 @@ import { useTranslation } from "react-i18next"
 import {motion, useInView} from "framer-motion"
 import { useRef } from "react";
 import i18n from "@/localization";
-export default function NationalCert() {
+
+type NationalCertProps = {
+    onOpenModal?: () => void;
+};
+
+export default function NationalCert({ onOpenModal }: NationalCertProps) {
     const {t}=useTranslation()
     const cardRef = useRef(null);
     const isCardInView = useInView(cardRef, { once: true, margin: "-100px" });
@@ -54,11 +59,19 @@ export default function NationalCert() {
             ))}
           </div>
                 <div className="flex flex-col md:flex-row items-center gap-3 mt-6 w-full md:w-fit">
-                 <button className="w-full md:w-auto cursor-pointer text-[#1A1A2E] bg-[linear-gradient(104.61deg,_#D4A017_0%,_#F5D060_100%)] shadow-[0px_4px_20px_0px_#D4A01766] px-10 py-5 rounded-full font-bold">
+                 <button
+                   type="button"
+                   onClick={onOpenModal}
+                   className="w-full md:w-auto cursor-pointer text-[#1A1A2E] bg-[linear-gradient(104.61deg,_#D4A017_0%,_#F5D060_100%)] shadow-[0px_4px_20px_0px_#D4A01766] px-10 py-5 rounded-full font-bold"
+                 >
                    {t("version2.NationalCert.button1")}
                  </button>
   
-                 <button className="w-full md:w-auto cursor-pointer border border-[#D4A01780] text-[#F5D060] px-10 py-[18px] rounded-full">
+                 <button
+                   type="button"
+                   onClick={onOpenModal}
+                   className="w-full md:w-auto cursor-pointer border border-[#D4A01780] text-[#F5D060] px-10 py-[18px] rounded-full"
+                 >
                    {t("version2.NationalCert.button2")}
                  </button>
                </div>

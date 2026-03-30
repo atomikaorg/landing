@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Button from "../Button";
 
 const cards = [
@@ -54,10 +54,16 @@ const ProcessCard = ({ card, index, t }:any) => {
   );
 };
 
-export default function Process() {
+export default function Process({ onAutoOpen }: { onAutoOpen?: () => void }) {
   const { t } = useTranslation();
   const sectionRef = useRef(null);
+  
   const isSectionInView = useInView(sectionRef, { once: true, margin: "-50px" });
+  useEffect(() => {
+        if (isSectionInView) {
+            onAutoOpen?.();
+        }
+    }, [isSectionInView, onAutoOpen]);
 
   return (
     <section ref={sectionRef} className="relative overflow-hidden pt-[30px]  md:pt-[146px]">
@@ -77,7 +83,7 @@ export default function Process() {
           <div className="mx-auto">
             <Button text={"version2.process.badge"}/>
 
-            <h2 className="font-gilroy mx-auto mt-5 text-left text-[32px] font-semibold leading-[1.15] text-[#1F2138] md:text-[48px]">
+            <h2 className="font-gilroy mx-auto mt-5 text-left text-[32px] font-bold leading-[1.15] text-[#1F2138] md:text-[48px]">
               {t("version2.process.titlePrefix")}{" "}
               <span className="bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] bg-clip-text text-transparent">
                 {t("version2.process.titleHighlight")}

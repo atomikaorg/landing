@@ -1,11 +1,23 @@
 import { useTranslation } from "react-i18next"
 import {motion, useInView} from "framer-motion"
-import { useRef } from "react";
-import { Link } from "react-router-dom";
-export default function Ready() {
+import { useEffect, useRef } from "react";
+
+type ReadyProps = {
+  onOpenModal?: () => void;
+  onAutoOpen?: () => void;
+};
+
+export default function Ready({ onOpenModal, onAutoOpen }: ReadyProps) {
   const {t}=useTranslation()
   const cardRef = useRef(null);
   const isCardInView = useInView(cardRef, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    if (isCardInView) {
+      onAutoOpen?.();
+    }
+  }, [isCardInView, onAutoOpen]);
+
   return (
     <div className="bg-brand-purple-gradient py-[100px]">
       <motion.div
@@ -21,7 +33,13 @@ export default function Ready() {
           className="container flex flex-col items-center justify-center text-center gap-[15px]">
         <h2 className="text-[#F9FAFB] text-[32px] md:text-[64px] font-gilroy font-bold">{t("version2.Ready.title")}</h2>
         <p className="text-[#FFFFFF] text-[15px] md:text=[24px]">{t("version2.Ready.description")}</p>
-        <Link to={"https://atomika.org/session/signup"} className="font-outfit  cursor-pointer text-[#1A1A2E] bg-[linear-gradient(104.61deg,_#D4A017_0%,_#F5D060_100%)] shadow-[0px_4px_20px_0px_#D4A01766] px-10 py-5 rounded-full font-bold">{t("version2.Ready.button")}</Link>
+        <button
+          type="button"
+          onClick={onOpenModal}
+          className="font-outfit cursor-pointer text-[#1A1A2E] bg-[linear-gradient(104.61deg,_#D4A017_0%,_#F5D060_100%)] shadow-[0px_4px_20px_0px_#D4A01766] px-10 py-5 rounded-full font-bold"
+        >
+          {t("version2.Ready.button")}
+        </button>
       </motion.div>
     </div>
   )

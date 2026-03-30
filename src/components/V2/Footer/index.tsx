@@ -5,7 +5,7 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer id="contacts" className="bg-[#120A20] text-white">
+    <footer id="contacts" className="bg-brand-purple-gradient text-white">
       <div className="container py-[56px] md:py-[72px]">
         <div className="grid gap-10 md:grid-cols-[1.8fr_1fr_1fr_1fr] md:gap-8">
           <div className="max-w-[290px]">

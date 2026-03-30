@@ -104,7 +104,7 @@ export default function OurCourses() {
 
           <Button text="version2.ourcourses.button" />
 
-          <h2 className="mt-[30px] text-left text-[32px] font-bold font-gilroy text-[#1A1A2E] md:mt-10 md:text-[44px]">
+          <h2 className="mt-[30px] text-left text-[32px] font-bold font-gilroy text-[#1A1A2E] md:mt-10 md:text-[48px]">
             {t("version2.ourcourses.title")}
           </h2>
 

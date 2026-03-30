@@ -1,10 +1,14 @@
 import IT_PARK from "/itpark-logo.png?url";
 import CYBER_PARK from "/cyber.png?url";
 import MINISTRY from "/ministry-logo.png?url";
+import MINISTRYRU from "/partnerru.png?url";
 import { motion, useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 import Button from "../Button";
+import i18n from "@/localization";
+import { Link } from "react-router-dom";
+// import {Link} from ""
 
 export default function Partners() {
   const {t}=useTranslation()
@@ -38,17 +42,23 @@ export default function Partners() {
             [scrollbar-width:none]
           "
         >
-          <div className="flex justify-center flex-shrink-0">
+          <Link to={"https://cyberpark.uz/residents/194-ooo-atomika-1"} className="flex justify-center flex-shrink-0">
             <img src={CYBER_PARK} className="w-[116px] md:w-[211px]" />
-          </div>
+          </Link>
 
-          <div className="flex justify-center flex-shrink-0">
+          <Link to={"https://www.it-park.uz/"} className="flex justify-center flex-shrink-0">
             <img src={IT_PARK} className="w-[166px] md:w-[303px]" />
-          </div>
+          </Link>
+          {i18n.language === "uz" ? (
+            <Link to={"https://digital.uz/uz"} className="flex justify-center flex-shrink-0">
+              <img src={MINISTRY} className="w-[200px] md:w-[367px]" />
+            </Link>
+          ) : (
+            <Link to={"https://digital.uz/en"} className="flex justify-center flex-shrink-0">
+              <img src={MINISTRYRU} className="w-[200px] md:w-[367px]" />
+            </Link>
+          )}
 
-          <div className="flex justify-center flex-shrink-0">
-            <img src={MINISTRY} className="w-[200px] md:w-[367px]" />
-          </div>
         </div>
       </div>
       </div>

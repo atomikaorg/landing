@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { RotateCcw } from "lucide-react";
+import { Play, RotateCcw } from "lucide-react";
 import Button from "../Button";
 
 type Teacher = {
@@ -11,7 +11,7 @@ type Teacher = {
   imagePosition?: string;
   imageScale?: number;
   field: string;
-  description: string;
+  description: string[];
   experience: string;
 };
 
@@ -28,7 +28,7 @@ export default function Teachers() {
       image: "/teacher2.jpg",
       imagePosition: "center top",
       field: t("version2.teacher_field1"),
-      description: t("title.teacher_desc1"),
+      description: [t("title.teacher_desc1"), t("title.teacher_desc11")],
       experience: t("title.teacher_exp1"),
     },
     {
@@ -37,7 +37,7 @@ export default function Teachers() {
       image: "/teacher1.jpg",
       imagePosition: "center top",
       field: t("version2.teacher_field2"),
-      description: t("title.teacher_desc2"),
+      description: [t("title.teacher_desc2"), t("title.teacher_desc22")],
       experience: t("title.teacher_exp2"),
     },
     {
@@ -46,7 +46,7 @@ export default function Teachers() {
       image: "/teacher3.jpg",
       imagePosition: "center 48%",
       field: t("version2.teacher_field3"),
-      description: t("title.teacher_desc3"),
+      description: [t("title.teacher_desc3"), t("title.teacher_desc33")],
       experience: t("title.teacher_exp3"),
     },
     {
@@ -55,7 +55,7 @@ export default function Teachers() {
       image: "/teacher4.jpg",
       imagePosition: "center top",
       field: t("version2.teacher_field4"),
-      description: t("title.teacher_desc4"),
+      description: [t("title.teacher_desc4"), t("title.teacher_desc44")],
       experience: t("title.teacher_exp4"),
     },
     {
@@ -65,7 +65,7 @@ export default function Teachers() {
       imagePosition: "center 50%",
       imageScale: 1.40,
       field: t("version2.teacher_field5"),
-      description: t("title.teacher_desc5"),
+      description: [t("title.teacher_desc5"), t("title.teacher_desc55")],
       experience: t("title.teacher_exp5"),
     },
   ];
@@ -94,7 +94,7 @@ export default function Teachers() {
         <Button text={"version2.teacher_button"} />
 
         <div className="mx-auto mt-5">
-          <h2 className="text-left text-[32px] font-semibold leading-[1.1] text-[#111827] md:text-[48px]">
+          <h2 className="text-left text-[32px] font-bold font-gilroy leading-[1.1] text-[#111827] md:text-[48px]">
             {t("version2.teacher_title")}
           </h2>
           <p className="mt-4 text-left text-[15px] text-[#6B7280] md:text-[22px]">
@@ -150,39 +150,31 @@ export default function Teachers() {
                     </div>
                   </div>
 
-                  <div className="absolute inset-0 flex rounded-[32px] bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] p-4 text-white [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                    <div className="flex h-full flex-col">
-                      <div className="mb-5 flex items-start justify-between gap-3">
-                        <div>
-                          <h3 className="text-[20px] font-bold leading-tight">
-                            {teacher.name}
-                          </h3>
-                          <p className="mt-1 text-sm font-semibold text-white/80">
-                            {teacher.field}
-                          </p>
-                        </div>
-                        <span className="rounded-full bg-white/15 p-3">
-                          <RotateCcw className="h-4 w-4" />
-                        </span>
-                      </div>
-
-                      <div className="flex items-center gap-2 rounded-[24px] bg-white/10 p-4 backdrop-blur-sm">
-                        <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-white/70">
+                  <div className="absolute inset-0 flex rounded-[32px] bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)]  text-white [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                    <div className="flex h-full flex-col justify-end relative p-4">
+                      <img className="w-[100px] absolute right-3 top-0" src="/teachercard.png" alt="" />
+                      <div className="flex flex-col  text-left gap-2 ">
+                        <p className="text-[13px] text-left font-semibold uppercase tracking-[0.18em] text-[#FFFFFF]">
                           {t("title.experience")}
                         </p>
-                        <p className="text-[16px] font-semibold">
+                        <li className="text-[16px] ml-4 text-left font-semibold">
                           {teacher.experience}
-                        </p>
+                        </li>
                       </div>
 
-                      <div className="mt-2 flex-1 rounded-[24px] bg-white/10 p-4 backdrop-blur-sm">
-                        <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-white/70">
+                      <div className="mt-2 ">
+                        <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#FFFFFF]">
                           {t("title.field")}
                         </p>
-                        <p className="mt-2 text-[15px] leading-6 text-white/90">
-                          {teacher.description}
-                        </p>
+                        <ul className="mt-2 ml-4 list-disc space-y-1">
+                          {teacher.description.map((item) => (
+                            <li key={item} className="text-[15px] leading-6 text-white/90">
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
+                      <button className="text-[#A755F7] mt-5 bg-[#F4EBFE] flex items-center justify-center gap-1 py-[18px] text-center rounded-full"><Play/>{t("title.teacherbutton")}</button>
                     </div>
                   </div>
                 </div>
