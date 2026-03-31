@@ -87,7 +87,7 @@ function PlanCard({
       <button
         type="button"
         onClick={onOpenModal}
-        className={`group relative mt-8 cursor-pointer overflow-hidden rounded-full border px-6 py-4 text-[15px] font-semibold transition-all duration-300 ease-in-out ${
+        className={`group relative font-gilroy mt-8 cursor-pointer overflow-hidden rounded-full border px-6 py-4 text-[15px] font-semibold transition-all duration-300 ease-in-out ${
           highlighted
             ? "border-[#A855F7] bg-white text-[#A855F7]"
             : "border-[#A855F7] bg-transparent text-[#A855F7] hover:bg-[#A855F7] hover:text-white"
@@ -96,7 +96,7 @@ function PlanCard({
         {highlighted ? (
           <>
             <span className="absolute inset-0 bg-brand-purple-gradient transition-opacity duration-300 ease-in-out group-hover:opacity-0" />
-            <span className="text-white relative z-10 bg-brand-purple-gradient bg-clip-text  transition-all duration-300 ease-in-out group-hover:bg-none group-hover:text-[#A855F7]">
+            <span className="text-white relative z-10 bg-brand-purple-gradient bg-clip-text font-gilroy  transition-all duration-300 ease-in-out group-hover:bg-none group-hover:text-[#A855F7]">
               {buttonText}
             </span>
           </>

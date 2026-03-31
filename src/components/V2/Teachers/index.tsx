@@ -141,10 +141,10 @@ export default function Teachers() {
                     <div className="absolute inset-x-0 bottom-0 h-36 bg-[linear-gradient(180deg,_rgba(0,0,0,0)_47.12%,_rgba(0,0,0,0.71)_72.23%,_#000000_93.17%)] to-transparent" />
 
                     <div className="absolute bottom-5 left-5 right-5">
-                      <h3 className="text-center text-[16px] font-bold leading-tight text-white">
+                      <h3 className="text-center text-[16px] font-bold font-gilroy leading-tight text-white">
                         {teacher.name}
                       </h3>
-                      <p className="mb-2 bg-[linear-gradient(182.09deg,_#C38BFA_1.21%,_#A755F7_53.87%,_#8216EB_123.92%)] bg-clip-text text-center text-sm font-bold text-transparent">
+                      <p className="mb-2 bg-[linear-gradient(182.09deg,_#C38BFA_1.21%,_#A755F7_53.87%,_#8216EB_123.92%)] bg-clip-text text-center text-sm font-bold text-transparent font-gilroy">
                         {teacher.field}
                       </p>
                     </div>
@@ -154,27 +154,27 @@ export default function Teachers() {
                     <div className="flex h-full flex-col justify-end relative p-4">
                       <img className="w-[100px] absolute right-3 top-0" src="/teachercard.png" alt="" />
                       <div className="flex flex-col  text-left gap-2 ">
-                        <p className="text-[13px] text-left font-semibold uppercase tracking-[0.18em] text-[#FFFFFF]">
+                        <p className="text-[13px] text-left font-semibold font-gilroy uppercase tracking-[0.18em] text-[#FFFFFF]">
                           {t("title.experience")}
                         </p>
-                        <li className="text-[16px] ml-4 text-left font-semibold">
+                        <li className="text-[16px] ml-4 text-left font-semibold font-gilroy">
                           {teacher.experience}
                         </li>
                       </div>
 
                       <div className="mt-2 ">
-                        <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#FFFFFF]">
+                        <p className="text-[13px] font-semibold font-gilroy uppercase tracking-[0.18em] text-[#FFFFFF]">
                           {t("title.field")}
                         </p>
                         <ul className="mt-2 ml-4 list-disc space-y-1">
                           {teacher.description.map((item) => (
-                            <li key={item} className="text-[15px] leading-6 text-white/90">
+                            <li key={item} className="text-[15px] font-gilroy leading-6 text-white/90">
                               {item}
                             </li>
                           ))}
                         </ul>
                       </div>
-                      <button className="text-[#A755F7] mt-5 bg-[#F4EBFE] flex items-center justify-center gap-[6.5px] py-[18px] text-center rounded-full"><img src="/teacherplay.svg" alt="" />{t("title.teacherbutton")}</button>
+                      <button className="text-[#A755F7] mt-5 bg-[#F4EBFE] flex items-center justify-center gap-[6.5px] py-[18px] text-center rounded-full font-gilroy"><img src="/teacherplay.svg" alt="" />{t("title.teacherbutton")}</button>
                     </div>
                   </div>
                 </div>

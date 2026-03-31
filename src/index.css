@@ -123,6 +123,10 @@
   padding-right: 20px;
 }
 
+body{
+  font-family: gilroy, sans-serif;
+}
+
 @media (min-width: 768px) {
   .feedbacks-rail {
     padding-left: calc((100vw - 840px) / 2);

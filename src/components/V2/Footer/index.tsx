@@ -16,7 +16,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[15px] font-bold text-white">
+            <h4 className="text-[15px] font-bold text-white font-gilroy">
               {t("version2.footer.platform")}
             </h4>
             <div className="mt-4 space-y-3 text-[13px] text-white/50">
