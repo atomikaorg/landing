@@ -37,11 +37,33 @@ export default {
             transform: "rotate(360deg)",
           },
         },
+        "button-breathe": {
+          "0%, 100%": {
+            transform: "scale(1)",
+            boxShadow: "0px 4px 20px 0px rgba(212, 160, 23, 0.4)",
+          },
+          "50%": {
+            transform: "scale(1.05)",
+            boxShadow: "0px 10px 28px 0px rgba(212, 160, 23, 0.55)",
+          },
+        },
+        "gradient-shift": {
+          "0%, 100%": {
+            backgroundPosition: "0% 50%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         spin: "spin 1s linear infinite",
+        "button-breathe": "button-breathe 2.4s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 4s ease-in-out infinite",
+        "button-breathe-gradient":
+          "button-breathe 2.4s ease-in-out infinite, gradient-shift 4s ease-in-out infinite",
       },
       borderRadius: {
         lg: "var(--radius)",

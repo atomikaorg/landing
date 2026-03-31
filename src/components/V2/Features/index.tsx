@@ -45,7 +45,7 @@ export default function Features() {
         "absolute inset-0 bg-[url('/original-course-bg.png')] bg-contain bg-right bg-no-repeat max-md:bg-[size:300px] max-md:bg-right-top",
       titleClass:
         "text-white font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy max-md:text-[32px]  max-md:max-w-[150px] z-10",
-      descClass: "text-[#F2F2F2] font-sfpro font-medium text-[22px] md:text-[24px] leading-[150%] z-10",
+      descClass: "text-[#F2F2F2] font-sfpro font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-gilroy",
     },
     {
       id: "flexibleLearning",
@@ -56,7 +56,7 @@ export default function Features() {
         "absolute inset-0 bg-[url('/flexible-card-bg.png')] bg-[length:164px] bg-right-top bg-no-repeat max-md:bg-[size:150px]",
       titleClass:
         "text-black font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy z-10 max-md:text-[32px] w-[250px] max-md:max-w-[70%]",
-      descClass: "text-gray-text font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-sfpro",
+      descClass: "text-gray-text font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-gilroy",
     },
     {
       id: "smartPractice",
@@ -67,7 +67,7 @@ export default function Features() {
         "absolute inset-0 bg-[url('/training-card-bg.png')] bg-[length:447px] bg-right-top bg-no-repeat max-md:bg-[size:250px]",
       titleClass:
         "text-white font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy max-md:text-[32px] w-[330px] max-md:max-w-[70%] z-10",
-      descClass: "text-white font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-sfpro",
+      descClass: "text-white font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-gilroy",
     },
     {
       id: "progressSystem",
@@ -78,7 +78,7 @@ export default function Features() {
         "absolute inset-0  bg-[url('/gamification-card-bg.png')] bg-[length:203px] bg-right-top bg-no-repeat max-md:bg-[size:150px]",
       titleClass:
         "text-black font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy w-[280px] max-md:max-w-[70%]",
-      descClass: "text-gray-text font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-sfpro",
+      descClass: "text-gray-text font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-gilroy",
     },
     {
       id: "clearExplanations",
@@ -89,7 +89,7 @@ export default function Features() {
         "absolute inset-0 bg-[url('/card4.png'),_url('/card4bg1.png')] bg-[position:right_top,_center] bg-no-repeat bg-[size:auto,_50%]   bg-right-top bg-no-repeat max-md:bg-[size:150px] ",
       titleClass:
         "text-white font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy w-[332px] max-md:max-w-[70%]",
-      descClass: "text-white font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-sfpro",
+      descClass: "text-white font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-gilroy",
     },
     {
       id:"fasterLearning",
@@ -100,7 +100,7 @@ export default function Features() {
         "absolute inset-0 bg-[url('/card6.png'),_url('/card6bg1.png')]  bg-right-top bg-no-repeat bg-[size:164px_auto,_296px_380px] max-md:bg-[size:150px_auto,_180px_230px]",
       titleClass:
         "text-white font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy max-md:max-w-[70%]",
-      descClass: "text-[#F2F2F2] font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-sfpro",
+      descClass: "text-[#F2F2F2] font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-gilroy",
     }
   ];
 

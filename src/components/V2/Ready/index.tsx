@@ -36,7 +36,7 @@ export default function Ready({ onOpenModal, onAutoOpen }: ReadyProps) {
         <button
           type="button"
           onClick={onOpenModal}
-          className="font-gilroy text-[24px] cursor-pointer text-[#1A1A2E] bg-[linear-gradient(104.61deg,_#D4A017_0%,_#F5D060_100%)] shadow-[0px_4px_20px_0px_#D4A01766] px-10 py-[30px] rounded-full font-bold"
+          className="animate-button-breathe-gradient font-gilroy text-[24px] cursor-pointer text-[#1A1A2E] bg-gold-gradient bg-[length:200%_200%] px-10 py-[30px] rounded-full font-bold will-change-transform"
         >
           {t("version2.Ready.button")}
         </button>
