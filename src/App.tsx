@@ -44,15 +44,25 @@ function App() {
   const [modalOpenMode, setModalOpenMode] = useState<'button' | 'scroll'>('button');
   const [autoOpenedSections, setAutoOpenedSections] = useState<Record<string, boolean>>({});
   const modalOpenFrameRef = useRef<number | null>(null);
+  const modalOpenTimeoutRef = useRef<number | null>(null);
 
-  const scheduleModalOpen = useCallback((source: string, mode: 'button' | 'scroll') => {
+  const clearPendingModalOpen = useCallback(() => {
     if (modalOpenFrameRef.current) {
       window.cancelAnimationFrame(modalOpenFrameRef.current);
       modalOpenFrameRef.current = null;
     }
 
+    if (modalOpenTimeoutRef.current) {
+      window.clearTimeout(modalOpenTimeoutRef.current);
+      modalOpenTimeoutRef.current = null;
+    }
+  }, []);
+
+  const scheduleModalOpen = useCallback((source: string, mode: 'button' | 'scroll') => {
     setModalSource(source);
     setModalOpenMode(mode);
+
+    clearPendingModalOpen();
 
     window.requestAnimationFrame(() => {
       modalOpenFrameRef.current = window.requestAnimationFrame(() => {
@@ -60,20 +70,16 @@ function App() {
         modalOpenFrameRef.current = null;
       });
     });
-  }, []);
+  }, [clearPendingModalOpen]);
 
   const openModal = useCallback((source: string) => {
     scheduleModalOpen(source, 'button');
   }, [scheduleModalOpen]);
 
   const closeModal = useCallback(() => {
-    if (modalOpenFrameRef.current) {
-      window.cancelAnimationFrame(modalOpenFrameRef.current);
-      modalOpenFrameRef.current = null;
-    }
-
+    clearPendingModalOpen();
     setIsModalOpen(false);
-  }, []);
+  }, [clearPendingModalOpen]);
 
   const openModalOnce = useCallback((source: string) => {
     setAutoOpenedSections((previous) => {
@@ -81,14 +87,18 @@ function App() {
         return previous;
       }
 
-      scheduleModalOpen(source, 'scroll');
+      clearPendingModalOpen();
+      modalOpenTimeoutRef.current = window.setTimeout(() => {
+        scheduleModalOpen(source, 'scroll');
+        modalOpenTimeoutRef.current = null;
+      }, 2000);
 
       return {
         ...previous,
         [source]: true,
       };
     });
-  }, [scheduleModalOpen]);
+  }, [clearPendingModalOpen, scheduleModalOpen]);
 
   return (
     <Router>

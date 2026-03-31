@@ -342,11 +342,11 @@
     "start_plan": {
       "title": "Start",
       "description": "Mustaqil ta’lim uchun",
-      "price": "300 000",
+      "price": "300,000",
       "button_text": "O'qishni boshlash",
       "features": [
         "Kimyo va biologiyadan video-darslar",
-        "Cheklovsiz darslarni ko'rish",
+        "Kunlik 1 ta darsni o’rganish imkoniyati",
         "Har bir dars/mavzu/moduldan keyin testlar",
         "Har bir savol uchun video-tahlillar",
         "Haftalik ochiq darslar va yozib olingan ochiq darslarga kirish",
@@ -362,12 +362,13 @@
       "title": "Standart",
       "badge": "Tavsiya etamiz!",
       "description": "Mentorlar bilan to'liq tayyorgarlik",
-      "price": "600 000",
+      "price": "600,000",
       "button_text": "O'qishni boshlash",
       "installment_info": "Uzum Nasiya/Alif Nasiya orqali bo’lib to’lash imkoniyati",
       "features": [
         "“Start” tarifidagi barcha imkoniyatlar",
         "Individual mentorlar",
+        "Cheksiz darslarni ko'rish imkoniyati",
         "Kuratorlar nazorati va yordami",
         "DTM va Milliy sertifikat bo'yicha sinov imtihonlari",
         "Interaktiv bilim mashqlari (trenajorlar)",

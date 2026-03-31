@@ -13,7 +13,6 @@ export default function StudentsResult() {
         {src:"/cert5.png"},
         {src:"/cert2.png"},
         {src:"/cert7.png"},
-        {src:"/cert6.png"},
         {src:"/cert1.png"},
         {src:"/cert3.png"},
         {src:"/cert4.png"},

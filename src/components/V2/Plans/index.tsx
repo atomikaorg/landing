@@ -15,6 +15,7 @@ type PlanCardProps = {
   badge?: string;
   installmentInfo?: string;
   highlighted?: boolean;
+  className?: string;
 };
 
 function PlanCard({
@@ -29,10 +30,11 @@ function PlanCard({
   badge,
   installmentInfo,
   highlighted = false,
+  className,
 }: PlanCardProps) {
   return (
     <article
-      className={`relative flex h-full flex-col rounded-[32px] bg-white px-6 pb-6 pt-7 shadow-[0px_18px_50px_-16px_rgba(24,39,75,0.18)] md:px-8 md:pb-8 md:pt-8 ${
+      className={`${className ?? ""} relative flex h-full flex-col rounded-[32px] bg-white px-6 pb-6 pt-7 shadow-[0px_18px_50px_-16px_rgba(24,39,75,0.18)] md:px-8 md:pb-8 md:pt-8 ${
         highlighted
           ? "border-[4px] border-[#A855F7] shadow-[0px_20px_60px_-20px_rgba(168,85,247,0.55)]"
           : "border border-[#E8E8EF]"
@@ -85,9 +87,22 @@ function PlanCard({
       <button
         type="button"
         onClick={onOpenModal}
-        className="mt-8 cursor-pointer rounded-full border border-[#A855F7] px-6 py-4 text-[15px] font-semibold text-[#A855F7] transition hover:bg-[#A855F7] hover:text-white"
+        className={`group relative mt-8 cursor-pointer overflow-hidden rounded-full border px-6 py-4 text-[15px] font-semibold transition-all duration-300 ease-in-out ${
+          highlighted
+            ? "border-[#A855F7] bg-white text-[#A855F7]"
+            : "border-[#A855F7] bg-transparent text-[#A855F7] hover:bg-[#A855F7] hover:text-white"
+        }`}
       >
-        {buttonText}
+        {highlighted ? (
+          <>
+            <span className="absolute inset-0 bg-brand-purple-gradient transition-opacity duration-300 ease-in-out group-hover:opacity-0" />
+            <span className="text-white relative z-10 bg-brand-purple-gradient bg-clip-text  transition-all duration-300 ease-in-out group-hover:bg-none group-hover:text-[#A855F7]">
+              {buttonText}
+            </span>
+          </>
+        ) : (
+          buttonText
+        )}
       </button>
 
      <div className="flex items-center justify-center w-full"> <p className="mt-4 text-center text-[16px] leading-[150%] text-[#9CA3AF] font-gilroy font-medium max-w-[220px]">
@@ -116,13 +131,13 @@ export default function Plans({ onOpenModal, onAutoOpen }: PlansProps) {
     ? "version2.pricing"
     : `${plansRoot}.pricing`;
 
-  const startFeatures = Array.from({ length: 6 }, (_, index) =>
+  const startFeatures = Array.from({ length: 7 }, (_, index) =>
     t(`${pricingRoot}.start_plan.features.${index}`)
   );
   const startUnavailableFeatures = Array.from({ length: 2 }, (_, index) =>
     t(`${pricingRoot}.start_plan.unavailable_features.${index}`)
   );
-  const standardFeatures = Array.from({ length: 6 }, (_, index) =>
+  const standardFeatures = Array.from({ length: 7 }, (_, index) =>
     t(`${pricingRoot}.standard_plan.features.${index}`)
   );
 
@@ -170,6 +185,7 @@ export default function Plans({ onOpenModal, onAutoOpen }: PlansProps) {
               features={startFeatures}
               unavailableFeatures={startUnavailableFeatures}
               installmentInfo={t(`${pricingRoot}.standard_plan.installment_info`)}
+              className="order-2 md:order-1"
             />
 
             <PlanCard
@@ -183,6 +199,7 @@ export default function Plans({ onOpenModal, onAutoOpen }: PlansProps) {
               features={standardFeatures}
               installmentInfo={t(`${pricingRoot}.standard_plan.installment_info`)}
               highlighted
+              className="order-1 md:order-2"
             />
           </div>
         </motion.div>
