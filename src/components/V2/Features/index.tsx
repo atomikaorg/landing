@@ -77,7 +77,7 @@ export default function Features() {
       bgClass:
         "absolute inset-0  bg-[url('/gamification-card-bg.png')] bg-[length:203px] bg-right-top bg-no-repeat max-md:bg-[size:150px]",
       titleClass:
-        "text-black font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy w-[250px] max-md:max-w-[70%]",
+        "text-black font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy w-[280px] max-md:max-w-[70%]",
       descClass: "text-gray-text font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-sfpro",
     },
     {

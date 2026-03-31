@@ -36,7 +36,7 @@ export default function Info({ onOpenModal }: InfoProps) {
               <button
                 type="button"
                 onClick={onOpenModal}
-                className="px-10 py-5 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.3)] w-full md:w-auto cursor-pointer text-center text-[#FFFFFF]"
+                className="px-10 py-5 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.3)] w-full md:w-auto cursor-pointer text-center text-[#FFFFFF] font-gilroy text-[24px] font-bold"
                 style={{
                   background:
                     "linear-gradient(182.09deg, #C38BFA 1.21%, #A755F7 53.87%, #8216EB 123.92%)",
@@ -47,7 +47,7 @@ export default function Info({ onOpenModal }: InfoProps) {
 
               <a
                 href="tel:+998555111133"
-                className="rounded-full border-[2px] border-[#A755F7] text-center py-[18px] px-10 bg-[#FFFFFF] text-[#A755F7] cursor-pointer hover:bg-transparent w-full md:w-auto"
+                className="rounded-full border-[2px] border-[#A755F7] text-center py-[18px] px-10 bg-[#FFFFFF] text-[#A755F7] cursor-pointer hover:bg-transparent w-full md:w-auto font-gilroy text-[24px] font-bold"
               >
                 {t("version2.info.tryFree")}
               </a>

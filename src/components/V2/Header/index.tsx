@@ -118,7 +118,7 @@ export default function Header({onOpenModal}: HeaderProps) {
               </div>
             </div>
 
-            <Link to={"https://atomika.org/session/signin"} className="px-[30px] py-[5px] md:py-5 font-bold font-gilroy text-[16px] md:text-[20px] rounded-full text-white bg-gradient-to-b from-[#C38BFA] via-[#A755F7] to-[#8216EB] lg:bg-none lg:text-[#1A1A2E] hover:bg-transparent">
+            <Link to={"https://atomika.org/session/signin"} className="px-[30px] py-[10px] md:py-5 font-bold font-gilroy text-[16px] md:text-[20px] rounded-full text-white bg-gradient-to-b from-[#C38BFA] via-[#A755F7] to-[#8216EB] lg:bg-none lg:text-[#1A1A2E] hover:bg-transparent">
               {t("version2.header.login")}
             </Link>
             <button onClick={onOpenModal}
