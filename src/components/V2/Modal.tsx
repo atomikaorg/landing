@@ -12,7 +12,7 @@ type ModalProps = {
 };
 
 const GOOGLE_SHEETS_URL =
-  "https://docs.google.com/spreadsheets/d/105ETzpRK0h3of9mWc8vqZbHa724ycklIuxvppx9aNxM/edit?gid=0#gid=0";
+  "https://docs.google.com/spreadsheets/d/105ETzpRK0h3of9mWc8vqZbHa724ycklIuxvppx9aNxM/edit?gid=0#gid=0r";
 
 const formatDisplayPhoneNumber = (value: string, isDeleting = false) => {
   let normalized = value.replace(/^\+998\+99/, "+998").replace(/^\+99\+99/, "+99");
@@ -227,9 +227,7 @@ export default function Modal({
           <X size={20} />
         </button>
 
-        {/* <div className="absolute inset-y-0 left-0 hidden w-[43%] bg-[radial-gradient(circle_at_20%_30%,_rgba(255,244,118,0.95)_0%,_rgba(255,207,51,0.88)_28%,_rgba(255,207,51,0)_60%)] md:block" /> */}
-
-        <div className="grid items-center gap-0 md:gap-8 md:grid-cols-[0.92fr_1.08fr]">
+        <div className="grid items-center gap-0 md:gap-8 md:grid-cols-[0.92fr_1.08fr] pb-[34px] ">
           <div className="relative hidden h-full  left-0 items-center md:flex">
             <img
               src="/modal.png"
@@ -245,20 +243,20 @@ export default function Modal({
           </div>
             
 
-          <div className="relative z-10 px-4 pb-4 pt-14 md:px-10 md:pb-10 md:pr-14 md:pt-12">
+          <div className="relative z-10 px-4  pt-22 md:px-10 md:pb-10 md:pr-14 md:pt-12">
             <div className="max-w-[560px]">
-              <h2 className=" font-gilroy text-[48px] font-semibold leading-[1.08] text-white md:max-w-[470px] md:text-[64px] md:leading-[1.02]">
+              <h2 className=" font-gilroy text-[48px] font-semibold leading-[110%] text-white md:max-w-[470px] md:text-[64px]">
                 {t("version2.modal.title")} <span className="bg-[linear-gradient(111.21deg,_#F8DC71_-4.37%,_#F09C38_68.59%)] bg-clip-text text-transparent">{t("version2.modal.titlefree")}</span>{t("version2.modal.title2")}
               </h2>
               <p className="font-sfpro mt-3  text-[16px] leading-5 text-white/85 md:mt-4 md:max-w-[470px] md:text-[24px] md:leading-6">
                 {t("version2.modal.description")}
               </p>
 
-              <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-white/80 md:mt-8 md:flex-nowrap md:gap-5">
+              <div className="mt-4 flex flex-col md:flex-wrap  gap-x-3 gap-y-2 text-white/80 md:mt-8 leading-[150%] md:gap-5">
               {t("version2.modal.features",{returnObjects:true}).map((feature) => (
                 <div
                   key={feature}
-                  className="rounded-full flex items-center gap-1 text-[11px] font-outfit whitespace-nowrap md:gap-3 md:text-[15px]"
+                  className="rounded-full flex items-center gap-1 text-[16px] font-gilroy font-medium leading-[150%] whitespace-nowrap md:gap-3 "
                 >
                 <img src="/check.svg" alt="" className="w-4 md:w-auto" />  {feature}
                 </div>
@@ -266,7 +264,7 @@ export default function Modal({
 
               </div>
 
-              <div className="mt-5 space-y-3 md:mt-8 md:space-y-4">
+              <div className="mt-[36px] space-y-3 md:mt-8 md:space-y-4">
                 <input
                   type="tel"
                   value={phone}
@@ -275,23 +273,25 @@ export default function Modal({
                     setPhone(formatDisplayPhoneNumber(event.target.value, isDeleting));
                   }}
                   placeholder={t("version2.modal.phonePlaceholder")}
-                  className="h-11 w-full rounded-full border border-white/70 bg-white/8 px-5 text-[14px] text-white outline-none placeholder:text-white/55 focus:border-white/70 md:h-14 md:px-6 md:text-[16px]"
+                  className=" w-full rounded-full border border-white/70 bg-white/8 px-5 py-5 text-[24px] font-gilroy text-white outline-none placeholder:text-white/55 focus:border-white/70"
                 />
 
                 <button
                   type="button"
                   onClick={handleSubmit}
                   disabled={isSubmitting}
-                  className="h-11 w-full rounded-full bg-white px-6 font-outfit text-[13px] font-bold text-[#0B0B0B] transition hover:bg-[#f5ebff] disabled:cursor-not-allowed disabled:opacity-70 md:h-14 md:text-[15px]"
+                  className="w-full rounded-full bg-white py-5 font-gilroy text-[24px] font-bold disabled:cursor-not-allowed disabled:opacity-70 "
                 >
-                  {isSubmitting ? "..." : t("version2.modal.submit")}
+                  <span className="bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] bg-clip-text text-transparent">
+                    {isSubmitting ? "..." : t("version2.modal.submit")}
+                  </span>
                 </button>
 
                 <div className="text-center text-[20px] font-sfpro font-medium text-[#F2F2F2] md:text-[24px]">{t("version2.modal.or")}</div>
 
                 <a
                   href="tel:+998555111133"
-                  className="flex h-11 w-full items-center justify-center rounded-full border border-white/70 px-6 text-center font-outfit text-[13px] font-bold text-white transition hover:bg-white/10 md:h-14 md:border-white/40 md:text-[17px]"
+                  className="flex  w-full items-center justify-center rounded-full border border-white/70 py-5 text-center font-gilroy text-[24px] font-bold text-white  md:border-white/40"
                 >
                   {t("version2.modal.secondary")}
                 </a>

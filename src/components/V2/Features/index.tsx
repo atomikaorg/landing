@@ -44,8 +44,8 @@ export default function Features() {
       bgClass:
         "absolute inset-0 bg-[url('/original-course-bg.png')] bg-contain bg-right bg-no-repeat max-md:bg-[size:300px] max-md:bg-right-top",
       titleClass:
-        "text-white font-semibold text-3xl max-md:text-[32px]  max-md:max-w-[150px] z-10",
-      descClass: "text-[#F2F2F2] font-sfpro font-medium text-[22px] z-10",
+        "text-white font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy max-md:text-[32px]  max-md:max-w-[150px] z-10",
+      descClass: "text-[#F2F2F2] font-sfpro font-medium text-[22px] md:text-[24px] leading-[150%] z-10",
     },
     {
       id: "flexibleLearning",
@@ -55,8 +55,8 @@ export default function Features() {
       bgClass:
         "absolute inset-0 bg-[url('/flexible-card-bg.png')] bg-[length:164px] bg-right-top bg-no-repeat max-md:bg-[size:150px]",
       titleClass:
-        "text-black font-semibold text-3xl z-10 max-md:text-[32px] w-[217px] max-md:max-w-[70%]",
-      descClass: "text-gray-text font-medium text-[22px] z-10 font-sfpro",
+        "text-black font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy z-10 max-md:text-[32px] w-[250px] max-md:max-w-[70%]",
+      descClass: "text-gray-text font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-sfpro",
     },
     {
       id: "smartPractice",
@@ -66,8 +66,8 @@ export default function Features() {
       bgClass:
         "absolute inset-0 bg-[url('/training-card-bg.png')] bg-[length:447px] bg-right-top bg-no-repeat max-md:bg-[size:250px]",
       titleClass:
-        "text-white font-semibold text-3xl max-md:text-[32px] w-[330px] max-md:max-w-[70%] z-10",
-      descClass: "text-white font-medium text-[22px] z-10 font-sfpro",
+        "text-white font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy max-md:text-[32px] w-[330px] max-md:max-w-[70%] z-10",
+      descClass: "text-white font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-sfpro",
     },
     {
       id: "progressSystem",
@@ -75,10 +75,10 @@ export default function Features() {
       className:
         "relative bg-gradient-to-r from-[#D2FF73] to-[#C3FB4C] min-h-[300px] md:h-[323px] rounded-[40px] px-10 py-[38px] flex flex-col justify-between gap-[56px] max-md:py-[30px] max-md:px-[22px] shadow-[0px_14px_64px_-4px_#18274B1F,0px_8px_22px_-6px_#18274B1F]",
       bgClass:
-        "absolute inset-0 bg-[url('/gamification-card-bg.png')] bg-[length:203px] bg-right-top bg-no-repeat max-md:bg-[size:150px]",
+        "absolute inset-0  bg-[url('/gamification-card-bg.png')] bg-[length:203px] bg-right-top bg-no-repeat max-md:bg-[size:150px]",
       titleClass:
-        "text-black font-semibold text-3xl z-10 max-md:text-[32px] max-md:max-w-[70%]",
-      descClass: "text-gray-text font-medium text-[22px] z-10 font-sfpro",
+        "text-black font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy w-[250px] max-md:max-w-[70%]",
+      descClass: "text-gray-text font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-sfpro",
     },
     {
       id: "clearExplanations",
@@ -88,8 +88,8 @@ export default function Features() {
       bgClass:
         "absolute inset-0 bg-[url('/card4.png'),_url('/card4bg1.png')] bg-[position:right_top,_center] bg-no-repeat bg-[size:auto,_50%]   bg-right-top bg-no-repeat max-md:bg-[size:150px] ",
       titleClass:
-        "text-white font-semibold text-3xl z-10 max-md:text-[32px] w-[240px] max-md:max-w-[70%]",
-      descClass: "text-white font-medium text-[22px] z-10 font-sfpro",
+        "text-white font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy w-[332px] max-md:max-w-[70%]",
+      descClass: "text-white font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-sfpro",
     },
     {
       id:"fasterLearning",
@@ -99,8 +99,8 @@ export default function Features() {
       bgClass:
         "absolute inset-0 bg-[url('/card6.png'),_url('/card6bg1.png')]  bg-right-top bg-no-repeat bg-[size:164px_auto,_296px_380px] max-md:bg-[size:150px_auto,_180px_230px]",
       titleClass:
-        "text-white font-semibold text-3xl z-10 max-md:text-[32px] max-md:max-w-[70%]",
-      descClass: "text-[#F2F2F2] font-medium text-[22px] z-10 font-sfpro",
+        "text-white font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy max-md:max-w-[70%]",
+      descClass: "text-[#F2F2F2] font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-sfpro",
     }
   ];
 
@@ -126,10 +126,10 @@ export default function Features() {
   );
 
   return (
-    <div className="container ">
+    <div className="container mt-[30px] md:mt-[50px] relative">
+      <img src="microscope.svg" className="hidden md:block absolute top-0 right-[-220px]" alt="" />
       <Button text={"version2.features.badge"}/>
-
-      <h2 className="font-gilroy mt-[13px] md:mt-6 text-left mb-[10px] md:mb-5 font-bold text-[48px] w-[700px]  max-md:text-[32px] max-md:leading-10 max-md:w-full">
+      <h2 className="font-gilroy mt-[30px] md:mt-10 text-left mb-[10px] font-semibold text-[48px] w-[700px]  max-md:text-[36px]  max-md:w-full leading-[120%]">
         {t("version2.features.title")}{" "}
         <span className="text-[40px] md:text-[64px] bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] bg-clip-text text-transparent">
           {t("version2.features.atomika")}
@@ -137,7 +137,7 @@ export default function Features() {
         {t("version2.features.title2")}
       </h2>
 
-      <p className="text-[#6B7280] text-[15px] font-outfit md:text-[24px]">
+      <p className="text-[#6B7280] text-[22px] font-gilroy font-medium leading-[150%] md:text-[28px]">
         {t("version2.features.description")}
       </p>
 
@@ -147,7 +147,7 @@ export default function Features() {
         animate={wrapperInView ? "visible" : "hidden"}
         className="hidden md:block"
       >
-        <div className="mt-10 grid grid-cols-12 gap-5">
+        <div className="mt-0 md:mt-10 grid grid-cols-12 gap-5">
           {orderedCards.map((card, i) => (
             <motion.div
               key={card.id}
@@ -161,7 +161,6 @@ export default function Features() {
         </div>
       </motion.div>
 
-      {/* ─── KICHIK EKRAN (md-): har bir card scroll qilganda alohida animatsiya ─── */}
       <div className="md:hidden flex flex-col gap-5 mt-[30px]">
         {orderedCards.map((card) => (
           <MobileCard key={card.id} className={card.className}>

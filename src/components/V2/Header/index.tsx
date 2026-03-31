@@ -36,10 +36,7 @@ export default function Header({onOpenModal}: HeaderProps) {
       href: "#nat_cert",
       label: t("version2.header.nav.certificate"),
       className:
-        "bg-[#FFF7CA] px-[18px] py-[5.5px] rounded-full font-medium text-[#1A1A2E] hidden lg:block",
-      style: {
-        background: "linear-gradient(101.64deg, #D4A017 0%, #F5D060 100%)",
-      },
+        "bg-[#FFF7CA] rounded-full font-gilroy font-black text-[#1A1A2E] hidden lg:block bg-[linear-gradient(104.61deg,#D4A017_0%,#F5D060_100%)] bg-clip-text text-transparent"
     },
     { href: "#contacts", label: t("version2.header.nav.contacts") },
   ];
@@ -54,7 +51,7 @@ export default function Header({onOpenModal}: HeaderProps) {
   );
 
   return (
-    <header className="fixed left-0 right-0 z-999 w-full border-b border-[#F2F2F2] bg-[#FFFEF7] py-4 backdrop-blur-lg supports-[backdrop-filter]:bg-[#FFFEF7]/70 lg:py-6" >
+    <header className="fixed left-0 right-0 z-999 w-full  bg-[#FFFEF7] py-4 backdrop-blur-lg supports-[backdrop-filter]:bg-[#FFFEF7]/70 lg:py-[17px]" >
       <div className="container">
         <div className="flex items-center justify-between gap-0 ">
           <a href="/" aria-label="Atomika home">
@@ -65,7 +62,7 @@ export default function Header({onOpenModal}: HeaderProps) {
             />
           </a>
 
-          <div className="flex items-center gap-5 lg:gap-3">
+          <div className="flex items-center gap-2 lg:gap-3">
             <div className="flex items-center justify-between gap-6">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
@@ -104,7 +101,7 @@ export default function Header({onOpenModal}: HeaderProps) {
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              <div className="hidden lg:flex items-center gap-6 ">
+              <div className="hidden lg:flex items-center gap-6">
                 {navItems.map((item) => (
                   <a
                     key={item.href}
@@ -112,7 +109,7 @@ export default function Header({onOpenModal}: HeaderProps) {
                     style={item.style}
                     className={
                       item.className ??
-                      "text-[#1A1A2E] font-medium text-[15px] hidden lg:block "
+                      "text-[#1A1A2E] font-medium text-[16px] font-gilroy leading-[150%] hidden lg:block "
                     }
                   >
                     {item.label}
@@ -121,18 +118,18 @@ export default function Header({onOpenModal}: HeaderProps) {
               </div>
             </div>
 
-            <Link to={"https://atomika.org/session/signin"} className="px-7 py-3 font-bold text-[15px] rounded-full text-white bg-gradient-to-b from-[#C38BFA] via-[#A755F7] to-[#8216EB] lg:bg-none lg:bg-[#FFFEF7] lg:text-[#1A1A2E] hover:bg-transparent">
+            <Link to={"https://atomika.org/session/signin"} className="px-[30px] py-[5px] md:py-5 font-bold font-gilroy text-[16px] md:text-[20px] rounded-full text-white bg-gradient-to-b from-[#C38BFA] via-[#A755F7] to-[#8216EB] lg:bg-none lg:text-[#1A1A2E] hover:bg-transparent">
               {t("version2.header.login")}
             </Link>
-            <Button onClick={onOpenModal}
-              className="rounded-full px-7 py-2 font-bold text-[15px] cursor-pointer hidden lg:block text-white"
+            <button onClick={onOpenModal}
+              className="rounded-full px-[30px] py-5 font-bold text-[20px] font-gilroy cursor-pointer whitespace-nowrap hidden lg:block text-white"
               style={{
                 background:
                   "linear-gradient(182.09deg, #C38BFA 1.21%, #A755F7 53.87%, #8216EB 123.92%)",
               }}
             >
               {t("version2.header.startEducation")}
-            </Button>
+            </button>
             <BurgerMenu />
           </div>
         </div>

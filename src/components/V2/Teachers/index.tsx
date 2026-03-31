@@ -85,7 +85,7 @@ export default function Teachers() {
       }}
       transition={{ duration: 0.8, delay: 0.1 }}
       id="about_course"
-      className="overflow-hidden pt-[60px] md:pt-[120px]"
+      className="overflow-hidden pt-[30px] md:pt-[50px]"
     >
       <div className="container relative">
         <div className="absolute left-[-280px] top-[-100px] hidden lg:block">
@@ -93,17 +93,17 @@ export default function Teachers() {
         </div>
         <Button text={"version2.teacher_button"} />
 
-        <div className="mx-auto mt-5">
-          <h2 className="text-left text-[32px] font-bold font-gilroy leading-[1.1] text-[#111827] md:text-[48px]">
+        <div className="mx-auto mt-[30px] md:mt-[40px]">
+          <h2 className="text-left text-[36px] font-semibold font-gilroy leading-[1.1] text-[#111827] md:text-[48px]">
             {t("version2.teacher_title")}
           </h2>
-          <p className="mt-4 text-left text-[15px] text-[#6B7280] md:text-[22px]">
+          <p className="mt-[10px] text-left text-[22px] font-medium leading-[150%] text-[#6B7280] md:text-[28px]">
             {t("version2.teacher_description")}
           </p>
         </div>
       </div>
 
-      <div className="content-rail no-scrollbar mt-8 overflow-x-auto overflow-y-hidden pb-20 md:mt-12 md:pb-[50px]">
+      <div className="content-rail no-scrollbar mt-[30px] overflow-x-auto overflow-y-hidden pb-[60px] md:mt-10 md:pb-[50px]">
         <div
           className="flex w-max min-w-full snap-x snap-mandatory justify-start gap-[30px] pt-5 md:gap-[50px]"
           style={{ msOverflowStyle: "none", scrollbarWidth: "none" }}
@@ -141,7 +141,7 @@ export default function Teachers() {
                     <div className="absolute inset-x-0 bottom-0 h-36 bg-[linear-gradient(180deg,_rgba(0,0,0,0)_47.12%,_rgba(0,0,0,0.71)_72.23%,_#000000_93.17%)] to-transparent" />
 
                     <div className="absolute bottom-5 left-5 right-5">
-                      <h3 className="text-center text-[17px] font-bold leading-tight text-white">
+                      <h3 className="text-center text-[16px] font-bold leading-tight text-white">
                         {teacher.name}
                       </h3>
                       <p className="mb-2 bg-[linear-gradient(182.09deg,_#C38BFA_1.21%,_#A755F7_53.87%,_#8216EB_123.92%)] bg-clip-text text-center text-sm font-bold text-transparent">
@@ -174,7 +174,7 @@ export default function Teachers() {
                           ))}
                         </ul>
                       </div>
-                      <button className="text-[#A755F7] mt-5 bg-[#F4EBFE] flex items-center justify-center gap-1 py-[18px] text-center rounded-full"><Play/>{t("title.teacherbutton")}</button>
+                      <button className="text-[#A755F7] mt-5 bg-[#F4EBFE] flex items-center justify-center gap-[6.5px] py-[18px] text-center rounded-full"><img src="/teacherplay.svg" alt="" />{t("title.teacherbutton")}</button>
                     </div>
                   </div>
                 </div>

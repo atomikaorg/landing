@@ -8,6 +8,7 @@ type FeedbackItem = {
   userName?: string;
   username?: string;
   feedback?: string;
+  userPosition?: string;
 };
 
 export default function Feedbacks() {
@@ -32,17 +33,20 @@ export default function Feedbacks() {
     }) as FeedbackItem[]) || [];
 
   return (
-    <section id="privileges" className="md:pt-[150px] pt-0">
+    <section id="privileges" className="md:pt-[100px] pt-[60px] ]">
       <div className="container relative">
-        <div className="absolute right-[-200px] top-[-80px] hidden lg:block">
+        <div className="absolute right-[-220px] top-[-50px] hidden lg:block">
           <img src="/message.png" alt="" />
         </div>
 
         <Button text={"version2.feedbacks.button"} />
-        <h2 className="mt-10 mb-5 text-center text-[32px] font-bold font-gilroy text-[#1A1A2E] md:text-[48px]">
+        <div className="flex items-center justify-center w-full">
+
+        <h2 className="mt-[50px] leading-[120%] mb-5 text-center max-w-[1000px] text-[36px] font-semibold font-gilroy text-[#1A1A2E] md:text-[48px]">
           {t("version2.feedbacks.title")}
         </h2>
-        <p className="text-center text-[15px] text-[#6B7280] md:text-[24px]">
+        </div>
+        <p className="text-center text-[22px] leading-[150%] font-medium font-gilroy text-[#6B7280] md:text-[28px]">
           {t("version2.feedbacks.description")}
         </p>
 
@@ -57,26 +61,29 @@ export default function Feedbacks() {
         }}
         transition={{ duration: 0.8, delay: 0.1 }}
       
-       className="feedbacks-rail mt-[30px] flex items-stretch overflow-x-scroll no-scrollbar gap-[30px] md:gap-[50px]  md:mt-[50px] pb-[40px] md:pb-[80px]">
+       className="feedbacks-rail mt-[30px] flex items-stretch overflow-x-scroll no-scrollbar gap-[30px] md:gap-[50px]  md:mt-[50px] pb-[40px] md:pb-[60px]">
      {feedbacks.map((item, index) => (
     <div
       key={item.id ?? index}
-      className="flex  flex-col rounded-[32px] bg-white p-7 shadow-[0px_4px_24px_0px_#7C3AED14] max-v-[300px] min-w-[300px] md:min-w-[400px] md:max-w-[400px]"
+      className="flex  flex-col rounded-[32px] bg-white p-7 shadow-[0px_4px_24px_0px_#7C3AED14] max-w-[300px] min-w-[300px] md:min-w-[400px] md:max-w-[400px]"
     >
       <img src="/stars.png" alt="stars" className="mb-5 h-4 w-[100px]" />
       
-      <p className="flex-1 text-[15px] leading-7 text-[#4B5563] md:text-[17px]">
+      <p className="flex-1 text-[15px] font-gilroy font-medium leading-[150%] text-[#1A1A2E] md:text-[16px]">
         {item.feedback}
       </p>
       
-      <div className="mt-6 border-t border-[#EEEAF8] pt-5">
-        <p className="text-[17px] font-semibold text-[#1A1A2E]">
+      <div className="mt-5 md:mt-7">
+        <p className="text-[20px] leading-[150%] font-semibold text-[#1A1A2E]">
           {item.userName || item.username}
+        </p>
+        <p className="text-[16px] text-[#6B7280] font-gilroy font-medium leading-[150%]">
+          {item.userPosition}
         </p>
       </div>
     </div>
   ))}
-</motion.div>
+      </motion.div>
 
       <motion.div
         ref={ref}
@@ -89,10 +96,10 @@ export default function Feedbacks() {
         transition={{ duration: 0.8, delay: 0.1 }}
       >
         <div className="container">
-          <h2 className="mb-[10px] text-center text-[36px] md:text-[48px] font-bold text-[#1A1A2E] md:mb-5 font-gilroy">
-            {`🎥 ${t("version2.feedbacks.videofeedback")}`}
+          <h2 className="mb-[10px] text-center text-[36px] md:text-[48px] font-semibold leading-[120%] text-[#1A1A2E] md:mb-5 font-gilroy">
+            {`${t("version2.feedbacks.videofeedback")}`}
           </h2>
-          <p className="text-center text-[15px] text-[#6B7280] md:text-[24px]">
+          <p className="text-center text-[22px] text-[#6B7280] md:text-[28px] leading-[150%] font-medium font-gilroy">
             {t("version2.feedbacks.description")}
           </p>
         </div>
