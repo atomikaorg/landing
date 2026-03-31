@@ -97,7 +97,7 @@ export default function Teachers() {
           <h2 className="text-left text-[36px] font-semibold font-gilroy leading-[1.1] text-[#111827] md:text-[48px]">
             {t("version2.teacher_title")}
           </h2>
-          <p className="mt-[10px] text-left text-[22px] font-medium leading-[150%] text-[#6B7280] md:text-[28px]">
+          <p className="mt-[10px] text-left text-[22px] font-gilroy font-medium leading-[150%] text-[#6B7280] md:text-[28px]">
             {t("version2.teacher_description")}
           </p>
         </div>

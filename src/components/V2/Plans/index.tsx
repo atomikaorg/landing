@@ -131,10 +131,10 @@ export default function Plans({ onOpenModal, onAutoOpen }: PlansProps) {
     ? "version2.pricing"
     : `${plansRoot}.pricing`;
 
-  const startFeatures = Array.from({ length: 7 }, (_, index) =>
+  const startFeatures = Array.from({ length: 8 }, (_, index) =>
     t(`${pricingRoot}.start_plan.features.${index}`)
   );
-  const startUnavailableFeatures = Array.from({ length: 2 }, (_, index) =>
+  const startUnavailableFeatures = Array.from({ length: 3 }, (_, index) =>
     t(`${pricingRoot}.start_plan.unavailable_features.${index}`)
   );
   const standardFeatures = Array.from({ length: 7 }, (_, index) =>
