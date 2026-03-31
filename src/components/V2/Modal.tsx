@@ -248,11 +248,11 @@ export default function Modal({
               <h2 className=" font-gilroy text-[48px] font-semibold leading-[110%] text-white md:max-w-[470px] md:text-[64px]">
                 {t("version2.modal.title")} <span className="bg-[linear-gradient(111.21deg,_#F8DC71_-4.37%,_#F09C38_68.59%)] bg-clip-text text-transparent">{t("version2.modal.titlefree")}</span>{t("version2.modal.title2")}
               </h2>
-              <p className="font-sfpro mt-3  text-[16px] leading-5 text-white/85 md:mt-4 md:max-w-[470px] md:text-[24px] md:leading-6">
+              <p className="font-gilroy mt-3  text-[16px] leading-5 text-white/85 md:mt-4 md:max-w-[470px] md:text-[24px] md:leading-6">
                 {t("version2.modal.description")}
               </p>
 
-              <div className="mt-4 flex flex-col md:flex-wrap  gap-x-3 gap-y-2 text-white/80 md:mt-8 leading-[150%] md:gap-5">
+              <div className="font-gilroy mt-4 flex flex-col md:flex-wrap  gap-x-3 gap-y-2 text-white/80 md:mt-8 leading-[150%] md:gap-5">
               {t("version2.modal.features",{returnObjects:true}).map((feature) => (
                 <div
                   key={feature}
