@@ -25,37 +25,27 @@ export default function Partners() {
     visible: { y: 0, opacity: 1 }
   }}
   transition={{ duration: 0.8, delay: 0.1 }}
-      className="pt-[39px] pb-20"
+      className="w-full max-w-[700px] px-[20px] mx-auto py-[30px] md:pt-[50px]"
     >
-      <div className="w-full md:mx-auto md:max-w-[90%] lg:max-w-[840px] xl:max-w-[1000px] 2xl:max-w-[1280px]">
+      <div className="">
       <Button text={"version2.info.partners"}/>
 
-      <div className="overflow-hidden mt-[30px] md:mt-[68px]">
+      <div className=" mt-[30px] md:mt-[68px] mb-[79px]">
         <div
           className="
-            flex items-center gap-[50px] lg:gap-0 md:justify-between
-            overflow-x-auto lg:overflow-visible
-            px-5  md:px-0
-            scroll-smooth
-            [&::-webkit-scrollbar]:hidden
-            [-ms-overflow-style:none]
-            [scrollbar-width:none]
+            flex items-center justify-between
           "
         >
           <Link to={"https://cyberpark.uz/residents/194-ooo-atomika-1"} className="flex justify-center flex-shrink-0">
             <img src={CYBER_PARK} className="w-[116px] md:w-[211px]" />
           </Link>
-
-          <Link to={"https://www.it-park.uz/"} className="flex justify-center flex-shrink-0">
-            <img src={IT_PARK} className="w-[166px] md:w-[303px]" />
-          </Link>
           {i18n.language === "uz" ? (
             <Link to={"https://digital.uz/uz"} className="flex justify-center flex-shrink-0">
-              <img src={MINISTRY} className="w-[200px] md:w-[367px]" />
+              <img src={MINISTRY} className="w-[202px] md:w-[367px]" />
             </Link>
           ) : (
             <Link to={"https://digital.uz/en"} className="flex justify-center flex-shrink-0">
-              <img src={MINISTRYRU} className="w-[200px] md:w-[367px]" />
+              <img src={MINISTRYRU} className="w-[202px] md:w-[367px]" />
             </Link>
           )}
 

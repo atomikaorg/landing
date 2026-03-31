@@ -123,14 +123,16 @@ function App() {
             <Header onOpenModal={() => openModal('header-cta')} />
             <main className='bg-[#F9FAFB]'>
             <Info onOpenModal={() => openModal('info-cta')}/>
+            <Teachers/>
             <Features/>  
             {/* <WhyAtomika/> */}
-            <Teachers/>
-            <Feedbacks/>
             <StudentsResult/>
-            <Process  onAutoOpen={() => openModalOnce('students-result-scroll')}/>
-            <OurCourses/>
-            <Plans onOpenModal={() => openModal('plans-cta')}/>
+            <Feedbacks/>
+            {/* <Process  /> */}
+            {/* <OurCourses onAutoOpen={() => openModalOnce('students-result-scroll')}/> */}
+            <Plans onOpenModal={() => openModal('plans-cta')}
+              onAutoOpen={() => openModalOnce('students-result-scroll')}
+              />
             <NationalCert onOpenModal={() => openModal('national-cert-cta')}/>
             <Ready onOpenModal={() => openModal('ready-button')}/>
             <FAQ/>

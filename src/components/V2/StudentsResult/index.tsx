@@ -1,7 +1,8 @@
 import i18n from "@/localization"
 import { useTranslation } from "react-i18next"
 import {motion, useInView} from "framer-motion"
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import Button from "../Button";
 
 
 export default function StudentsResult() {
@@ -19,7 +20,7 @@ export default function StudentsResult() {
 
     ]
   return (
-    <div className="w-full py-[50px] ">
+    <div className="w-full pt-[60px] ">
         <motion.div
           ref={cardRef}
           initial="hidden"
@@ -32,12 +33,13 @@ export default function StudentsResult() {
            transition: { duration: 0.6, delay: 0.1 }
           }}}>
 
-        <div className="container ">
+        <div className="container relative">
+          <Button text={"version2.results.button"} />
+          <img src="/cubok.png" className="absolute left-[-200px] top-0 hidden md:block" alt="" />
           <div className="flex items-center justify-center">
-
-            <h2 className="text-[#1A1A2E] text-center  font-gilroy max-w-[800px] text-[32px] md:text-[48px] font-bold mb-[10px] md:mb-5 ">{t("version2.results.title")}</h2>
+            <h2 className="text-[#1A1A2E] text-center  font-gilroy max-w-[800px] text-[36px] leading-[120%] md:text-[48px] font-semibold mb-[10px] md:mb-5  mt-[30px] md:mt-[50px]">{t("version2.results.title")}</h2>
           </div>
-              <p className="text-[#6B7280] text-center text-[24px] mb-10 font-gilroy">
+              <p className="text-[#6B7280] text-center text-[22px] font-medium leading-[150%]  md:text-[28px] mb-[30px] md:mb-10 font-gilroy">
                 {i18n.language === "ru" ? (  <>
                       {t("version2.results.description")}{" "}
                      <span className="font-bold">{t("version2.results.atomika")}</span>

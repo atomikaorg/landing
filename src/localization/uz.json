@@ -153,7 +153,7 @@
         "teachers": "O'qituvchilar haqida",
         "reviews": "Mijoz fikrlari",
         "tariffs": "Narxlar",
-        "certificate": "🏆 Milliy Sertifikat",
+        "certificate": "Milliy Sertifikat",
         "contacts": "Bog’lanish"
       },
       "login": "Kirish",
@@ -168,7 +168,7 @@
       "tryFree": "Mutaxasis bilan bog’lanish",
       "students": "o'quvchilar",
       "lessons": "darslar",
-      "languages": "xil tilda",
+      "languages": "testlar",
       "partners":"Rasmiy hamkorlarimiz"
     },
     "features": {
@@ -275,33 +275,38 @@
 
     "feedbacks":{
       "button":"Mijozlarimiz fikrlari",
-      "title":"O'quvchilarimiz va ota-onalar biz haqimizda nima deyishadi?",
+      "title":"O'quvchilarimiz va ota-onalar biz haqimizda qanday fikrda?",
       "description":"O'quvchilarimiz va ota-onalardan haqiqiy fikrlar!",
-      "videofeedback":" Video-fikrlar",
+      "videofeedback":"Video-fikrlar",
       "userfeedbacks": [
   {
     "id": 1,
-    "userName": "Madina Ibragimova (ota-ona)",
+    "userName": "Madina Ibragimova",
+    "userPosition":"O'quvchi ota-onasi",
     "feedback": "Атомика зур дарсларни тушунарли килиб утадилар мени кизим химия фани тушунмасди атомикага катта рахмат илохим грант асосида укишга кириш насиб килсин хар бир ота она фарзандини укимишли энг касб эгаси булишини истайди ишларингизни ривожини барсин оллохим"
   },
   {
     "id": 2,
-    "userName": "Ahmed Muhammedov (o'quvchi)",
+    "userName": "Ahmed Muhammedov ",
+    "userPosition":"O'quvchi",
     "feedback": "Platforma haqida fikrm Juda zor ichidagi mavzulari tushunarli boshqa joylarda shuncha oqb tushunmagan mazularmni bu platforma bilan Tez tushunaman. Otilgan darsdan keyingi testlari Juda yoqadi. Man ozim xorazmdan turb onlayn. Tayorlanyabman Atomika 🔥🔥"
   },
   {
     "id": 3,
-    "userName": "Shahruza Rustamova (o'quvchi)",
+    "userName": "Shahruza Rustamova ",
+    "userPosition":"O'quvchi",
     "feedback": "Дахщат Кийини темаларни осон усулда чунтирвотти 🥰"
   },
   {
   "id": 5,
-  "userName": "Behruz Alimbayev (o'quvchi)",
+  "userName": "Behruz Alimbayev",
+  "userPosition":"O'quvchi",
   "feedback": "Atomika — ajoyib platforma, barcha kerakli ma'lumotlarni topsa bo'ladi. Hozirda platformada Milliy sertifikat va DTM savollari chiqishini intiqlik bilan kutyapman. Nasib bo'lsa, Atomika bilan hali katta yutuqlarga erishaman. Katta rahmat!"
  },
   {
   "id": 6,
-  "userName": "Zilola Mamasolieva (o'quvchi)",
+  "userName": "Zilola Mamasolieva",
+  "userPosition":"O'quvchi",
   "feedback": "Assalomu alaykum! Menga platforma juda yoqdi. Uydan chiqmagan holda kimyo va biologiya fanlarini chuqur o'rganib bormoqdaman. Beminnat yordamingiz uchun katta tashakkur!"
 }
 ]
@@ -344,30 +349,29 @@
         "Cheklovsiz darslarni ko'rish",
         "Har bir dars/mavzu/moduldan keyin testlar",
         "Har bir savol uchun video-tahlillar",
-        "Haftalik ochiq darslar va yozib olingan ochiq darslar kirish",
-        "24/7 ta'lim olish"
+        "Haftalik ochiq darslar va yozib olingan ochiq darslarga kirish",
+        "24/7 ta'lim olish",
+        "Master-klasslar va podkastlar"
       ],
       "unavailable_features": [
-        "Kuratorlar nazorati",
-        "Mentorlar yordami",
-        "Sinov imtihonlari"
+        "Kuratorlar va mentorlar",
+        "DTM bo’yicha sinov imtihonlari"
       ]
     },
     "standard_plan": {
       "title": "Standart",
-      "badge": "⭐ Tavsiya etamiz!",
+      "badge": "Tavsiya etamiz!",
       "description": "Mentorlar bilan to'liq tayyorgarlik",
       "price": "600 000",
       "button_text": "O'qishni boshlash",
-      "installment_info": "🏦 Uzum Nasiya / Alif Nasiya orqali bo’lib to’lash",
+      "installment_info": "Uzum Nasiya/Alif Nasiya orqali bo’lib to’lash imkoniyati",
       "features": [
         "“Start” tarifidagi barcha imkoniyatlar",
         "Individual mentorlar",
         "Kuratorlar nazorati va yordami",
         "DTM va Milliy sertifikat bo'yicha sinov imtihonlari",
         "Interaktiv bilim mashqlari (trenajorlar)",
-        "ATOMS ballar va “Cashback”",
-        "Master-klasslar va podkastlar"
+        "ATOMS ballar va “Cashback”"
       ]
     }
    },
@@ -380,9 +384,7 @@
       "3 oy intensiv tayyorlanish",
       "Haftada bir marta 3 soatlik guruhda jonli darslar",
       "12 ta HAQIQIY sinov imtihoni",
-      "100+ o’quvchlarimiz Milliy Sertifikat imtihonlarini topshirishdi",
-      "Abituriyentlar, o’quvchilar va o’qituvchilar uchun",
-      "Uzum Nasiya / Alif Nasiya orqali bo’lib to’lash imkoniyati"
+      "Abituriyentlar, o’quvchilar va o’qituvchilar uchun"
      ],
       "button1":"Kurs haqida batafsil →",
       "button2":"Sinov darslarni ko’rish",
@@ -410,7 +412,7 @@
     "pricetitle":"Uzum Nasiya и Alif Nasiya orqali bo’lib to’lash imkoniyati"
    },
     "Ready":{
-    "title":"Tayyormisiz?",
+    "title":"O’qishga tayyormisiz?",
     "description":"Bepul sinab ko’ring! Birinchi darslar — mutlaqo bepul!",
     "button":"Bepul sinab ko’rish!"    
    },
@@ -451,7 +453,8 @@
    "results":{
     "title":"O’quvchilarimizning “Milliy Sertifikat” natijalari",
     "atomika":"atomika",
-    "description":" o’quvchilarining “Milliy Sertifikat” imtihonidan erishgan natijalari"
+    "description":" o’quvchilarining “Milliy Sertifikat” imtihonidan erishgan natijalari",
+    "button":"Natijalar"
    },
    "modal":{
       "title": "Hoziroq ",
@@ -466,7 +469,7 @@
       "phonePlaceholder": "+998 (XX) XXX XX XX",
       "submit": "BEPUL sinov muddatini olish!",
       "or": "yoki",
-      "secondary": "Hoziroq mutaxasis bilan bog’lanish!",
+      "secondary": "Mutaxasis bilan bog’lanish!",
       "success": "So'rov yuborildi. Tez orada bog'lanamiz.",
       "error": "So'rov yuborilmadi. Qayta urinib ko'ring.",
       "validation": "Telefon raqamini to'liq kiriting."

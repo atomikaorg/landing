@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Button from "../Button";
@@ -34,30 +34,30 @@ function PlanCard({
     <article
       className={`relative flex h-full flex-col rounded-[32px] bg-white px-6 pb-6 pt-7 shadow-[0px_18px_50px_-16px_rgba(24,39,75,0.18)] md:px-8 md:pb-8 md:pt-8 ${
         highlighted
-          ? "border border-[#A855F7] shadow-[0px_20px_60px_-20px_rgba(168,85,247,0.55)]"
+          ? "border-[4px] border-[#A855F7] shadow-[0px_20px_60px_-20px_rgba(168,85,247,0.55)]"
           : "border border-[#E8E8EF]"
       }`}
     >
       {badge ? (
-        <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] px-4 py-2 text-[12px] font-semibold text-white shadow-[0px_12px_30px_rgba(130,22,235,0.25)]">
+        <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 leading-[150%] whitespace-nowrap  rounded-full bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] px-[30px] py-[10px] text-[24px] font-medium font-gilroy text-white shadow-[0px_12px_30px_rgba(130,22,235,0.25)]">
           {badge}
         </div>
       ) : null}
 
-      <div className="mb-7">
-        <h3 className="text-[28px] font-bold font-gilroy leading-none text-[#1F2138] md:text-[32px]">
+      <div className="mb-5">
+        <h3 className="font-gilroy font-semibold leading-[150%] text-[#1F2138] text-[36px]">
           {title}
         </h3>
-        <p className="mt-3 text-[14px] leading-5 text-[#8A8FA3] md:text-[16px]">
+        <p className="mt-[3px]  leading-[150%] font-medium text-[#8A8FA3] text-[24px]">
           {description}
         </p>
       </div>
 
-      <div className="mb-7 flex items-end gap-2 pb-5">
-        <span className="bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] bg-clip-text font-delagothic font-normal leading-none text-transparent text-[36px] sm:text-[42px] ">
+      <div className=" flex items-end gap-[5px] mb-[10px]">
+        <span className="bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] bg-clip-text font-gilroy font-semibold leading-[120%] text-transparent text-[55px] ">
           {price}
         </span>
-        <span className="pb-1 text-[14px] font-medium text-[#6B7280] md:text-[16px]">
+        <span className="pb-1 text-[16px] font-medium text-[#6B7280] font-gilroy l">
           {currency}
         </span>
       </div>
@@ -66,10 +66,9 @@ function PlanCard({
         {features.map((feature) => (
           <div key={feature} className="flex items-start gap-3 text-[#30354A] border-b border-[#F3F4F6] last:border-none pb-[11px]">
             <div className="bg-[#E8F8F3] py-[3px] px-[5.5px] rounded-full items-center justify-center">
-
-            <img src="/plancheck.svg" alt="" aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0" />
+              <img src="/plancheck.svg" alt="" aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0" />
             </div>
-            <p className="text-[14px] leading-6 md:text-[15px]  w-full text-[#1A1A2E]">{feature}</p>
+            <p className="text-[16px] leading-[150%] font-gilroy font-medium  w-full text-[#1A1A2E]">{feature}</p>
           </div>
         ))}
 
@@ -78,7 +77,7 @@ function PlanCard({
             <span className=" flex items-center justify-center  shrink-0  rounded-full border border-[#E5E7EB] text-[12px] leading-none bg-[#F1F1F3] py-[10px] px-2 ">
               <img src="/minus.png" alt="" className="mt-0.5 " />
             </span>
-            <p className="text-[14px] leading-6 md:text-[15px] ">{feature}</p>
+            <p className="text-[16px] leading-[150%] font-gilroy font-medium text-[#6B7280]">{feature}</p>
           </div>
         ))}
       </div>
@@ -91,20 +90,19 @@ function PlanCard({
         {buttonText}
       </button>
 
-      {installmentInfo ? (
-        <p className="mt-4 text-[12px] leading-5 text-[#9CA3AF] md:text-[13px] ">
-          {installmentInfo}
-        </p>
-      ) : null}
+     <div className="flex items-center justify-center w-full"> <p className="mt-4 text-center text-[16px] leading-[150%] text-[#9CA3AF] font-gilroy font-medium max-w-[220px]">
+        {installmentInfo}
+      </p></div>
     </article>
   );
 }
 
 type PlansProps = {
   onOpenModal?: () => void;
+  onAutoOpen?: () => void;
 };
 
-export default function Plans({ onOpenModal }: PlansProps) {
+export default function Plans({ onOpenModal, onAutoOpen }: PlansProps) {
   const { t, i18n } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
@@ -121,18 +119,24 @@ export default function Plans({ onOpenModal }: PlansProps) {
   const startFeatures = Array.from({ length: 6 }, (_, index) =>
     t(`${pricingRoot}.start_plan.features.${index}`)
   );
-  const startUnavailableFeatures = Array.from({ length: 3 }, (_, index) =>
+  const startUnavailableFeatures = Array.from({ length: 2 }, (_, index) =>
     t(`${pricingRoot}.start_plan.unavailable_features.${index}`)
   );
-  const standardFeatures = Array.from({ length: 7 }, (_, index) =>
+  const standardFeatures = Array.from({ length: 6 }, (_, index) =>
     t(`${pricingRoot}.standard_plan.features.${index}`)
   );
+
+  useEffect(() => {
+    if (isInView) {
+      onAutoOpen?.();
+    }
+  }, [isInView, onAutoOpen]);
 
   return (
     <section
       id="about_platform"
       ref={ref}
-      className="overflow-hidden pb-[40px] pt-[40px] md:pb-[120px] md:pt-[40px]"
+      className="overflow-hidden pb-[30px] pt-[60px] md:pb-[50px] md:pt-[100px]"
     >
       <div className="container relative">
         <motion.div
@@ -140,22 +144,22 @@ export default function Plans({ onOpenModal }: PlansProps) {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <div className="absolute bottom-[-200px] left-[-200px] hidden lg:block">
+          <div className="absolute top-[-50px] left-[-200px] hidden lg:block">
             <img src="/lope.png" alt="" aria-hidden="true" className="" />
           </div>
 
           <Button text={`${plansRoot}.plan`} />
 
-          <div className="mx-auto mt-5 max-w-[780px] text-center">
-            <h2 className="text-[32px] font-semibold leading-[1.1] text-[#1F2138] md:text-[48px] font-gilroy">
+          <div className="mx-auto mt-[30px] md:mt-10 text-center">
+            <h2 className="text-[36px] font-semibold leading-[120%] text-[#1F2138] md:text-[48px] font-gilroy">
               {t(`${plansRoot}.title`)}
             </h2>
-            <p className="mt-4 hidden md:block text-[15px] leading-6 text-[#7B8092] md:text-[22px] md:leading-8">
+            <p className="mt-[10px] md:mt-4  text-[22px]  text-[#7B8092] md:text-[28px] leading-[150%] font-medium font-gilroy">
               {t(`${plansRoot}.description`)}
             </p>
           </div>
 
-          <div className="mx-auto mt-10 grid max-w-[920px] gap-6 md:mt-14 md:grid-cols-2">
+          <div className="mx-auto mt-[30px] grid max-w-[920px] gap-10 md:gap-6 md:mt-10 md:grid-cols-2">
             <PlanCard
               title={t(`${pricingRoot}.start_plan.title`)}
               description={t(`${pricingRoot}.start_plan.description`)}
@@ -181,9 +185,6 @@ export default function Plans({ onOpenModal }: PlansProps) {
               highlighted
             />
           </div>
-          <p className="mt-4 block md:hidden text-[15px] leading-6 text-[#7B8092] md:text-[22px] md:leading-8">
-              {t(`${plansRoot}.description`)}
-            </p>
         </motion.div>
       </div>
     </section>
