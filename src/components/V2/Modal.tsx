@@ -12,7 +12,10 @@ type ModalProps = {
 };
 
 const GOOGLE_SHEETS_URL =
-  "https://docs.google.com/spreadsheets/d/105ETzpRK0h3of9mWc8vqZbHa724ycklIuxvppx9aNxM/edit?gid=0#gid=0r";
+  "https://script.google.com/macros/s/AKfycbx5uYVwea_K8zBMbGhva3sjanoyOegAI1fHxip4dViUBIkAgpk_RZrxWAkxJ8HKyeTk/exec";
+const GOOGLE_SHEET_ID = "105ETzpRK0h3of9mWc8vqZbHa724ycklIuxvppx9aNxM";
+const GOOGLE_SHEET_GID = "0";
+const SIGNUP_URL = "https://test.atomika.org/session/signup";
 
 const formatDisplayPhoneNumber = (value: string, isDeleting = false) => {
   let normalized = value.replace(/^\+998\+99/, "+998").replace(/^\+99\+99/, "+99");
@@ -69,13 +72,34 @@ const formatDisplayPhoneNumber = (value: string, isDeleting = false) => {
 const extractPhoneDigits = (phone: string) =>
   phone.replace(/^\+998/, "").replace(/\D/g, "").slice(0, 9);
 
+const buildSignupUrl = (phoneDigits: string) => {
+  const currentParams = new URLSearchParams(window.location.search);
+  const signupUrl = new URL(SIGNUP_URL);
+
+  signupUrl.searchParams.set("phone", phoneDigits);
+
+  ["utm_source", "utm_medium", "utm_campaign", "utm_content"].forEach((key) => {
+    const value = currentParams.get(key);
+
+    if (value) {
+      signupUrl.searchParams.set(key, value);
+    }
+  });
+
+  if (document.referrer) {
+    signupUrl.searchParams.set("utm_referrer", document.referrer);
+  }
+
+  return signupUrl.toString();
+};
+
 export default function Modal({
   isOpen,
   onClose,
   source = "unknown",
   openMode = "button",
 }: ModalProps) {
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState("+998");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { t } = useTranslation();
 
@@ -104,6 +128,7 @@ export default function Modal({
   useEffect(() => {
     if (!isOpen) {
       setIsSubmitting(false);
+      setPhone("+998");
     }
   }, [isOpen]);
 
@@ -160,8 +185,7 @@ export default function Modal({
       setIsSubmitting(true);
 
       const params = new URLSearchParams(window.location.search);
-      const formData = new URLSearchParams();
-
+      const formData = new FormData();
       formData.append("name", `Landing modal (${source})`);
       formData.append("phone", phoneDigits);
       formData.append("utm_source", params.get("utm_source") || "");
@@ -169,25 +193,17 @@ export default function Modal({
       formData.append("utm_campaign", params.get("utm_campaign") || "");
       formData.append("utm_content", params.get("utm_content") || "");
       formData.append("utm_referrer", document.referrer || "");
+      formData.append("sheet_id", GOOGLE_SHEET_ID);
+      formData.append("sheet_gid", GOOGLE_SHEET_GID);
 
-      const response = await fetch(GOOGLE_SHEETS_URL, {
+      await fetch(GOOGLE_SHEETS_URL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: formData.toString(),
-        mode: "cors",
-        credentials: "omit",
+        body: formData,
+        mode: "no-cors",
+        redirect: "follow",
       });
 
-      if (!response.ok) {
-        throw new Error("Request failed");
-      }
-
-      toast({
-        description: t("version2.modal.success"),
-      });
-      onClose();
+      window.location.href = buildSignupUrl(phoneDigits);
     } catch (error) {
       console.error(error);
       toast({
