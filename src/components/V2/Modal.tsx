@@ -257,8 +257,6 @@ export default function Modal({
             src="/modalmobile.png" alt="" />
           </div>
             
-
-          <div className="relative z-10 px-4  pt-22 md:px-0 md:pb-10 md:pr-14 md:pt-12">
             <div className="max-w-[676px]">
               <h2 className=" font-gilroy text-[48px] font-semibold leading-[110%] text-white  md:text-[64px]">
                 {t("version2.modal.title")} <span className="bg-[linear-gradient(111.21deg,_#F8DC71_-4.37%,_#F09C38_68.59%)] bg-clip-text text-transparent">{t("version2.modal.titlefree")}</span>{t("version2.modal.title2")}
