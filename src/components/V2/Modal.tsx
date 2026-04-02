@@ -12,7 +12,10 @@ type ModalProps = {
 };
 
 const GOOGLE_SHEETS_URL =
-  "https://docs.google.com/spreadsheets/d/105ETzpRK0h3of9mWc8vqZbHa724ycklIuxvppx9aNxM/edit?gid=0#gid=0r";
+  "https://script.google.com/macros/s/AKfycbx5uYVwea_K8zBMbGhva3sjanoyOegAI1fHxip4dViUBIkAgpk_RZrxWAkxJ8HKyeTk/exec";
+const GOOGLE_SHEET_ID = "105ETzpRK0h3of9mWc8vqZbHa724ycklIuxvppx9aNxM";
+const GOOGLE_SHEET_GID = "0";
+const SIGNUP_URL = "https://atomika.org/session/signup";
 
 const formatDisplayPhoneNumber = (value: string, isDeleting = false) => {
   let normalized = value.replace(/^\+998\+99/, "+998").replace(/^\+99\+99/, "+99");
@@ -69,13 +72,34 @@ const formatDisplayPhoneNumber = (value: string, isDeleting = false) => {
 const extractPhoneDigits = (phone: string) =>
   phone.replace(/^\+998/, "").replace(/\D/g, "").slice(0, 9);
 
+const buildSignupUrl = (phoneDigits: string) => {
+  const currentParams = new URLSearchParams(window.location.search);
+  const signupUrl = new URL(SIGNUP_URL);
+
+  signupUrl.searchParams.set("phone", phoneDigits);
+
+  ["utm_source", "utm_medium", "utm_campaign", "utm_content"].forEach((key) => {
+    const value = currentParams.get(key);
+
+    if (value) {
+      signupUrl.searchParams.set(key, value);
+    }
+  });
+
+  if (document.referrer) {
+    signupUrl.searchParams.set("utm_referrer", document.referrer);
+  }
+
+  return signupUrl.toString();
+};
+
 export default function Modal({
   isOpen,
   onClose,
   source = "unknown",
   openMode = "button",
 }: ModalProps) {
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState("+998");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { t } = useTranslation();
 
@@ -104,6 +128,7 @@ export default function Modal({
   useEffect(() => {
     if (!isOpen) {
       setIsSubmitting(false);
+      setPhone("+998");
     }
   }, [isOpen]);
 
@@ -160,8 +185,7 @@ export default function Modal({
       setIsSubmitting(true);
 
       const params = new URLSearchParams(window.location.search);
-      const formData = new URLSearchParams();
-
+      const formData = new FormData();
       formData.append("name", `Landing modal (${source})`);
       formData.append("phone", phoneDigits);
       formData.append("utm_source", params.get("utm_source") || "");
@@ -169,25 +193,17 @@ export default function Modal({
       formData.append("utm_campaign", params.get("utm_campaign") || "");
       formData.append("utm_content", params.get("utm_content") || "");
       formData.append("utm_referrer", document.referrer || "");
+      formData.append("sheet_id", GOOGLE_SHEET_ID);
+      formData.append("sheet_gid", GOOGLE_SHEET_GID);
 
-      const response = await fetch(GOOGLE_SHEETS_URL, {
+      await fetch(GOOGLE_SHEETS_URL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: formData.toString(),
-        mode: "cors",
-        credentials: "omit",
+        body: formData,
+        mode: "no-cors",
+        redirect: "follow",
       });
 
-      if (!response.ok) {
-        throw new Error("Request failed");
-      }
-
-      toast({
-        description: t("version2.modal.success"),
-      });
-      onClose();
+      window.location.href = buildSignupUrl(phoneDigits);
     } catch (error) {
       console.error(error);
       toast({
@@ -227,7 +243,7 @@ export default function Modal({
           <X size={20} />
         </button>
 
-        <div className="grid items-center gap-0 md:gap-8 md:grid-cols-[0.92fr_1.08fr] pb-[34px] ">
+        <div className="grid items-center  md:grid-cols-[0.7fr_1.0fr] pb-[34px] ">
           <div className="relative hidden h-full  left-0 items-center md:flex">
             <img
               src="/modal.png"
@@ -236,23 +252,26 @@ export default function Modal({
             />
           </div>
           <div className="relative h-full md:hidden">
-
           <img 
               className="absolute right-6 top-0 z-10 "
             src="/modalmobile.png" alt="" />
           </div>
             
 
-          <div className="relative z-10 px-4  pt-22 md:px-10 md:pb-10 md:pr-14 md:pt-12">
-            <div className="max-w-[560px]">
-              <h2 className=" font-gilroy text-[48px] font-semibold leading-[110%] text-white md:max-w-[470px] md:text-[64px]">
+          <div className="relative z-10 px-4  pt-22 md:px-0 md:pb-10 md:pr-14 md:pt-12">
+            <div className="max-w-[676px]">
+              <h2 className=" font-gilroy text-[48px] font-semibold leading-[110%] text-white  md:text-[64px]">
                 {t("version2.modal.title")} <span className="bg-[linear-gradient(111.21deg,_#F8DC71_-4.37%,_#F09C38_68.59%)] bg-clip-text text-transparent">{t("version2.modal.titlefree")}</span>{t("version2.modal.title2")}
               </h2>
-              <p className="font-gilroy mt-3  text-[16px] leading-5 text-white/85 md:mt-4 md:max-w-[470px] md:text-[24px] md:leading-6">
+
+            <div className="font-gilroy mt-4 flex flex-col md:flex-wrap  gap-x-3 gap-y-2 text-white/80 md:mt-8 leading-[150%] md:gap-5">
+
+              <p className="font-gilroy mt-[10px]  text-[22px] text-[#F2F2F2] md:mt-[18px] md:text-[28px] leading-[150%]">
                 {t("version2.modal.description")}
               </p>
 
-              <div className="font-gilroy mt-4 flex flex-col md:flex-wrap  gap-x-3 gap-y-2 text-white/80 md:mt-8 leading-[150%] md:gap-5">
+              <div className="mt-4 flex flex-col md:flex-row  gap-x-3 gap-y-2 text-white/80 md:mt-8 leading-[150%] md:gap-5">
+
               {t("version2.modal.features",{returnObjects:true}).map((feature) => (
                 <div
                   key={feature}
@@ -287,7 +306,7 @@ export default function Modal({
                   </span>
                 </button>
 
-                <div className="text-center text-[20px] font-sfpro font-medium text-[#F2F2F2] md:text-[24px]">{t("version2.modal.or")}</div>
+                <div className="text-center text-[20px] font-gilroy font-medium text-[#F2F2F2] md:text-[24px]">{t("version2.modal.or")}</div>
 
                 <a
                   href="tel:+998555111133"
