@@ -15,7 +15,7 @@ const GOOGLE_SHEETS_URL =
   "https://script.google.com/macros/s/AKfycbx5uYVwea_K8zBMbGhva3sjanoyOegAI1fHxip4dViUBIkAgpk_RZrxWAkxJ8HKyeTk/exec";
 const GOOGLE_SHEET_ID = "105ETzpRK0h3of9mWc8vqZbHa724ycklIuxvppx9aNxM";
 const GOOGLE_SHEET_GID = "0";
-const SIGNUP_URL = "https://test.atomika.org/session/signup";
+const SIGNUP_URL = "https://atomika.org/session/signup";
 
 const formatDisplayPhoneNumber = (value: string, isDeleting = false) => {
   let normalized = value.replace(/^\+998\+99/, "+998").replace(/^\+99\+99/, "+99");
