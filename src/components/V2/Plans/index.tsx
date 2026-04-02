@@ -67,8 +67,8 @@ function PlanCard({
       <div className="flex flex-1 flex-col gap-3">
         {features.map((feature) => (
           <div key={feature} className="flex items-start gap-3 text-[#30354A] border-b border-[#F3F4F6] last:border-none pb-[11px]">
-            <div className="bg-[#E8F8F3] py-[3px] px-[5.5px] rounded-full items-center justify-center">
-              <img src="/plancheck.svg" alt="" aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0" />
+            <div className="bg-[#E8F8F3] py-2 px-[10px] rounded-full items-center justify-center">
+              <img src="/plancheck.svg" alt="" aria-hidden="true" className="mt-0.5 h-4 w-[11px] h-[11px] shrink-0" />
             </div>
             <p className="text-[16px] leading-[150%] font-gilroy font-medium  w-full text-[#1A1A2E]">{feature}</p>
           </div>
@@ -87,7 +87,7 @@ function PlanCard({
       <button
         type="button"
         onClick={onOpenModal}
-        className={`group relative font-gilroy mt-8 cursor-pointer overflow-hidden rounded-full border px-6 py-4 text-[15px] font-semibold transition-all duration-300 ease-in-out ${
+        className={`group relative font-gilroy mt-8 mb-5 cursor-pointer overflow-hidden rounded-full border px-6 py-4 text-[15px] font-semibold transition-all duration-300 ease-in-out ${
           highlighted
             ? "border-[#A855F7] bg-white text-[#A855F7]"
             : "border-[#A855F7] bg-transparent text-[#A855F7] hover:bg-[#A855F7] hover:text-white"
@@ -105,7 +105,8 @@ function PlanCard({
         )}
       </button>
 
-     <div className="flex items-center justify-center w-full"> <p className="mt-4 text-center text-[16px] leading-[150%] text-[#9CA3AF] font-gilroy font-medium max-w-[220px]">
+     <div className="flex items-center justify-center w-full border-t border-dashed border-[#F2F2F2]"> 
+      <p className="mt-5 text-center text-[16px] leading-[150%] text-[#9CA3AF] font-gilroy font-medium max-w-[220px]">
         {installmentInfo}
       </p></div>
     </article>

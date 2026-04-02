@@ -49,7 +49,7 @@ export default function NationalCert({ onOpenModal }: NationalCertProps) {
                  )}
                </h2>                
                <p className="text-[#FFFFFF99] text-[22px] md:text-[28px] leading-[150%] font-gilroy font-medium">{t("version2.NationalCert.description")}</p>
-               <div className="flex flex-col gap-4 mt-[50px] ">
+               <div className="flex flex-col gap-4 my-[50px] ">
                   {Array.isArray(features) && features.map((item, index) => (
                     <div key={index} className="flex items-center gap-4 text-[#FFFFFFCC] text-[16px]">
                       <img src="/check.svg" className="w-5 h-5" alt="check" />
@@ -57,7 +57,7 @@ export default function NationalCert({ onOpenModal }: NationalCertProps) {
                    </div>
                  ))}
               </div>
-                <div className="flex flex-col  gap-3 mt-6 w-full">
+                <div className="flex flex-col  gap-3  w-full">
                  <button
                    type="button"
                    onClick={onOpenModal}
@@ -69,7 +69,7 @@ export default function NationalCert({ onOpenModal }: NationalCertProps) {
                  <button
                    type="button"
                    onClick={onOpenModal}
-                   className="w-full md:w-auto cursor-pointer border  text-[24px] font-gilroy border-[#D4A01780] text-[#F5D060] px-10 py-[18px] rounded-full"
+                   className="w-full md:w-auto max-[430px]:px-3 cursor-pointer border  text-[24px] font-gilroy border-[#D4A01780] text-[#F5D060] px-10 py-[18px] rounded-full"
                  >
                    {t("version2.NationalCert.button2")}
                  </button>
