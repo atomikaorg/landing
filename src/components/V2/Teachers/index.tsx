@@ -61,7 +61,7 @@ export default function Teachers() {
       field: t("version2.teacher_field4"),
       description: [t("title.teacher_desc4"), t("title.teacher_desc44")],
       experience: t("title.teacher_exp4"),
-      teacherVideoUrl:"https://kinescope.io/4DK98Dwrvu79pnaNRmot1P"
+      teacherVideoUrl:"https://kinescope.io/ehe93mBjDUYpWa3pdvB67p"
     },
     {
       id: 5,
@@ -193,7 +193,7 @@ export default function Teachers() {
                         <button
                           type="button"
                           onClick={handleCloseTeacherVideo}
-                          className="absolute right-5 top-5 z-10 rounded-full bg-white/95 p-2 text-[#A755F7] shadow-md"
+                          className="absolute right-5 top-5 z-10 rounded-full bg-white/95 p-4 text-[#A755F7] shadow-md"
                           aria-label="Close video"
                         >
                           <X className="h-4 w-4 cursor-pointer" />
@@ -237,7 +237,7 @@ export default function Teachers() {
                           data-teacher-id={teacher.id}
                           onClick={handleOpenTeacherVideo}
                           disabled={!teacher.teacherVideoUrl}
-                          className="mt-5 flex cursor-pointer items-center justify-center gap-[6.5px] rounded-full bg-[#F4EBFE] py-[18px] text-center font-gilroy text-[#A755F7]"
+                          className={`${teacher.teacherVideoUrl?"cursor-pointer":"cursor-not-allowed"} mt-5 flex  items-center justify-center gap-[6.5px] rounded-full bg-[#F4EBFE] py-[18px] text-center font-gilroy text-[#A755F7]`}
                         >
                           <img src="/teacherplay.svg" alt="" />
                           {t("title.teacherbutton")}
