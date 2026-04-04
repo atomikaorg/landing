@@ -64,7 +64,7 @@ export default function Features() {
       className:
         "relative bg-gradient-to-r from-[#F8DC71] to-[#F09C38] min-h-[300px] md:h-[323px] overflow-hidden rounded-[40px] px-10 py-[38px] flex flex-col justify-between gap-[56px] max-md:py-[30px] max-md:px-[22px] shadow-[0px_14px_64px_-4px_#18274B1F,0px_8px_22px_-6px_#18274B1F]",
       bgClass:
-        "absolute inset-0 bg-[url('/training-card-bg.png')] bg-[length:447px] right-[-20px] md:right-0 bg-right-top bg-no-repeat max-md:bg-[size:250px]",
+        "absolute inset-0 bg-[url('/training-card-bg.png')] bg-[length:447px] right-[-30px] md:right-0 bg-right-top bg-no-repeat max-md:bg-[size:250px]",
       titleClass:
         "text-white font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy max-md:text-[32px] w-[330px] max-md:max-w-[70%] z-10",
       descClass: "text-white font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-gilroy",
@@ -86,9 +86,9 @@ export default function Features() {
       className:
         "relative bg-gradient-to-r bg-[linear-gradient(37.76deg,_#22BF4D_23.58%,_#7CD488_69.57%)] min-h-[300px] md:h-[323px] rounded-[40px] px-10 py-[38px] flex flex-col justify-between gap-[56px] max-md:py-[30px] max-md:px-[22px] shadow-[0px_14px_64px_-4px_#18274B1F,0px_8px_22px_-6px_#18274B1F]",
       bgClass:
-        "absolute inset-0 bg-[url('/card4.png'),_url('/card4bg1.png')] bg-[position:right_top,_center] bg-no-repeat bg-[size:auto,_50%]   bg-right-top bg-no-repeat max-md:bg-[size:150px] ",
+        "absolute inset-0 bg-[url('/card4.png'),_url('/card4bg1.png')] bg-[position:right_top,_center] bg-no-repeat bg-[size:auto,_50%]    bg-right-top bg-no-repeat max-md:bg-[size:150px] ",
       titleClass:
-        "text-white font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy w-[332px] max-md:max-w-[70%]",
+        "text-white font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy w-[227px] max-md:max-w-[70%]",
       descClass: "text-white font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-gilroy",
     },
     {
@@ -97,7 +97,7 @@ export default function Features() {
       className:
         "relative bg-white min-h-[300px] md:h-[323px]  rounded-[40px] px-10 py-[38px] flex flex-col justify-between gap-[56px] max-md:py-[30px] max-md:px-[22px] shadow-[0px_14px_64px_-4px_#18274B1F,0px_8px_22px_-6px_#18274B1F] bg-[linear-gradient(117.94deg,_#54A7FF_2.48%,_#1C75D4_94.59%)]",
       bgClass:
-        "absolute inset-0 bg-[url('/card6.png'),_url('/card6bg1.png')]  bg-right-top bg-no-repeat bg-[size:164px_auto,_296px_380px] max-md:bg-[size:150px_auto,_180px_230px]",
+        "absolute inset-0 bg-[url('/card6.png'),_url('/card6bg1.png')]  bg-right-top bg-no-repeat bg-[size:220px_auto,_296px_380px] max-md:bg-[size:150px_auto,_180px_230px]",
       titleClass:
         "text-white font-semibold text-[32px] leading-[120%] z-10 md:text-[36px] font-gilroy max-md:max-w-[70%]",
       descClass: "text-[#F2F2F2] font-medium text-[22px] md:text-[24px] leading-[150%] z-10 font-gilroy",
