@@ -16,10 +16,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[15px] font-bold text-white font-gilroy">
+            <h4 className="text-[20px] font-bold text-white font-gilroy">
               {t("version2.footer.platform")}
             </h4>
-            <div className="mt-4 space-y-3 text-[13px] text-white/50">
+            <div className="mt-4 space-y-3 text-[14px] text-white/50">
               <a href="#about_course" className="block transition-colors text-[#FFFFFF]">
                 {t("version2.footer.links.courses")}
               </a>
@@ -39,10 +39,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[15px] font-bold text-white">
+            <h4 className="text-[20px] font-gilroy font-bold text-[#FFFFFF]">
               {t("version2.footer.contacts")}
             </h4>
-            <div className="mt-4 space-y-3 text-[13px] text-white/50">
+            <div className="mt-4 space-y-3 text-[14px] text-white/50">
               <a href="tel:+998555111133" className="block transition-colors text-[#FFFFFF]">
                 +998 (55) 511-11-33
               </a>
@@ -53,15 +53,15 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[15px] font-bold text-white">
+            <h4 className="text-[20px] font-gilroy font-bold text-[#FFFFFF]">
               {t("version2.footer.socials")}
             </h4>
-            <div className="mt-4 space-y-3 text-[14px] font-outfit  text-white/50">
+            <div className="mt-4 space-y-3 text-[14px] font-outfit  text-[#FFFFFF]">
               <a
                 href="https://www.instagram.com/atomika_uz/"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 transition-colors hover:text-white/80"
+                className="flex items-center gap-2 transition-colors"
               >
                <img src="/telegram.svg" alt="" />
                 Instagram
@@ -70,7 +70,7 @@ export default function Footer() {
                 href="https://www.t.me/atomika_online"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 transition-colors hover:text-white/80"
+                className="flex items-center gap-2 transition-colors "
               >
                <img src="/instagram.svg" alt="" />
                 Telegram
@@ -79,7 +79,7 @@ export default function Footer() {
                 href="https://www.youtube.com/@atomika_online"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 transition-colors hover:text-white/80"
+                className="flex items-center gap-2 transition-colors"
               >
                 <img src="/youtube.svg" alt="" />
                 Youtube

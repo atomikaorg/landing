@@ -118,7 +118,8 @@ export default function Header({onOpenModal}: HeaderProps) {
               </div>
             </div>
 
-            <Link to={"https://atomika.org/session/signin"} className="px-[30px] py-[10px] md:py-5 font-bold font-gilroy text-[16px] md:text-[20px] rounded-full text-white bg-gradient-to-b from-[#C38BFA] via-[#A755F7] to-[#8216EB] lg:bg-none lg:text-[#1A1A2E] hover:bg-transparent">
+            <Link to={"https://atomika.org/session/signin"}
+            className="px-[30px] py-[10px] md:py-5 font-bold font-gilroy text-[16px] md:text-[20px] rounded-full text-white bg-gradient-to-b from-[#C38BFA] via-[#A755F7] to-[#8216EB] shadow-[0px_4px_16px_0px_#7C3AED4D] md:shadow-none lg:bg-none lg:text-[#1A1A2E] hover:bg-transparent">
               {t("version2.header.login")}
             </Link>
             <button onClick={onOpenModal}
@@ -126,6 +127,7 @@ export default function Header({onOpenModal}: HeaderProps) {
               style={{
                 background:
                   "linear-gradient(182.09deg, #C38BFA 1.21%, #A755F7 53.87%, #8216EB 123.92%)",
+                boxShadow: "0px 4px 16px 0px #7C3AED4D",
               }}
             >
               {t("version2.header.startEducation")}

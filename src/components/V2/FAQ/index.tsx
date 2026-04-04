@@ -31,7 +31,7 @@ export default function FAQ() {
           transition: { duration: 0.8, delay:0.1 }}}}
         className="mx-auto max-w-[700px]">
           <div className="mb-[30px] flex flex-col items-center justify-center gap-[30px] md:gap-[40px] md:mb-10">
-            <button className="font-gilroy rounded-[14px] text-[22px] md:text-[28px] leading-[150%] cursor-pointer bg-white px-[30px] md:px-10 py-[15px] md:py-5 text-[#787878] shadow-[0px_12px_42px_-4px_#18274B1F,0px_8px_18px_-6px_#18274B1F]">
+            <button className="font-gilroy rounded-[14px] text-[22px] md:text-[28px] leading-[150%] cursor-pointer bg-white px-[30px] md:px-10 py-[15px] md:py-5 text-[#787878] shadow-[0px_4px_16px_0px_#7C3AED4D]">
               FAQ
             </button>
             <h2 className="font-gilroy text-center text-[36px] leading-[120%] font-semibold text-[#1A1A2E] md:text-[48px]">
@@ -56,7 +56,7 @@ export default function FAQ() {
                       {t(`version2.Faq.items.${key}.question`)}
                     </span>
 
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#F3ECFF] text-[#8B3DFF] transition-colors duration-200 group-data-[state=open]:bg-[#8B3DFF] group-data-[state=open]:text-white md:h-12 md:w-12">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#F3ECFF] text-[#8B3DFF] transition-colors duration-200 group-data-[state=open]:bg-brand-purple-gradient group-data-[state=open]:text-white md:h-12 md:w-12">
                       <Plus className="h-5 w-5 group-data-[state=open]:hidden" />
                       <X className="hidden h-5 w-5 group-data-[state=open]:block" />
                     </span>

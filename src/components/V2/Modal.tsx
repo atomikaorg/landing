@@ -256,20 +256,15 @@ export default function Modal({
               className="absolute right-6 top-0 z-10 "
             src="/modalmobile.png" alt="" />
           </div>
-            
-            <div className="max-w-[676px]">
+            <div className="max-w-[676px] p-5 mt-15">
               <h2 className=" font-gilroy text-[48px] font-semibold leading-[110%] text-white  md:text-[64px]">
                 {t("version2.modal.title")} <span className="bg-[linear-gradient(111.21deg,_#F8DC71_-4.37%,_#F09C38_68.59%)] bg-clip-text text-transparent">{t("version2.modal.titlefree")}</span>{t("version2.modal.title2")}
               </h2>
-
-            <div className="font-gilroy mt-4 flex flex-col md:flex-wrap  gap-x-3 gap-y-2 text-white/80 md:mt-8 leading-[150%] md:gap-5">
-
               <p className="font-gilroy mt-[10px]  text-[22px] text-[#F2F2F2] md:mt-[18px] md:text-[28px] leading-[150%]">
                 {t("version2.modal.description")}
               </p>
 
               <div className="mt-4 flex flex-col md:flex-row  gap-x-3 gap-y-2 text-white/80 md:mt-8 leading-[150%] md:gap-5">
-
               {t("version2.modal.features",{returnObjects:true}).map((feature) => (
                 <div
                   key={feature}
@@ -312,8 +307,7 @@ export default function Modal({
                 >
                   {t("version2.modal.secondary")}
                 </a>
-              </div>
-            </div>
+         </div>
           </div>
         </div>
           </motion.div>
