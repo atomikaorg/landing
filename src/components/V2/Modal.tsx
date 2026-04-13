@@ -16,6 +16,7 @@ const GOOGLE_SHEETS_URL =
 const GOOGLE_SHEET_ID = "105ETzpRK0h3of9mWc8vqZbHa724ycklIuxvppx9aNxM";
 const GOOGLE_SHEET_GID = "0";
 const SIGNUP_URL = "https://atomika.org/session/signup";
+const THANK_YOU_PATH = "/thank-you";
 
 const formatDisplayPhoneNumber = (value: string, isDeleting = false) => {
   let normalized = value.replace(/^\+998\+99/, "+998").replace(/^\+99\+99/, "+99");
@@ -203,7 +204,9 @@ export default function Modal({
         redirect: "follow",
       });
 
-      window.location.href = buildSignupUrl(phoneDigits);
+      const signupUrl = buildSignupUrl(phoneDigits);
+      const thankYouUrl = `${THANK_YOU_PATH}?redirect=${encodeURIComponent(signupUrl)}`;
+      window.location.href = thankYouUrl;
     } catch (error) {
       console.error(error);
       toast({
