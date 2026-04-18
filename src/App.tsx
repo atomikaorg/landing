@@ -37,6 +37,7 @@ import FAQ from './components/V2/FAQ';
 import StudentsResult from './components/V2/StudentsResult';
 import Modal from './components/V2/Modal';
 import { Toaster } from './components/ui/toaster';
+import ThankYouPage from './pages/thank-you';
 
 function App() {
   const [modalSource, setModalSource] = useState<string | undefined>();
@@ -127,7 +128,7 @@ function App() {
           {/* //   <Toaster /> */}
           {/* // </div> */}
         {/* } /> */}
-        {/* <Route path="/thank-you" element={<ThankYouPage />} /> */}
+        <Route path="/thank-you" element={<ThankYouPage />} />
         <Route path='/' element={
           <div>
             <Header onOpenModal={() => openModal('header-cta')} />
