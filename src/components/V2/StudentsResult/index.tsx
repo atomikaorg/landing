@@ -19,7 +19,7 @@ export default function StudentsResult() {
 
     ]
   return (
-    <div className="w-full pt-[60px] ">
+    <section className="w-full overflow-x-clip pt-[60px] ">
         <motion.div
           ref={cardRef}
           initial="hidden"
@@ -61,6 +61,6 @@ export default function StudentsResult() {
                 ))}
             </div>
         </motion.div>
-         </div>
+         </section>
     )
 }

@@ -14,7 +14,7 @@ export default function NationalCert({ onOpenModal }: NationalCertProps) {
     const features = t("version2.NationalCert.features", { returnObjects: true }) || [];
     const cards = t("version2.NationalCert.cards", { returnObjects: true }) || [];
   return (
-    <div id="nat_cert" className="bg-[linear-gradient(111.38deg,_#1A1205_0%,_#2D1F08_50%,_#1A1408_100%)] relative ">
+    <section id="nat_cert" className="bg-[linear-gradient(111.38deg,_#1A1205_0%,_#2D1F08_50%,_#1A1408_100%)] relative overflow-x-clip">
         <img className="absolute right-0" src="/before.png" alt="" />
         <img className="absolute left-0 bottom-0" src="/after.png" alt="" />
         <motion.div 
@@ -80,6 +80,6 @@ export default function NationalCert({ onOpenModal }: NationalCertProps) {
                 <img src="/certificate.png" className=" object-contain" alt="" />
             </div>
         </motion.div>
-    </div>
+    </section>
   )
 }

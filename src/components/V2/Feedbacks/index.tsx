@@ -33,7 +33,7 @@ export default function Feedbacks() {
     }) as FeedbackItem[]) || [];
 
   return (
-    <section id="privileges" className="md:pt-[100px] pt-[60px] ]">
+    <section id="privileges" className="overflow-x-clip pt-[60px] md:pt-[100px]">
       <div className="container relative">
         <div className="absolute right-[-220px] top-[-50px] hidden lg:block">
           <img src="/message.png" alt="" />

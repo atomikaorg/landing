@@ -10,7 +10,7 @@ export default function Info({ onOpenModal }: InfoProps) {
   const { t } = useTranslation();
 
   return (
-    <div className="py-[30px] pt-[114px] md:py-[100px] md:pt-[134px]">
+    <section className="overflow-x-clip py-[30px] pt-[114px] md:py-[100px] md:pt-[134px]">
       <div className="container">
         <motion.div
           initial={{ y: 100, opacity: 0 }}
@@ -101,6 +101,6 @@ export default function Info({ onOpenModal }: InfoProps) {
         </motion.div>
         
       </div>
-    </div>
+    </section>
   );
 }

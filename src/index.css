@@ -9,6 +9,12 @@
   scroll-behavior: smooth;
 }
 
+html,
+body,
+#root {
+  overflow-x: clip;
+}
+
 #root {
   white-space: pre-line;
 }
@@ -129,32 +135,32 @@ body{
 
 @media (min-width: 768px) {
   .feedbacks-rail {
-    padding-left: calc((100vw - 840px) / 2);
+    padding-left: calc((100% - 840px) / 2);
     padding-right: 40px;
   }
 
   .content-rail {
-    padding-left: calc((100vw - 840px) / 2);
+    padding-left: calc((100% - 840px) / 2);
     padding-right: 40px;
   }
 }
 
 @media (min-width: 1024px) {
   .feedbacks-rail {
-    padding-left: calc((100vw - 1000px) / 2);
+    padding-left: calc((100% - 1000px) / 2);
   }
 
   .content-rail {
-    padding-left: calc((100vw - 1000px) / 2);
+    padding-left: calc((100% - 1000px) / 2);
   }
 }
 
 @media (min-width: 1280px) {
   .feedbacks-rail {
-    padding-left: calc((100vw - 1280px) / 2);
+    padding-left: calc((100% - 1280px) / 2);
   }
 
   .content-rail {
-    padding-left: calc((100vw - 1280px) / 2);
+    padding-left: calc((100% - 1280px) / 2);
   }
 }

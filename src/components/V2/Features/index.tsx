@@ -113,7 +113,7 @@ export default function Features() {
     cards[5],
   ];
 
-  const renderCardInner = (card:any,i:number) => (
+  const renderCardInner = (card:any) => (
     <>
       <div className={card.bgClass} />
       <h5 className={card.titleClass}>
@@ -126,48 +126,50 @@ export default function Features() {
   );
 
   return (
-    <div className="container mt-[30px] md:mt-[50px] relative">
-      <img src="microscope.svg" className="hidden md:block absolute top-0 right-[-220px]" alt="" />
-      <Button text={"version2.features.badge"}/>
-      <h2 className="font-gilroy mt-[30px] md:mt-10 text-left mb-[10px] font-semibold text-[48px] w-[700px]  max-md:text-[36px]  max-md:w-full leading-[120%]">
+    <section className="overflow-x-clip">
+      <div className="container mt-[30px] md:mt-[50px] relative">
+        <img src="microscope.svg" className="hidden md:block absolute top-0 right-[-220px]" alt="" />
+        <Button text={"version2.features.badge"}/>
+        <h2 className="font-gilroy mt-[30px] md:mt-10 text-left mb-[10px] font-semibold text-[48px] w-[700px]  max-md:text-[36px]  max-md:w-full leading-[120%]">
         {t("version2.features.title")}{" "}
         <span className="text-[40px] md:text-[64px] bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] bg-clip-text text-transparent">
           {t("version2.features.atomika")}
         </span>
         {t("version2.features.title2")}
-      </h2>
+        </h2>
 
-      <p className="text-[#6B7280] text-[22px] font-gilroy font-medium leading-[150%] md:text-[28px]">
-        {t("version2.features.description")}
-      </p>
+        <p className="text-[#6B7280] text-[22px] font-gilroy font-medium leading-[150%] md:text-[28px]">
+          {t("version2.features.description")}
+        </p>
 
-      <motion.div
-        ref={wrapperRef}
-        initial="hidden"
-        animate={wrapperInView ? "visible" : "hidden"}
-        className="hidden md:block"
-      >
-        <div className="mt-0 md:mt-10 grid grid-cols-12 gap-5">
-          {orderedCards.map((card, i) => (
-            <motion.div
-              key={card.id}
-              custom={i}
-              variants={cardVariants}
-              className={`${card.className} ${card.layoutClass} ]`}
-            >
-              {renderCardInner(card,i)}
-            </motion.div>
+        <motion.div
+          ref={wrapperRef}
+          initial="hidden"
+          animate={wrapperInView ? "visible" : "hidden"}
+          className="hidden md:block"
+        >
+          <div className="mt-0 md:mt-10 grid grid-cols-12 gap-5">
+            {orderedCards.map((card, i) => (
+              <motion.div
+                key={card.id}
+                custom={i}
+                variants={cardVariants}
+                className={`${card.className} ${card.layoutClass}`}
+              >
+                {renderCardInner(card)}
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        <div className="md:hidden flex flex-col gap-5 mt-[30px]">
+          {orderedCards.map((card) => (
+            <MobileCard key={card.id} className={card.className}>
+              {renderCardInner(card)}
+            </MobileCard>
           ))}
         </div>
-      </motion.div>
-
-      <div className="md:hidden flex flex-col gap-5 mt-[30px]">
-        {orderedCards.map((card) => (
-          <MobileCard key={card.id} className={card.className}>
-            {renderCardInner(card)}
-          </MobileCard>
-        ))}
       </div>
-    </div>
+    </section>
   );
 }
