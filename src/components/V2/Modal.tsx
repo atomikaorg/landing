@@ -223,7 +223,7 @@ export default function Modal({
     <AnimatePresence>
       {isOpen ? (
         <motion.div
-          className="fixed inset-0 z-[1000] flex items-center justify-center bg-[#14091F]/70 px-4 py-6 backdrop-blur-sm"
+          className="fixed inset-0 z-[1000] flex items-start justify-center overflow-y-auto bg-[#14091F]/70 px-4 py-4 backdrop-blur-sm md:items-center md:py-6"
           onClick={onClose}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -231,7 +231,7 @@ export default function Modal({
           transition={overlayTransition}
         >
           <motion.div
-            className="relative w-full overflow-hidden rounded-[34px] bg-[linear-gradient(182.09deg,_#C38BFA_1.21%,_#A755F7_53.87%,_#8216EB_123.92%)] shadow-[24px_56px_82.2px_0px_#9484A3CC] md:max-w-[1400px] md:rounded-[50px]"
+            className="relative my-auto w-full max-h-[calc(100dvh-32px)] overflow-y-auto overflow-x-hidden rounded-[30px] bg-[linear-gradient(182.09deg,_#C38BFA_1.21%,_#A755F7_53.87%,_#8216EB_123.92%)] shadow-[24px_56px_82.2px_0px_#9484A3CC] md:max-h-none md:max-w-[1180px] md:overflow-visible md:rounded-[50px]"
             onClick={(event) => event.stopPropagation()}
             initial={panelVariants.initial}
             animate={panelVariants.animate}
@@ -246,32 +246,32 @@ export default function Modal({
           <X size={20} />
         </button>
 
-        <div className="grid items-center  md:grid-cols-[0.7fr_1.0fr] pb-[34px] ">
-          <div className="relative hidden h-full  left-0 items-center md:flex">
+        <div className="grid items-center pb-6 md:pb-[34px] md:grid-cols-[0.62fr_0.9fr]">
+          <div className="relative hidden h-full items-center justify-start md:flex">
             <img
               src="/modal.png"
               alt="Gift"
-              className="relative z-10 w-auto object-contain drop-shadow-[0px_24px_48px_rgba(45,0,84,0.5)]"
+              className="relative z-10 max-h-[560px] object-contain object-left drop-shadow-[0px_24px_48px_rgba(45,0,84,0.5)]"
             />
           </div>
-          <div className="relative h-full md:hidden">
+          <div className="relative h-[80px] md:hidden">
           <img 
-              className="absolute right-6 top-0 z-10 "
+              className="absolute right-4 top-0 z-10 h-auto w-[198px]"
             src="/modalmobile.png" alt="" />
           </div>
-            <div className="max-w-[676px] p-5 mt-15">
-              <h2 className=" font-gilroy text-[48px] font-semibold leading-[110%] text-white  md:text-[64px]">
+            <div className="max-w-[580px] p-4 pt-1 md:mt-15 md:p-5 md:pr-8 lg:pr-10">
+              <h2 className="font-gilroy text-[36px] font-semibold leading-[108%] text-white sm:text-[42px] md:text-[56px] xl:text-[60px]">
                 {t("version2.modal.title")} <span className="bg-[linear-gradient(111.21deg,_#F8DC71_-4.37%,_#F09C38_68.59%)] bg-clip-text text-transparent">{t("version2.modal.titlefree")}</span>{t("version2.modal.title2")}
               </h2>
-              <p className="font-gilroy mt-[10px]  text-[22px] text-[#F2F2F2] md:mt-[18px] md:text-[28px] leading-[150%]">
+              <p className="mt-2.5 font-gilroy text-[18px] leading-[145%] text-[#F2F2F2] sm:text-[20px] md:mt-[16px] md:text-[24px] xl:text-[26px]">
                 {t("version2.modal.description")}
               </p>
 
-              <div className="mt-4 flex flex-col md:flex-row  gap-x-3 gap-y-2 text-white/80 md:mt-8 leading-[150%] md:gap-5">
+              <div className="mt-3 flex flex-col gap-x-3 gap-y-1.5 leading-[145%] text-white/80 md:mt-6 md:flex-row md:gap-4">
               {t("version2.modal.features",{returnObjects:true}).map((feature) => (
                 <div
                   key={feature}
-                  className="rounded-full flex items-center gap-1 text-[16px] font-gilroy font-medium leading-[150%] whitespace-nowrap md:gap-3 "
+                  className="flex items-center gap-1 whitespace-nowrap rounded-full font-gilroy text-[16px] font-medium leading-[150%] md:gap-2.5"
                 >
                 <img src="/check.svg" alt="" className="w-4 md:w-auto" />  {feature}
                 </div>
@@ -279,7 +279,7 @@ export default function Modal({
 
               </div>
 
-              <div className="mt-[36px] space-y-3 md:mt-8 md:space-y-4">
+              <div className="mt-5 space-y-2.5 md:mt-7 md:space-y-3.5">
                 <input
                   type="tel"
                   value={phone}
@@ -288,25 +288,25 @@ export default function Modal({
                     setPhone(formatDisplayPhoneNumber(event.target.value, isDeleting));
                   }}
                   placeholder={t("version2.modal.phonePlaceholder")}
-                  className=" w-full rounded-full border border-white/70 bg-white/8 px-5 py-5 text-[24px] font-gilroy text-white outline-none placeholder:text-white/55 focus:border-white/70"
+                  className="w-full rounded-full border border-white/70 bg-white/8 px-5 py-3.5 text-[20px] font-gilroy text-white outline-none placeholder:text-white/55 focus:border-white/70 md:py-4 md:text-[23px]"
                 />
 
                 <button
                   type="button"
                   onClick={handleSubmit}
                   disabled={isSubmitting}
-                  className="w-full rounded-full bg-white py-5 font-gilroy text-[24px] font-bold disabled:cursor-not-allowed disabled:opacity-70 "
+                  className="w-full rounded-full bg-white py-3.5 font-gilroy text-[20px] font-bold disabled:cursor-not-allowed disabled:opacity-70 md:py-4 md:text-[23px]"
                 >
                   <span className="bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] bg-clip-text text-transparent">
                     {isSubmitting ? "..." : t("version2.modal.submit")}
                   </span>
                 </button>
 
-                <div className="text-center text-[20px] font-gilroy font-medium text-[#F2F2F2] md:text-[24px]">{t("version2.modal.or")}</div>
+                <div className="text-center font-gilroy text-[18px] font-medium text-[#F2F2F2] md:text-[22px]">{t("version2.modal.or")}</div>
 
                 <a
                   href="tel:+998555111133"
-                  className="flex  w-full items-center justify-center rounded-full border border-white/70 py-5 text-center font-gilroy text-[24px] font-bold text-white  md:border-white/40"
+                  className="flex w-full items-center justify-center rounded-full border border-white/70 py-3.5 text-center font-gilroy text-[20px] font-bold text-white md:border-white/40 md:py-4 md:text-[23px]"
                 >
                   {t("version2.modal.secondary")}
                 </a>
