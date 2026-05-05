@@ -84,6 +84,30 @@ const formatDisplayPhoneNumber = (value: string, isDeleting = false) => {
 };
 
 const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycbx5uYVwea_K8zBMbGhva3sjanoyOegAI1fHxip4dViUBIkAgpk_RZrxWAkxJ8HKyeTk/exec";
+const SIGNUP_URL = "https://atomika.org/session/signup";
+const THANK_YOU_REDIRECT_KEY = "thank-you-redirect";
+
+const buildSignupUrl = (
+  phoneDigits: string,
+  utmParams: {
+    utm_source: string;
+    utm_medium: string;
+    utm_campaign: string;
+    utm_content: string;
+    utm_referrer: string;
+  }
+) => {
+  const signupUrl = new URL(SIGNUP_URL);
+  signupUrl.searchParams.set("phone", phoneDigits);
+
+  if (utmParams.utm_source) signupUrl.searchParams.set("utm_source", utmParams.utm_source);
+  if (utmParams.utm_medium) signupUrl.searchParams.set("utm_medium", utmParams.utm_medium);
+  if (utmParams.utm_campaign) signupUrl.searchParams.set("utm_campaign", utmParams.utm_campaign);
+  if (utmParams.utm_content) signupUrl.searchParams.set("utm_content", utmParams.utm_content);
+  if (utmParams.utm_referrer) signupUrl.searchParams.set("utm_referrer", utmParams.utm_referrer);
+
+  return signupUrl.toString();
+};
 
 const FormComponent = () => {
   const { t } = useTranslation();
@@ -169,6 +193,8 @@ const FormComponent = () => {
       setPreviousPhone("+998");
 
       // Redirect to thank you page using React Router
+      const signupUrl = buildSignupUrl(formattedPhone, utmParams);
+      window.sessionStorage.setItem(THANK_YOU_REDIRECT_KEY, signupUrl);
       navigate('/thank-you');
     } catch (error) {
       console.error('Error submitting form:', error);

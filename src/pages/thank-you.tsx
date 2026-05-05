@@ -1,24 +1,26 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useSearchParams } from "react-router-dom";
 
 const SIGNUP_URL = "https://atomika.org/session/signup";
 const REDIRECT_DELAY_MS = 5000;
+const THANK_YOU_REDIRECT_KEY = "thank-you-redirect";
 
 const ThankYouPage = () => {
   const { t } = useTranslation();
-  const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    const redirectTarget = searchParams.get("redirect") || SIGNUP_URL;
+    const redirectTarget =
+      window.sessionStorage.getItem(THANK_YOU_REDIRECT_KEY) || SIGNUP_URL;
+
     const timeoutId = window.setTimeout(() => {
+      window.sessionStorage.removeItem(THANK_YOU_REDIRECT_KEY);
       window.location.href = redirectTarget;
     }, REDIRECT_DELAY_MS);
 
     return () => {
       window.clearTimeout(timeoutId);
     };
-  }, [searchParams]);
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-[#f3f3f3]">
