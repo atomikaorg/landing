@@ -10,13 +10,17 @@ export default function StudentsResult() {
     const isCardInView = useInView(cardRef, { once: true, margin: "-100px" });
     const {t}=useTranslation()
     const links=[
+        {src:"/certificateA2.jpg"},
         {src:"/cert5.png"},
-        {src:"/cert2.png"},
+        {src:"/certificateA.jpg"},
         {src:"/cert7.png"},
+        {src:"/cert2.png"},
+        {src:"/certificateb.jpg"},
         {src:"/cert1.png"},
+        {src:"/certificatecp.jpg"},
+        {src:"/certificatecpp.jpg"},
         {src:"/cert3.png"},
         {src:"/cert4.png"},
-
     ]
   return (
     <section className="w-full overflow-x-clip pt-[60px] ">
