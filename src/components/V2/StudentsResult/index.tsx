@@ -10,7 +10,7 @@ export default function StudentsResult() {
     const isCardInView = useInView(cardRef, { once: true, margin: "-100px" });
     const {t}=useTranslation()
     const links=[
-        {src:"/certificateA2.jpg"},
+        {src:"/certificateA2.png"},
         {src:"/cert5.png"},
         {src:"/certificateA.jpg"},
         {src:"/cert7.png"},
