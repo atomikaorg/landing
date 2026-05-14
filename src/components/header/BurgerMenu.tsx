@@ -4,7 +4,10 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "../ui/button";
 
-export default function BurgerMenu(): JSX.Element {
+type Props = {
+    type?:boolean
+}
+export default function BurgerMenu({type}:Props): JSX.Element {
   const { t } = useTranslation();
 
   const [isMenuShown, setIsMenuShown] = useState<boolean>(false);
@@ -14,13 +17,13 @@ export default function BurgerMenu(): JSX.Element {
   };
 
   return (
-    <div className="lg:hidden max-lg:order-3">
+    <div className={`max-lg:order-3 ${type ? "xl:hidden" : "lg:hidden"} `}>
       <Button
         className={clsx(
           "inline-flex p-0 w-[52px] h-[52px] bg-white hover:bg-white rounded-full",
-          {
-            "bg-purple-main hover:bg-purple-main": isMenuShown,
-          }
+           isMenuShown &&(type
+      ? "gold-gradient-btn"
+      : "bg-purple-main hover:bg-purple-main")
         )}
         onClick={() => setIsMenuShown(!isMenuShown)}
       >
@@ -40,7 +43,7 @@ export default function BurgerMenu(): JSX.Element {
         }}
       >
         <div
-          className="w-full bg-purple-main z-20 rounded-[28px] px-7 py-8"
+          className={`w-full ${type ? "gold-gradient-btn":"bg-purple-main"} z-20 rounded-[28px] px-7 py-8`}
           onClick={(e) => {
             e.stopPropagation();
           }}

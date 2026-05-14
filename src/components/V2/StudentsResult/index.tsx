@@ -4,8 +4,10 @@ import {motion, useInView} from "framer-motion"
 import { useRef } from "react";
 import Button from "../Button";
 
-
-export default function StudentsResult() {
+type Props = {
+  iscert?: boolean;
+};
+export default function StudentsResult({iscert=false}:Props) {
     const cardRef = useRef(null);
     const isCardInView = useInView(cardRef, { once: true, margin: "-100px" });
     const {t}=useTranslation()
@@ -23,7 +25,7 @@ export default function StudentsResult() {
         {src:"/cert4.png"},
     ]
   return (
-    <section className="w-full overflow-x-clip pt-[60px] ">
+    <section className={`w-full overflow-x-clip pt-[50px]  pb-[50px] ${iscert&&"bg-[#FDF8E8]"}`}>
         <motion.div
           ref={cardRef}
           initial="hidden"
@@ -37,10 +39,10 @@ export default function StudentsResult() {
           }}}>
 
         <div className="container relative">
-          <Button text={"version2.results.button"} />
-          <img src="/cubok.png" className="absolute left-[-200px] top-0 hidden md:block" alt="" />
+          <Button text={"version2.results.button"} type={iscert} />
+          {! iscert &&<img src="/cubok.png" className="absolute left-[-200px] top-0 hidden md:block" alt="" />}
           <div className="flex items-center justify-center">
-            <h2 className="text-[#1A1A2E] text-center  font-gilroy max-w-[800px] text-[36px] leading-[120%] md:text-[48px] font-semibold mb-[10px] md:mb-5  mt-[30px] md:mt-[50px]">{t("version2.results.title")}</h2>
+            <h2 className="text-[#1A1A2E] text-center  font-gilroy max-w-[800px] text-[36px] leading-[120%] md:text-[42px] lg:text-[46px]  font-semibold mb-[10px] md:mb-5  mt-[30px] md:mt-[50px]">{t("version2.results.title")}</h2>
           </div>
               <p className="text-[#6B7280] text-center text-[22px] font-medium leading-[150%]  md:text-[28px] mb-[30px] md:mb-10 font-gilroy">
                 {i18n.language === "ru" ? (  <>
@@ -53,18 +55,22 @@ export default function StudentsResult() {
                    </> )}
               </p>      
          </div>
-            <div className="content-rail flex items-center gap-[30px] md:gap-[50px] overflow-x-scroll no-scrollbar">
-                {links.map((link, index) => (
-                    <div key={link.src} className="h-[520px] w-[350px] shrink-0 overflow-hidden rounded-[30px] md:h-[650px] md:w-[480px]">
-                      <img
-                        className="h-full w-full object-cover object-top"
-                        src={link.src}
-                        alt={`Natija ${index + 1}`}
-                      />
-                    </div>
-                ))}
-            </div>
+            <div className="content-rail flex w-full max-w-full items-center gap-[30px] overflow-x-auto overflow-y-hidden px-4 no-scrollbar md:gap-[50px]">
+             {links.map((link, index) => (
+             <div
+               key={link.src}
+               className="h-[520px] w-[350px] min-w-[350px] shrink-0 overflow-hidden rounded-[30px] md:h-[650px] md:w-[480px] md:min-w-[480px] lg:h-[550px] lg:w-[380px] lg:min-w-[380px]"
+             >
+               <img
+                 className="h-full w-full object-cover object-top"
+                 src={link.src}
+                 alt={`Natija ${index + 1}`}
+               />
+             </div>
+           ))}
+         </div>
         </motion.div>
          </section>
     )
 }
+

@@ -1,20 +1,23 @@
 import { useTranslation } from "react-i18next"
 import {motion, useInView} from "framer-motion"
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import i18n from "@/localization";
-import { Link } from "react-router-dom";
+
 
 type NationalCertProps = {
     onOpenModal?: () => void;
 };
 
 export default function NationalCert({ onOpenModal }: NationalCertProps) {
+  useEffect(() => {
+     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+   }, []);
     const {t}=useTranslation()
     const cardRef = useRef(null);
     const isCardInView = useInView(cardRef, { once: true, margin: "-100px" });
     const features = t("version2.NationalCert.features", { returnObjects: true }) || [];
-    const cards = t("version2.NationalCert.cards", { returnObjects: true }) || [];
-  return (
+
+    return (
     <section id="nat_cert" className="bg-[linear-gradient(111.38deg,_#1A1205_0%,_#2D1F08_50%,_#1A1408_100%)] relative overflow-x-clip">
         <img className="absolute right-0" src="/before.png" alt="" />
         <img className="absolute left-0 bottom-0" src="/after.png" alt="" />
@@ -30,7 +33,7 @@ export default function NationalCert({ onOpenModal }: NationalCertProps) {
           transition: { duration: 0.8, delay:0.1 }
         }
       }}
-        className="container flex items-center justify-between py-[30px] md:py-[100px] relative">
+        className="container flex items-center  justify-between py-[30px] md:py-[100px] relative">
             <div className="max-w-[655px]">
                <h2 className="font-gilroy text-[#FFFFFF] text-[44px] md:text-[64px] font-bold leading-[110%] mb-[50px]">
                  {i18n.language === 'uz' ? (
@@ -59,13 +62,13 @@ export default function NationalCert({ onOpenModal }: NationalCertProps) {
                  ))}
               </div>
                 <div className="flex flex-col  gap-3  w-full">
-                 <Link
+                 <button
                    type="button"
-                   to={"/national-certificate"}
+                   onClick={onOpenModal}
                    className="w-full whitespace-nowrap cursor-pointer text-center text-[24px] font-gilroy  text-[#1A1A2E] bg-[linear-gradient(104.61deg,_#D4A017_0%,_#F5D060_100%)] shadow-[0px_4px_20px_0px_#D4A01766] px-10 py-5 rounded-full font-bold"
                  >
                    {t("version2.NationalCert.button1")}
-                 </Link>
+                 </button>
   
                  <button
                    type="button"
@@ -76,8 +79,7 @@ export default function NationalCert({ onOpenModal }: NationalCertProps) {
                  </button>
                </div>
             </div>
-            <div className="absolute right-[-260px] top-1/2 hidden -translate-y-1/2 lg:block">
-
+            <div className="absolute right-[-260px] top-1/2 hidden -translate-y-1/2 xl:block">
                 <img src="/certificate.png" className=" object-contain" alt="" />
             </div>
         </motion.div>

@@ -38,6 +38,7 @@ import StudentsResult from './components/V2/StudentsResult';
 import Modal from './components/V2/Modal';
 import { Toaster } from './components/ui/toaster';
 import ThankYouPage from './pages/thank-you';
+import { NationalCertificate } from './pages/NationatCertificate';
 
 function App() {
   const [modalSource, setModalSource] = useState<string | undefined>();
@@ -129,16 +130,17 @@ function App() {
           {/* // </div> */}
         {/* } /> */}
         <Route path="/thank-you" element={<ThankYouPage />} />
+        <Route path="/national-certificate"  element={<NationalCertificate />}/>
         <Route path='/' element={
           <div>
             <Header onOpenModal={() => openModal('header-cta')} />
             <main className='bg-[#F9FAFB]'>
             <Info onOpenModal={() => openModal('info-cta')}/>
+            <StudentsResult/>
+            <Feedbacks/>
             <Teachers/>
             <Features/>  
             {/* <WhyAtomika/> */}
-            <StudentsResult/>
-            <Feedbacks/>
             {/* <Process  /> */}
             {/* <OurCourses onAutoOpen={() => openModalOnce('students-result-scroll')}/> */}
             <Plans onOpenModal={() => openModal('plans-cta')}

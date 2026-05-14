@@ -1,11 +1,14 @@
-import { Instagram, Send, Youtube } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-export default function Footer() {
+type FooterProps = {
+  bgClassName?: string;
+};
+
+export default function Footer({ bgClassName }: FooterProps) {
   const { t } = useTranslation();
 
   return (
-    <footer id="contacts" className="bg-brand-purple-gradient text-white">
+    <footer id="contacts" className={`${bgClassName ? bgClassName : "bg-brand-purple-gradient"} text-white`}>
       <div className="container pt-[56px] md:pt-[72px] pb-[30px]">
         <div className="grid gap-10 md:grid-cols-[1.8fr_1fr_1fr_1fr] md:gap-8">
           <div className="max-w-[290px]">

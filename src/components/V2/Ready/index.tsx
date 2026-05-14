@@ -5,9 +5,10 @@ import { useEffect, useRef } from "react";
 type ReadyProps = {
   onOpenModal?: () => void;
   onAutoOpen?: () => void;
+  bgClassName?: string;
 };
 
-export default function Ready({ onOpenModal, onAutoOpen }: ReadyProps) {
+export default function Ready({ onOpenModal, onAutoOpen, bgClassName }: ReadyProps) {
   const {t}=useTranslation()
   const cardRef = useRef(null);
   const isCardInView = useInView(cardRef, { once: true, margin: "-100px" });
@@ -19,7 +20,7 @@ export default function Ready({ onOpenModal, onAutoOpen }: ReadyProps) {
   }, [isCardInView, onAutoOpen]);
 
   return (
-    <div className="bg-brand-purple-gradient py-[30px] md:py-[100px]">
+    <div className={`${bgClassName ? bgClassName : "bg-brand-purple-gradient"} py-[30px] md:py-[100px]`}>
       <motion.div
         ref={cardRef}
           initial="hidden"

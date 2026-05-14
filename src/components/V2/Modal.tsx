@@ -9,6 +9,7 @@ type ModalProps = {
   onClose: () => void;
   source?: string;
   openMode?: "button" | "scroll";
+  bgClassName?: string;
 };
 
 const GOOGLE_SHEETS_URL =
@@ -100,6 +101,7 @@ export default function Modal({
   onClose,
   source = "unknown",
   openMode = "button",
+  bgClassName,
 }: ModalProps) {
   const [phone, setPhone] = useState("+998");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -232,7 +234,7 @@ export default function Modal({
           transition={overlayTransition}
         >
           <motion.div
-            className="relative my-auto w-full max-h-[calc(100dvh-32px)] overflow-y-auto overflow-x-hidden rounded-[30px] bg-[linear-gradient(182.09deg,_#C38BFA_1.21%,_#A755F7_53.87%,_#8216EB_123.92%)] shadow-[24px_56px_82.2px_0px_#9484A3CC] md:max-h-none md:max-w-[1180px] md:overflow-visible md:rounded-[50px]"
+            className={`relative my-auto w-full max-h-[calc(100dvh-32px)] overflow-y-auto overflow-x-hidden rounded-[30px] ${bgClassName ? bgClassName : "bg-[linear-gradient(182.09deg,_#C38BFA_1.21%,_#A755F7_53.87%,_#8216EB_123.92%)]"} shadow-[24px_56px_82.2px_0px_#9484A3CC] md:max-h-none md:max-w-[1180px] md:overflow-visible md:rounded-[50px]`}
             onClick={(event) => event.stopPropagation()}
             initial={panelVariants.initial}
             animate={panelVariants.animate}
@@ -296,9 +298,9 @@ export default function Modal({
                   type="button"
                   onClick={handleSubmit}
                   disabled={isSubmitting}
-                  className="w-full rounded-full bg-white py-3.5 font-gilroy text-[20px] font-bold disabled:cursor-not-allowed disabled:opacity-70 md:py-4 md:text-[23px]"
+                  className={`w-full rounded-full ${bgClassName?"bg-gold-gradient": "bg-white "} py-3.5 font-gilroy text-[20px] font-bold disabled:cursor-not-allowed disabled:opacity-70 md:py-4 md:text-[23px]`}
                 >
-                  <span className="bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)] bg-clip-text text-transparent">
+                  <span className={`${bgClassName?"text-[#1A1A2E]" :"bg-[linear-gradient(182.09deg,#C38BFA_1.21%,#A755F7_53.87%,#8216EB_123.92%)]  bg-clip-text text-transparent "}`}>
                     {isSubmitting ? "..." : t("version2.modal.submit")}
                   </span>
                 </button>

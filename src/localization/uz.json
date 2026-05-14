@@ -491,5 +491,26 @@
         "oferta":"Shartlar va siyosat"
       }
     }
+  },
+
+   "national-certificate":{
+    "header":{
+       "nav": {
+        "teachers": "O’qituvchilar",
+        "tariffs": "Narxlar",
+        "course": "Boshlang’ich kurs",
+        "reviews": "Sinov darslar",
+        "contacts": "Bog’lanish"
+      }
+    },
+    "teacher1":[
+       "Kimyo va biologiya fanlarini o‘qitishda 11+ yillik tajriba",
+  "95% dan ortiq o‘quvchilar O‘zbekistonning nufuzli OTMlariga kirgan",
+  "Har ikkala fan bo‘yicha A+ milliy sertifikatlar",
+  "1000+ dan ortiq bitiruvchi o‘quvchilar"
+    ],
+   "teacher_lesson": "Namunaviy darslarni ko‘rish",
+    "teacher_about": "O‘qituvchi haqida videoni ko‘rish",
+    "teacher1_desc":"Kimyo yoki biologiya bo‘yicha Milliy sertifikat topshirish uchun 3 oylik intensiv kurs. Haqiqiy savollar, o‘qituvchi bilan guruhli tahlillar va individual qo‘llab-quvvatlash."
   }
 }
